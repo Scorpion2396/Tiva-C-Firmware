@@ -1,0 +1,25 @@
+# ninja log v5
+1	223	6442554710000000	D:/embedded/timer/sw_interface_test/Debug/BrowseInfo/main.xcl	e3b72bd6e7e7fd4a
+14	485	6442549800000000	D:/embedded/timer/sw_interface_test/Debug/BrowseInfo/Timer.xcl	1f9c55e7019881fa
+240	400	6442554716806452	D:/embedded/timer/sw_interface_test/Debug/BrowseInfo/main.pbi	2c6893677d458f5
+406	498	6442554717807727	D:/embedded/timer/sw_interface_test/Debug/BrowseInfo/tiva.pbd	73e775c047c1970a
+507	1835	6442554730663254	D:/embedded/timer/sw_interface_test/Debug/BrowseInfo/tiva.pbw	458a7bc5d5102f9d
+793	1034	6442549812993033	D:/embedded/timer/sw_interface_test/Debug/BrowseInfo/GPIOdriver.pbi	e327423cfaa413ac
+957	2178	6442667330620552	D:/embedded/Software_v1.01/Debug/BrowseInfo/tiva.pbw	1f0e1f3fd8dbe0bc
+1	634	6442549800000000	D:/embedded/timer/sw_interface_test/Debug/BrowseInfo/GPIOdriver.xcl	eb58a81cb797b677
+646	950	6442549812139865	D:/embedded/timer/sw_interface_test/Debug/BrowseInfo/Timer.pbi	b8dd7d47fb8affe7
+857	950	6442667318590136	D:/embedded/Software_v1.01/Debug/BrowseInfo/tiva.pbd	3e1bec9596d22d0c
+77	791	6442661880000000	D:/embedded/Software_v1.0/Debug/BrowseInfo/Software/Driver/GPIO/GPIOdriver.xcl	f204cac3fffd6660
+1	1035	6442661880000000	D:/embedded/Software_v1.0/Debug/BrowseInfo/Software/App/Main/main.xcl	a667453b0169183a
+2	206	6442661940000000	D:/embedded/Software_v1.0/Debug/BrowseInfo/Software/Driver/Timer/Timer.xcl	f126ba2b11eec979
+1	168	6442662597984065	D:/embedded/Software_v1.0/Debug/BrowseInfo/Software/Driver/GPIO/GPIOdriver.pbi	fb1db9be581d64de
+216	429	6442661948174564	D:/embedded/Software_v1.0/Debug/BrowseInfo/Software/Driver/Timer/Timer.pbi	a2b99a927dc542ad
+330	514	6442661948955765	D:/embedded/Software_v1.0/Debug/BrowseInfo/Software/App/Main/main.pbi	d7705675ae3ec978
+176	287	6442662599269177	D:/embedded/Software_v1.0/Debug/BrowseInfo/tiva.pbd	a9163b28a0997e4a
+296	1270	6442662608643584	D:/embedded/Software_v1.0/Debug/BrowseInfo/tiva.pbw	fb98f8f960a53e5f
+6	306	6442667310000000	D:/embedded/Software_v1.01/Debug/BrowseInfo/Software/Driver/Timer/Timer.xcl	a6b2d1096d078b15
+16	373	6442667310000000	D:/embedded/Software_v1.01/Debug/BrowseInfo/Software/Driver/GPIO/GPIOdriver.xcl	48adcaf9f38e6805
+385	652	6442667315621608	D:/embedded/Software_v1.01/Debug/BrowseInfo/Software/Driver/GPIO/GPIOdriver.pbi	65d28a0f93d3fd0b
+320	551	6442667310000000	D:/embedded/Software_v1.01/Debug/BrowseInfo/Software/App/Main/main.xcl	7844301e680090fc
+561	775	6442667316871528	D:/embedded/Software_v1.01/Debug/BrowseInfo/Software/Driver/Timer/Timer.pbi	2d3413f787b4be3
+658	850	6442667317652751	D:/embedded/Software_v1.01/Debug/BrowseInfo/Software/App/Main/main.pbi	bb6c0b7b90ad953f
