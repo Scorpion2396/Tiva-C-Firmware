@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+    <fileVersion>5</fileVersion>
+    <fileChecksum>1056354309</fileChecksum>
+    <configuration>
+        <name>Debug</name>
+        <outputs>
+            <file>$PROJ_DIR$\Software\Driver\GPIO\GPIOdriver.h</file>
+            <file>$PROJ_DIR$\Software\Interface\ADC_Driver_Interface.h</file>
+            <file>$PROJ_DIR$\Software\Driver\Timer\Timer.h</file>
+            <file>$PROJ_DIR$\Software\Interface\GPIO_Driver_Interface.h</file>
+            <file>$PROJ_DIR$\Software\Interface\Timer_Interface.h</file>
+            <file>$TOOLKIT_DIR$\lib\rt7M_tl.a</file>
+            <file>$TOOLKIT_DIR$\config\linker\TexasInstruments\TM4C123GH6.icf</file>
+            <file>$TOOLKIT_DIR$\lib\dl7M_tln.a</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdio.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
+            <file>$PROJ_DIR$\Software\Driver\Timer\Timer.c</file>
+            <file>$PROJ_DIR$\Software\Driver\GPIO\GPIOdriver.c</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Normal.h</file>
+            <file>$PROJ_DIR$\Debug\Exe\tiva.out</file>
+            <file>$PROJ_DIR$\Debug\Obj\Software\App\Main\main.o</file>
+            <file>$PROJ_DIR$\Software\Driver\ADC\ADC_Driver.h</file>
+            <file>$PROJ_DIR$\Software\App\Main\main.c</file>
+            <file>$PROJ_DIR$\Software\Controller\core_cmSimd.h</file>
+            <file>$PROJ_DIR$\Software\Common\Common_Datatype.h</file>
+            <file>$PROJ_DIR$\Software\Common\Common_Macros.h</file>
+            <file>$PROJ_DIR$\Software\Driver\ADC\ADC_Driver.c</file>
+            <file>$PROJ_DIR$\Software\Controller\core_cm4.h</file>
+            <file>$PROJ_DIR$\Software\Controller\TM4C123GH6PM.h</file>
+            <file>$PROJ_DIR$\Software\Controller\core_cmInstr.h</file>
+            <file>$PROJ_DIR$\Software\Controller\core_cmFunc.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\Software\Driver\Timer\Timer.o</file>
+            <file>$TOOLKIT_DIR$\lib\shb_l.a</file>
+            <file>$PROJ_DIR$\Debug\Obj\Software\Driver\ADC\ADC_Driver.o</file>
+            <file>$TOOLKIT_DIR$\lib\m7M_tls.a</file>
+            <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\Software\Driver\GPIO\GPIOdriver.o</file>
+            <file>$PROJ_DIR$\Debug\List\tiva.map</file>
+            <file>$TOOLKIT_DIR$\inc\c\aarch32\iccarm_builtin.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\aarch32\cmsis_iar.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
+        </outputs>
+        <file>
+            <name>$PROJ_DIR$\Software\Driver\Timer\Timer.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 26</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 12 37 9 35 33 36 25 34 18 19 22 21 24 23 17 2</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Software\Driver\GPIO\GPIOdriver.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 31</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 12 37 9 35 33 36 25 34 18 22 21 24 23 17 0</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>[ROOT_NODE]</name>
+            <outputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 13 32</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Debug\Exe\tiva.out</name>
+            <outputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 32</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 6 7 29 5 27 14 28 31 26</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Software\App\Main\main.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 14</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 12 37 9 35 33 36 8 25 30 34 18 19 22 21 24 23 17 1 3 4</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Software\Driver\ADC\ADC_Driver.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 28</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 12 37 9 35 33 36 25 34 18 19 22 21 24 23 17 15</file>
+                </tool>
+            </inputs>
+        </file>
+        <forcedrebuild>
+            <name>[REBUILD_ALL]</name>
+        </forcedrebuild>
+    </configuration>
+    <configuration>
+        <name>Release</name>
+        <outputs />
+        <forcedrebuild>
+            <name>[MULTI_TOOL]</name>
+            <tool>ILINK</tool>
+        </forcedrebuild>
+    </configuration>
+</project>

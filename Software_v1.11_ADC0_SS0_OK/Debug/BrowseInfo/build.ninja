@@ -1,0 +1,71 @@
+##IAR Ninja build file
+
+
+#Rules
+rule COMPILER_XCL
+  command = C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\XclFileGenerator.exe $xclcommand -f "$rspfile_name"
+  description = IAR_NEW_TOOL+++COMPILER_XCL+++$in+++"C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\XclFileGenerator.exe" $flags
+  rspfile = $rspfile_name
+  rspfile_content = $flags
+
+rule INDEXER
+  command = C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\SourceIndexer.exe $flags
+  depfile = $out.dep
+  description = IAR_NEW_TOOL+++INDEXER+++$out+++"C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\SourceIndexer.exe" $flags
+
+rule MAKEBROWSE
+  command = C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\makeBrowseData.exe $flags
+  description = IAR_NEW_TOOL+++MAKEBROWSE+++$out+++"C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\makeBrowseData.exe" $flags
+
+rule PDBLINK
+  command = C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\PbdLink.exe $flags
+  description = IAR_NEW_TOOL+++PDBLINK+++$out+++"C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\PbdLink.exe" $flags
+
+
+
+#Build steps
+build D$:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST\Debug\BrowseInfo\Software\App\Main\main.xcl : COMPILER_XCL 
+  xclcommand = -source_file D$:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST\Software\App\Main\main.c -xcl_file D$:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST\Debug\BrowseInfo\Software\App\Main\main.xcl -macro_file D$:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST\Debug\BrowseInfo\Software\App\Main\main.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = D$:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST\Software\App\Main\main.c -o D$:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST\Debug\Obj\Software\App\Main --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -I D$:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST/Software/Interface\ -I D$:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST/Software/Common\ -I D$:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST/Software/Controller\ -Ol --predef_macros D$:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST\Debug\BrowseInfo\Software\App\Main\main.tmp
+  rspfile_name = D$:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST\Debug\BrowseInfo\Software\App\Main\main.xcl.rsp
+
+build D$:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST\Debug\BrowseInfo\Software\Driver\ADC\ADC_Driver.xcl : COMPILER_XCL 
+  xclcommand = -source_file D$:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST\Software\Driver\ADC\ADC_Driver.c -xcl_file D$:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST\Debug\BrowseInfo\Software\Driver\ADC\ADC_Driver.xcl -macro_file D$:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST\Debug\BrowseInfo\Software\Driver\ADC\ADC_Driver.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = D$:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST\Software\Driver\ADC\ADC_Driver.c -o D$:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST\Debug\Obj\Software\Driver\ADC --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -I D$:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST/Software/Interface\ -I D$:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST/Software/Common\ -I D$:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST/Software/Controller\ -Ol --predef_macros D$:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST\Debug\BrowseInfo\Software\Driver\ADC\ADC_Driver.tmp
+  rspfile_name = D$:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST\Debug\BrowseInfo\Software\Driver\ADC\ADC_Driver.xcl.rsp
+
+build D$:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST\Debug\BrowseInfo\Software\Driver\GPIO\GPIOdriver.xcl : COMPILER_XCL 
+  xclcommand = -source_file D$:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST\Software\Driver\GPIO\GPIOdriver.c -xcl_file D$:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST\Debug\BrowseInfo\Software\Driver\GPIO\GPIOdriver.xcl -macro_file D$:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST\Debug\BrowseInfo\Software\Driver\GPIO\GPIOdriver.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = D$:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST\Software\Driver\GPIO\GPIOdriver.c -o D$:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST\Debug\Obj\Software\Driver\GPIO --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -I D$:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST/Software/Interface\ -I D$:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST/Software/Common\ -I D$:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST/Software/Controller\ -Ol --predef_macros D$:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST\Debug\BrowseInfo\Software\Driver\GPIO\GPIOdriver.tmp
+  rspfile_name = D$:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST\Debug\BrowseInfo\Software\Driver\GPIO\GPIOdriver.xcl.rsp
+
+build D$:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST\Debug\BrowseInfo\Software\Driver\Timer\Timer.xcl : COMPILER_XCL 
+  xclcommand = -source_file D$:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST\Software\Driver\Timer\Timer.c -xcl_file D$:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST\Debug\BrowseInfo\Software\Driver\Timer\Timer.xcl -macro_file D$:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST\Debug\BrowseInfo\Software\Driver\Timer\Timer.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = D$:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST\Software\Driver\Timer\Timer.c -o D$:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST\Debug\Obj\Software\Driver\Timer --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -I D$:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST/Software/Interface\ -I D$:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST/Software/Common\ -I D$:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST/Software/Controller\ -Ol --predef_macros D$:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST\Debug\BrowseInfo\Software\Driver\Timer\Timer.tmp
+  rspfile_name = D$:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST\Debug\BrowseInfo\Software\Driver\Timer\Timer.xcl.rsp
+
+build D$:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST\Debug\BrowseInfo\Software\App\Main\main.pbi : INDEXER D$:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST\Debug\BrowseInfo\Software\App\Main\main.xcl |  $
+D$:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST\Software\App\Main\main.c
+  flags = -out=D$:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST\Debug\BrowseInfo\Software\App\Main\main.pbi -f D$:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST\Debug\BrowseInfo\Software\App\Main\main.xcl
+
+build D$:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST\Debug\BrowseInfo\Software\Driver\ADC\ADC_Driver.pbi : INDEXER D$:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST\Debug\BrowseInfo\Software\Driver\ADC\ADC_Driver.xcl |  $
+D$:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST\Software\Driver\ADC\ADC_Driver.c
+  flags = -out=D$:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST\Debug\BrowseInfo\Software\Driver\ADC\ADC_Driver.pbi -f D$:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST\Debug\BrowseInfo\Software\Driver\ADC\ADC_Driver.xcl
+
+build D$:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST\Debug\BrowseInfo\Software\Driver\GPIO\GPIOdriver.pbi : INDEXER D$:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST\Debug\BrowseInfo\Software\Driver\GPIO\GPIOdriver.xcl |  $
+D$:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST\Software\Driver\GPIO\GPIOdriver.c
+  flags = -out=D$:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST\Debug\BrowseInfo\Software\Driver\GPIO\GPIOdriver.pbi -f D$:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST\Debug\BrowseInfo\Software\Driver\GPIO\GPIOdriver.xcl
+
+build D$:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST\Debug\BrowseInfo\Software\Driver\Timer\Timer.pbi : INDEXER D$:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST\Debug\BrowseInfo\Software\Driver\Timer\Timer.xcl |  $
+D$:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST\Software\Driver\Timer\Timer.c
+  flags = -out=D$:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST\Debug\BrowseInfo\Software\Driver\Timer\Timer.pbi -f D$:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST\Debug\BrowseInfo\Software\Driver\Timer\Timer.xcl
+
+build D$:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST\Debug\BrowseInfo\tiva.pbw : MAKEBROWSE D$:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST\Debug\BrowseInfo\tiva.pbd
+  flags = D$:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST\Debug\BrowseInfo\tiva.pbd -output D$:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST\Debug\BrowseInfo\tiva.pbw
+
+build D$:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST\Debug\BrowseInfo\tiva.pbd : PDBLINK D$:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST\Debug\BrowseInfo\Software\App\Main\main.pbi |  $
+D$:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST\Debug\BrowseInfo\Software\Driver\ADC\ADC_Driver.pbi $
+D$:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST\Debug\BrowseInfo\Software\Driver\GPIO\GPIOdriver.pbi $
+D$:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST\Debug\BrowseInfo\Software\Driver\Timer\Timer.pbi
+  flags = -M D$:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST\Debug\BrowseInfo\tiva.pbd D$:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST\Debug\BrowseInfo\Software\App\Main\main.pbi D$:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST\Debug\BrowseInfo\Software\Driver\ADC\ADC_Driver.pbi D$:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST\Debug\BrowseInfo\Software\Driver\GPIO\GPIOdriver.pbi D$:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST\Debug\BrowseInfo\Software\Driver\Timer\Timer.pbi
+
