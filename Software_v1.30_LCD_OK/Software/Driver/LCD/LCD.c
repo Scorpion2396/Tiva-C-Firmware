@@ -24,7 +24,7 @@ GPIO_HI_LO    D7_data;
 void LCD_Setup(GPIO_PORT RS_pin , GPIO_PORT EN_pin , GPIO_PORT D4_pin ,    //
 			   GPIO_PORT D5_pin , GPIO_PORT D6_pin , GPIO_PORT D7_pin  )
 {
-  delay(15);
+ 
   
 	RS = RS_pin;
 	EN = EN_pin;
@@ -213,8 +213,3 @@ static void delay(uint8_t count)
 	}
 }
 
-/******************************use to set cursor to next line********************************************/
-void LCD_nextline()
-{
-  Cmd_Write('n');
-}
