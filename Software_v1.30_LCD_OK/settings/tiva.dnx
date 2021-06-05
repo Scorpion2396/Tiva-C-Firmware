@@ -1,0 +1,141 @@
+<?xml version="1.0"?>
+<settings>
+    <Stack>
+        <FillEnabled>0</FillEnabled>
+        <OverflowWarningsEnabled>1</OverflowWarningsEnabled>
+        <WarningThreshold>90</WarningThreshold>
+        <SpWarningsEnabled>1</SpWarningsEnabled>
+        <WarnLogOnly>1</WarnLogOnly>
+        <UseTrigger>1</UseTrigger>
+        <TriggerName>main</TriggerName>
+        <LimitSize>0</LimitSize>
+        <ByteLimit>50</ByteLimit>
+    </Stack>
+    <Trace1>
+        <Enabled>0</Enabled>
+        <ShowSource>1</ShowSource>
+    </Trace1>
+    <DebugChecksum>
+        <Checksum>3021864016</Checksum>
+    </DebugChecksum>
+    <Disassembly>
+        <InstrCount>0</InstrCount>
+        <MixedMode>1</MixedMode>
+    </Disassembly>
+    <DriverProfiling>
+        <Enabled>0</Enabled>
+        <Mode>1</Mode>
+        <Graph>0</Graph>
+        <Symbiont>0</Symbiont>
+    </DriverProfiling>
+    <Exceptions>
+        <StopOnUncaught>_ 0</StopOnUncaught>
+        <StopOnThrow>_ 0</StopOnThrow>
+    </Exceptions>
+    <CallStack>
+        <ShowArgs>0</ShowArgs>
+    </CallStack>
+    <InterruptLog>
+        <GraphEnabled>0</GraphEnabled>
+        <LogEnabled>0</LogEnabled>
+        <ShowTimeLog>1</ShowTimeLog>
+        <SumEnabled>0</SumEnabled>
+        <ShowTimeSum>1</ShowTimeSum>
+        <SumSortOrder>0</SumSortOrder>
+    </InterruptLog>
+    <DataLog>
+        <GraphEnabled>0</GraphEnabled>
+        <LogEnabled>0</LogEnabled>
+        <ShowTimeLog>1</ShowTimeLog>
+        <SumEnabled>0</SumEnabled>
+        <ShowTimeSum>1</ShowTimeSum>
+    </DataLog>
+    <Interrupts>
+        <Enabled>1</Enabled>
+    </Interrupts>
+    <MemConfig>
+        <Base>1</Base>
+        <Manual>0</Manual>
+        <Ddf>1</Ddf>
+        <TypeViol>0</TypeViol>
+        <Stop>1</Stop>
+    </MemConfig>
+    <Simulator>
+        <Freq>10000000</Freq>
+        <FreqHi>0</FreqHi>
+        <MultiCoreRunAll>1</MultiCoreRunAll>
+    </Simulator>
+    <LmiFtdiDriver>
+        <LMIFTDIserialNo>0E230863</LMIFTDIserialNo>
+        <LMIFTDIfoundProbes />
+        <LmiFtdiResetStyle>0</LmiFtdiResetStyle>
+        <LmiFtdiResetStrategy>0</LmiFtdiResetStrategy>
+        <LeaveTargetRunning>_ 1</LeaveTargetRunning>
+        <CStepIntDis>_ 0</CStepIntDis>
+    </LmiFtdiDriver>
+    <PlDriver>
+        <FirstRun>0</FirstRun>
+        <MemConfigValue>C:\Program Files\IAR Systems\Embedded Workbench 9.0\arm\CONFIG\debugger\TexasInstruments\TM4C123GH6PM.ddf</MemConfigValue>
+    </PlDriver>
+    <ArmDriver>
+        <EnableCache>0</EnableCache>
+    </ArmDriver>
+    <PlDdfRanges>
+        <ConfigRanges0>Memory ROM 16777216 520093696 1</ConfigRanges0>
+        <ConfigRanges1>Memory Periph1 1073741824 1048576 2</ConfigRanges1>
+        <ConfigRanges2>Memory Periph_BitBand 1107296256 33554432 2</ConfigRanges2>
+        <ConfigRanges3>Memory SystemSFR 3758096384 1048576 2</ConfigRanges3>
+        <ConfigRanges4>Memory Flash 0 262144 1</ConfigRanges4>
+        <ConfigRanges5>Memory RAM 536870912 32768 0</ConfigRanges5>
+        <ConfigRanges6>Memory RAM_BitBand 570425344 1048576 0</ConfigRanges6>
+    </PlDdfRanges>
+    <PlCacheRanges>
+        <CustomRanges0>0 0 262144 1 0</CustomRanges0>
+        <CustomRangesText0 />
+        <CustomRanges1>0 16777216 520093696 1 0</CustomRanges1>
+        <CustomRangesText1 />
+        <CustomRanges2>0 536870912 32768 0 0</CustomRanges2>
+        <CustomRangesText2 />
+        <CustomRanges3>0 570425344 1048576 0 0</CustomRanges3>
+        <CustomRangesText3 />
+        <CustomRanges4>0 1073741824 1048576 2 0</CustomRanges4>
+        <CustomRangesText4 />
+        <CustomRanges5>0 1107296256 33554432 2 0</CustomRanges5>
+        <CustomRangesText5 />
+        <CustomRanges6>0 3758096384 1048576 2 0</CustomRanges6>
+        <CustomRangesText6 />
+    </PlCacheRanges>
+    <SfrWindow>
+        <Show>1 1</Show>
+        <Sort>4 0</Sort>
+    </SfrWindow>
+    <Trace2>
+        <Enabled>0</Enabled>
+        <ShowSource>0</ShowSource>
+    </Trace2>
+    <TermIOLog>
+        <LoggingEnabled>_ 0</LoggingEnabled>
+        <LogFile>_ ""</LogFile>
+    </TermIOLog>
+    <LogFile>
+        <LoggingEnabled>_ 0</LoggingEnabled>
+        <LogFile>_ ""</LogFile>
+        <Category>_ 0</Category>
+    </LogFile>
+    <CallStackLog>
+        <Enabled>0</Enabled>
+    </CallStackLog>
+    <CallStackStripe>
+        <ShowTiming>1</ShowTiming>
+    </CallStackStripe>
+    <DisassembleMode>
+        <mode>1</mode>
+    </DisassembleMode>
+    <Breakpoints2>
+        <Count>0</Count>
+    </Breakpoints2>
+    <Aliases>
+        <Count>0</Count>
+        <SuppressDialog>0</SuppressDialog>
+    </Aliases>
+</settings>

@@ -1,0 +1,26 @@
+# ninja log v5
+185	298	6444376601145496	D:/embedded/ADC/Software_v1.20_ADC0_SS3_OK/Debug/Exe/tiva.out	5c7762653e639398
+492	832	6444375255077400	D:/embedded/ADC/Software_v1.20_ADC0_SS3_OK/Debug/Obj/Software/Driver/GPIO/GPIOdriver.o	faa17d76cc2634b1
+237	471	6445891087632935	D:/embedded/LCD/Software_v1.30_LCD_TEST/Debug/Obj/Software/Driver/Timer/Timer.o	67e4f8509d2ad7fd
+14	480	6444375251640298	D:/embedded/ADC/Software_v1.20_ADC0_SS3_OK/Debug/Obj/Software/Driver/ADC/ADC_Driver.o	2e08f58da09456fc
+3	174	6444376599895486	D:/embedded/ADC/Software_v1.20_ADC0_SS3_OK/Debug/Obj/Software/App/Main/main.o	faa31c4037d3fdd5
+617	902	6444375256014791	D:/embedded/ADC/Software_v1.20_ADC0_SS3_OK/Debug/Obj/Software/Driver/Timer/Timer.o	4621dece17669a6e
+4	177	6445893346586792	D:/embedded/LCD/Software_v1.30_LCD_TEST/Debug/Obj/Software/App/Main/main.o	2c280bd2a7f952dc
+11	220	6445891084976850	D:/embedded/LCD/Software_v1.30_LCD_TEST/Debug/Obj/Software/Driver/GPIO/GPIOdriver.o	29fd81c36d8c1a96
+191	391	6445891086695486	D:/embedded/LCD/Software_v1.30_LCD_TEST/Debug/Obj/Software/Driver/ADC/ADC_Driver.o	4f80bd692109bb48
+11	221	6445892352175945	D:/embedded/LCD/Software_v1.30_LCD_TEST/Debug/Obj/Software/Driver/LCD/LCD.o	2e19bdbee8dd295d
+192	309	6445893347992758	D:/embedded/LCD/Software_v1.30_LCD_TEST/Debug/Exe/tiva.out	3498913c8546d2f3
+632	731	6445891090289163	D:/embedded/LCD/Software_v1.30_LCD_TEST/Debug/List/tiva.map	f377a2795aa97bcf
+2	386	6445894911662023	D:/embedded/LCD/Software_v1.30_LCD_TEST/Debug/Obj/Software/App/Main/main.o	2c280bd2a7f952dc
+401	581	6445894913224398	D:/embedded/LCD/Software_v1.30_LCD_TEST/Debug/Exe/tiva.out	3498913c8546d2f3
+2	164	6445895773993106	D:/embedded/LCD/Software_v1.30_LCD_TEST/Debug/Obj/Software/App/Main/main.o	2c280bd2a7f952dc
+176	273	6445895775086694	D:/embedded/LCD/Software_v1.30_LCD_TEST/Debug/Exe/tiva.out	3498913c8546d2f3
+13	425	6445915107204721	D:/embedded/LCD/Software_v1.30_LCD_OK/Debug/Obj/Software/Driver/ADC/ADC_Driver.o	a838887ded43bd21
+3	475	6445915107360965	D:/embedded/LCD/Software_v1.30_LCD_OK/Debug/Obj/Software/App/Main/main.o	b6c7c90357447ce6
+438	686	6445915109860790	D:/embedded/LCD/Software_v1.30_LCD_OK/Debug/Obj/Software/Driver/GPIO/GPIOdriver.o	898d1eb0a27309ee
+491	770	6445915110641978	D:/embedded/LCD/Software_v1.30_LCD_OK/Debug/Obj/Software/Driver/Timer/Timer.o	e4aa8f4ecc123ce3
+700	959	6445915112516844	D:/embedded/LCD/Software_v1.30_LCD_OK/Debug/Obj/Software/Driver/LCD/LCD.o	a882317225da121d
+977	1107	6445915114235490	D:/embedded/LCD/Software_v1.30_LCD_OK/Debug/Exe/tiva.out	80a5921a2cac92e6
+977	1107	6445915114235490	D:/embedded/LCD/Software_v1.30_LCD_OK/Debug/List/tiva.map	80a5921a2cac92e6
+7	379	6445915273794708	D:/embedded/LCD/Software_v1.30_LCD_OK/Debug/Obj/Software/App/Main/main.o	b6c7c90357447ce6
+392	544	6445915275513326	D:/embedded/LCD/Software_v1.30_LCD_OK/Debug/Exe/tiva.out	d37d6b5aec218a57
