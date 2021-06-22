@@ -70,3 +70,13 @@
 1	173	6444370026634841	D:/embedded/ADC/Software_v1.10_ADC0_SS0_TEST/Debug/BrowseInfo/Software/Driver/ADC/ADC_Driver.pbi	b8d4ea8a79319a73
 181	300	6444370027883557	D:/embedded/ADC/Software_v1.10_ADC0_SS0_TEST/Debug/BrowseInfo/tiva.pbd	8c08c6c13eb3b717
 311	1513	6444370039482623	D:/embedded/ADC/Software_v1.10_ADC0_SS0_TEST/Debug/BrowseInfo/tiva.pbw	61663b1bed041cd4
+40	322	6452734830000000	D:/embedded/Firmware/Tiva-c-software/Software_v1.11_ADC0_SS0_OK/Debug/BrowseInfo/Software/Driver/ADC/ADC_Driver.xcl	74b70eeee643e6ca
+50	397	6452734830000000	D:/embedded/Firmware/Tiva-c-software/Software_v1.11_ADC0_SS0_OK/Debug/BrowseInfo/Software/App/Main/main.xcl	5787173c517661e1
+336	577	6452734830000000	D:/embedded/Firmware/Tiva-c-software/Software_v1.11_ADC0_SS0_OK/Debug/BrowseInfo/Software/Driver/GPIO/GPIOdriver.xcl	47581c21c7869f24
+411	701	6452734838645605	D:/embedded/Firmware/Tiva-c-software/Software_v1.11_ADC0_SS0_OK/Debug/BrowseInfo/Software/Driver/ADC/ADC_Driver.pbi	f1ecf59f2b492f5e
+587	884	6452734840520478	D:/embedded/Firmware/Tiva-c-software/Software_v1.11_ADC0_SS0_OK/Debug/BrowseInfo/Software/Driver/GPIO/GPIOdriver.pbi	201fcb04412176c7
+707	1031	6452734840000000	D:/embedded/Firmware/Tiva-c-software/Software_v1.11_ADC0_SS0_OK/Debug/BrowseInfo/Software/Driver/Timer/Timer.xcl	94e1fb1ad2609ae4
+891	1284	6452734844426454	D:/embedded/Firmware/Tiva-c-software/Software_v1.11_ADC0_SS0_OK/Debug/BrowseInfo/Software/App/Main/main.pbi	4ea7a78442bf5c6
+1045	1323	6452734844895174	D:/embedded/Firmware/Tiva-c-software/Software_v1.11_ADC0_SS0_OK/Debug/BrowseInfo/Software/Driver/Timer/Timer.pbi	90d2310cfc2d0d62
+1331	1456	6452734846301366	D:/embedded/Firmware/Tiva-c-software/Software_v1.11_ADC0_SS0_OK/Debug/BrowseInfo/tiva.pbd	9c6ee8b19ebce1c2
+1468	2939	6452734860675366	D:/embedded/Firmware/Tiva-c-software/Software_v1.11_ADC0_SS0_OK/Debug/BrowseInfo/tiva.pbw	46513ac05be5f226

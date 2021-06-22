@@ -23,9 +23,9 @@
 
 if ($debugfile -eq "")
 {
-& "C:\Program Files\IAR Systems\Embedded Workbench 9.0\common\bin\cspybat" -f "D:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST\settings\tiva.Debug.general.xcl" --backend -f "D:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST\settings\tiva.Debug.driver.xcl" 
+& "C:\Program Files\IAR Systems\Embedded Workbench 9.0\common\bin\cspybat" -f "D:\embedded\Firmware\Tiva-c-software\Software_v1.11_ADC0_SS0_OK\settings\tiva.Debug.general.xcl" --backend -f "D:\embedded\Firmware\Tiva-c-software\Software_v1.11_ADC0_SS0_OK\settings\tiva.Debug.driver.xcl" 
 }
 else
 {
-& "C:\Program Files\IAR Systems\Embedded Workbench 9.0\common\bin\cspybat" -f "D:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST\settings\tiva.Debug.general.xcl" --debug_file=$debugfile --backend -f "D:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST\settings\tiva.Debug.driver.xcl" 
+& "C:\Program Files\IAR Systems\Embedded Workbench 9.0\common\bin\cspybat" -f "D:\embedded\Firmware\Tiva-c-software\Software_v1.11_ADC0_SS0_OK\settings\tiva.Debug.general.xcl" --debug_file=$debugfile --backend -f "D:\embedded\Firmware\Tiva-c-software\Software_v1.11_ADC0_SS0_OK\settings\tiva.Debug.driver.xcl" 
 }

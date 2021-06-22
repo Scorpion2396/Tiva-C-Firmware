@@ -1,21 +1,21 @@
-"D:\embedded\Software_v1.01\Software\Driver\Timer\Timer.c"
+"D:\embedded\Firmware\Tiva-c-software\Software_v1.01\Software\Driver\Timer\Timer.c"
 -std=c11
 -ferror-limit=0
 -fbracket-depth=512
 -funsigned-char
 -MD
 -MF
-D:\embedded\Software_v1.01\Debug\BrowseInfo\Software\Driver\Timer\Timer.pbi.dep
+D:\embedded\Firmware\Tiva-c-software\Software_v1.01\Debug\BrowseInfo\Software\Driver\Timer\Timer.pbi.dep
 -o
-D:\embedded\Software_v1.01\Debug\BrowseInfo\Software\Driver\Timer\Timer.pbi
+D:\embedded\Firmware\Tiva-c-software\Software_v1.01\Debug\BrowseInfo\Software\Driver\Timer\Timer.pbi
 -I
-D:\embedded\Software_v1.01\Software\Driver\Timer
+D:\embedded\Firmware\Tiva-c-software\Software_v1.01\Software\Driver\Timer
 -I
-D:\embedded\Software_v1.01/Software/Interface
+D:\embedded\Firmware\Tiva-c-software\Software_v1.01/Software/Interface
 -I
-D:\embedded\Software_v1.01/Software/Common
+D:\embedded\Firmware\Tiva-c-software\Software_v1.01/Software/Common
 -I
-D:\embedded\Software_v1.01/Software/Controller
+D:\embedded\Firmware\Tiva-c-software\Software_v1.01/Software/Controller
 -I
 C:\Program Files\IAR Systems\Embedded Workbench 9.0\arm\inc\c\aarch32
 -I
@@ -23,11 +23,11 @@ C:\Program Files\IAR Systems\Embedded Workbench 9.0\arm\inc
 -I
 C:\Program Files\IAR Systems\Embedded Workbench 9.0\arm\inc\c
 -I
-D:\embedded\Software_v1.01\Software\Interface
+D:\embedded\Firmware\Tiva-c-software\Software_v1.01\Software\Interface
 -I
-D:\embedded\Software_v1.01\Software\Common
+D:\embedded\Firmware\Tiva-c-software\Software_v1.01\Software\Common
 -I
-D:\embedded\Software_v1.01\Software\Controller
+D:\embedded\Firmware\Tiva-c-software\Software_v1.01\Software\Controller
 -D__CHAR_BITS__=8
 -D__CHAR_MAX__=0xff
 -D__CHAR_MIN__=0

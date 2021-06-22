@@ -1,21 +1,21 @@
-"D:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST\Software\App\Main\main.c"
+"D:\embedded\Firmware\Tiva-c-software\Software_v1.11_ADC0_SS0_OK\Software\App\Main\main.c"
 -std=c11
 -ferror-limit=0
 -fbracket-depth=512
 -funsigned-char
 -MD
 -MF
-D:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST\Debug\BrowseInfo\Software\App\Main\main.pbi.dep
+D:\embedded\Firmware\Tiva-c-software\Software_v1.11_ADC0_SS0_OK\Debug\BrowseInfo\Software\App\Main\main.pbi.dep
 -o
-D:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST\Debug\BrowseInfo\Software\App\Main\main.pbi
+D:\embedded\Firmware\Tiva-c-software\Software_v1.11_ADC0_SS0_OK\Debug\BrowseInfo\Software\App\Main\main.pbi
 -I
-D:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST\Software\App\Main
+D:\embedded\Firmware\Tiva-c-software\Software_v1.11_ADC0_SS0_OK\Software\App\Main
 -I
-D:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST/Software/Interface
+D:\embedded\Firmware\Tiva-c-software\Software_v1.11_ADC0_SS0_OK/Software/Interface
 -I
-D:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST/Software/Common
+D:\embedded\Firmware\Tiva-c-software\Software_v1.11_ADC0_SS0_OK/Software/Common
 -I
-D:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST/Software/Controller
+D:\embedded\Firmware\Tiva-c-software\Software_v1.11_ADC0_SS0_OK/Software/Controller
 -I
 C:\Program Files\IAR Systems\Embedded Workbench 9.0\arm\inc\c\aarch32
 -I
@@ -23,11 +23,11 @@ C:\Program Files\IAR Systems\Embedded Workbench 9.0\arm\inc
 -I
 C:\Program Files\IAR Systems\Embedded Workbench 9.0\arm\inc\c
 -I
-D:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST\Software\Interface
+D:\embedded\Firmware\Tiva-c-software\Software_v1.11_ADC0_SS0_OK\Software\Interface
 -I
-D:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST\Software\Common
+D:\embedded\Firmware\Tiva-c-software\Software_v1.11_ADC0_SS0_OK\Software\Common
 -I
-D:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST\Software\Controller
+D:\embedded\Firmware\Tiva-c-software\Software_v1.11_ADC0_SS0_OK\Software\Controller
 -D__CHAR_BITS__=8
 -D__CHAR_MAX__=0xff
 -D__CHAR_MIN__=0

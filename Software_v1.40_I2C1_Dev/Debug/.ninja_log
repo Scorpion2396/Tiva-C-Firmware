@@ -1,0 +1,87 @@
+# ninja log v5
+297	661	6459043225529560	D:/embedded/DEVELOPMENT/I2C/Software_v1.40_I2C_Dev/Debug/Obj/Source/Driver/LCD/LCD.o	f8596b3be0b159
+890	916	6458856116809419	D:/embedded/SOFTWARE_UPDATED/Software_v1.31_LCD_OK/Debug/Exe/tiva.bin	af5028b224b5d02d
+976	1098	6459043230216727	D:/embedded/DEVELOPMENT/I2C/Software_v1.40_I2C_Dev/Debug/List/tiva.map	b7735f42993b1e05
+1120	1151	6459043230685440	D:/embedded/DEVELOPMENT/I2C/Software_v1.40_I2C_Dev/Debug/Exe/tiva.bin	b501d8a83e7221f
+12	272	6458856110183208	D:/embedded/SOFTWARE_UPDATED/Software_v1.31_LCD_OK/Debug/Obj/Source/Driver/ADC/ADC_Driver.o	6f18bd3ed1902cff
+976	1098	6459043230216727	D:/embedded/DEVELOPMENT/I2C/Software_v1.40_I2C_Dev/Debug/Exe/tiva.out	b7735f42993b1e05
+744	871	6458856116339680	D:/embedded/SOFTWARE_UPDATED/Software_v1.31_LCD_OK/Debug/List/tiva.map	c1b1d24cf7fe4c43
+213	483	6458856112331973	D:/embedded/SOFTWARE_UPDATED/Software_v1.31_LCD_OK/Debug/Obj/Source/Driver/GPIO/GPIOdriver.o	56604e728b0588ba
+3	200	6458856109493598	D:/embedded/SOFTWARE_UPDATED/Software_v1.31_LCD_OK/Debug/Obj/Source/App/Main/main.o	3022ab8099598438
+234	612	6459043225060841	D:/embedded/DEVELOPMENT/I2C/Software_v1.40_I2C_Dev/Debug/Obj/Source/Driver/I2C/I2C.o	58bdb38db629fca5
+288	574	6458856113121524	D:/embedded/SOFTWARE_UPDATED/Software_v1.31_LCD_OK/Debug/Obj/Source/Driver/LCD/LCD.o	365080ed832b3ef
+499	727	6458856114760615	D:/embedded/SOFTWARE_UPDATED/Software_v1.31_LCD_OK/Debug/Obj/Source/Driver/Timer/Timer.o	f66f87696eea8960
+744	871	6458856116339680	D:/embedded/SOFTWARE_UPDATED/Software_v1.31_LCD_OK/Debug/Exe/tiva.out	c1b1d24cf7fe4c43
+14	282	6459043221779795	D:/embedded/DEVELOPMENT/I2C/Software_v1.40_I2C_Dev/Debug/Obj/Source/Driver/ADC/ADC_Driver.o	a71c7eec627626dc
+677	959	6459043228654326	D:/embedded/DEVELOPMENT/I2C/Software_v1.40_I2C_Dev/Debug/Obj/Source/Driver/Timer/Timer.o	f60d2388e7f6bdff
+623	919	6459043228341895	D:/embedded/DEVELOPMENT/I2C/Software_v1.40_I2C_Dev/Debug/Obj/Source/Driver/GPIO/GPIOdriver.o	b64407212e713755
+3	223	6459043221311116	D:/embedded/DEVELOPMENT/I2C/Software_v1.40_I2C_Dev/Debug/Obj/Source/App/Main/main.o	9ccd77d8073698ad
+11	454	6459105473878523	D:/embedded/DEVELOPMENT/I2C/Software_v1.40_I2C_Dev/Debug/Obj/Source/Driver/ADC/ADC_Driver.o	a71c7eec627626dc
+418	672	6459105476167199	D:/embedded/DEVELOPMENT/I2C/Software_v1.40_I2C_Dev/Debug/Obj/Source/Driver/GPIO/GPIOdriver.o	b64407212e713755
+468	789	6459105476906776	D:/embedded/DEVELOPMENT/I2C/Software_v1.40_I2C_Dev/Debug/Obj/Source/Driver/Timer/Timer.o	f60d2388e7f6bdff
+688	1002	6459105479445307	D:/embedded/DEVELOPMENT/I2C/Software_v1.40_I2C_Dev/Debug/Obj/Source/Driver/LCD/LCD.o	f8596b3be0b159
+806	1073	6459105480224864	D:/embedded/DEVELOPMENT/I2C/Software_v1.40_I2C_Dev/Debug/Obj/Source/Driver/I2C/I2C.o	58bdb38db629fca5
+1	234	6459105668264661	D:/embedded/DEVELOPMENT/I2C/Software_v1.40_I2C_Dev/Debug/Obj/Source/App/Main/main.o	9ccd77d8073698ad
+13	320	6459105669094147	D:/embedded/DEVELOPMENT/I2C/Software_v1.40_I2C_Dev/Debug/Obj/Source/Driver/ADC/ADC_Driver.o	a71c7eec627626dc
+244	555	6459105671472780	D:/embedded/DEVELOPMENT/I2C/Software_v1.40_I2C_Dev/Debug/Obj/Source/Driver/GPIO/GPIOdriver.o	b64407212e713755
+338	666	6459105672552194	D:/embedded/DEVELOPMENT/I2C/Software_v1.40_I2C_Dev/Debug/Obj/Source/Driver/I2C/I2C.o	58bdb38db629fca5
+571	856	6459105674431097	D:/embedded/DEVELOPMENT/I2C/Software_v1.40_I2C_Dev/Debug/Obj/Source/Driver/LCD/LCD.o	f8596b3be0b159
+682	918	6459105675130710	D:/embedded/DEVELOPMENT/I2C/Software_v1.40_I2C_Dev/Debug/Obj/Source/Driver/Timer/Timer.o	f60d2388e7f6bdff
+935	1066	6459105676629831	D:/embedded/DEVELOPMENT/I2C/Software_v1.40_I2C_Dev/Debug/Exe/tiva.out	ec9f083053731260
+1084	1114	6459105677269470	D:/embedded/DEVELOPMENT/I2C/Software_v1.40_I2C_Dev/Debug/Exe/tiva.bin	b501d8a83e7221f
+18	477	6459109574519035	D:/embedded/DEVELOPMENT/I2C/Software_v1.40_I2C_Dev/Debug/Obj/Source/Driver/ADC/ADC_Driver.o	a71c7eec627626dc
+5	499	6459109574589005	D:/embedded/DEVELOPMENT/I2C/Software_v1.40_I2C_Dev/Debug/Obj/Source/App/Main/main.o	9ccd77d8073698ad
+490	846	6459109578116976	D:/embedded/DEVELOPMENT/I2C/Software_v1.40_I2C_Dev/Debug/Obj/Source/Driver/Timer/Timer.o	f60d2388e7f6bdff
+512	865	6459109578266905	D:/embedded/DEVELOPMENT/I2C/Software_v1.40_I2C_Dev/Debug/Obj/Source/Driver/GPIO/GPIOdriver.o	b64407212e713755
+859	1115	6459109580895417	D:/embedded/DEVELOPMENT/I2C/Software_v1.40_I2C_Dev/Debug/Obj/Source/Driver/LCD/LCD.o	f8596b3be0b159
+879	1161	6459109581365129	D:/embedded/DEVELOPMENT/I2C/Software_v1.40_I2C_Dev/Debug/Obj/Source/Driver/I2C/I2C.o	58bdb38db629fca5
+1180	1291	6459109582814301	D:/embedded/DEVELOPMENT/I2C/Software_v1.40_I2C_Dev/Debug/Exe/tiva.out	b7735f42993b1e05
+1180	1291	6459109582814301	D:/embedded/DEVELOPMENT/I2C/Software_v1.40_I2C_Dev/Debug/List/tiva.map	b7735f42993b1e05
+1308	1335	6459109583294024	D:/embedded/DEVELOPMENT/I2C/Software_v1.40_I2C_Dev/Debug/Exe/tiva.bin	b501d8a83e7221f
+4	136	6459109610964996	D:/embedded/DEVELOPMENT/I2C/Software_v1.40_I2C_Dev/Debug/Exe/tiva.out	ec9f083053731260
+152	174	6459109611524678	D:/embedded/DEVELOPMENT/I2C/Software_v1.40_I2C_Dev/Debug/Exe/tiva.bin	b501d8a83e7221f
+2	272	6459118876303123	D:/embedded/DEVELOPMENT/I2C/Software_v1.40_I2C_Dev/Debug/Obj/Source/Driver/I2C/I2C.o	58bdb38db629fca5
+288	397	6459118877622364	D:/embedded/DEVELOPMENT/I2C/Software_v1.40_I2C_Dev/Debug/Exe/tiva.out	ec9f083053731260
+418	446	6459118878232023	D:/embedded/DEVELOPMENT/I2C/Software_v1.40_I2C_Dev/Debug/Exe/tiva.bin	b501d8a83e7221f
+4	275	6459120991285063	D:/embedded/DEVELOPMENT/I2C/Software_v1.40_I2C_Dev/Debug/Obj/Source/Driver/I2C/I2C.o	58bdb38db629fca5
+284	391	6459120992504395	D:/embedded/DEVELOPMENT/I2C/Software_v1.40_I2C_Dev/Debug/Exe/tiva.out	ec9f083053731260
+413	433	6459120993034073	D:/embedded/DEVELOPMENT/I2C/Software_v1.40_I2C_Dev/Debug/Exe/tiva.bin	b501d8a83e7221f
+16	451	6459144008937727	D:/embedded/DEVELOPMENT/I2C/Software_v1.40_I2C_Dev - Copy/Debug/Obj/Source/App/Main/main.o	a37c5ce174b0f90e
+4	612	6459144010576799	D:/embedded/DEVELOPMENT/I2C/Software_v1.40_I2C_Dev - Copy/Debug/Obj/Source/Driver/GPIO/GPIOdriver.o	f90c2853012fbcf4
+466	805	6459144012445708	D:/embedded/DEVELOPMENT/I2C/Software_v1.40_I2C_Dev - Copy/Debug/Obj/Source/Driver/ADC/ADC_Driver.o	22e358152838998e
+625	998	6459144014424581	D:/embedded/DEVELOPMENT/I2C/Software_v1.40_I2C_Dev - Copy/Debug/Obj/Source/Driver/LCD/LCD.o	bae267b55aece441
+820	1134	6459144015833785	D:/embedded/DEVELOPMENT/I2C/Software_v1.40_I2C_Dev - Copy/Debug/Obj/Source/Driver/I2C/I2C.o	172449c2bab07455
+1015	1277	6459144017173057	D:/embedded/DEVELOPMENT/I2C/Software_v1.40_I2C_Dev - Copy/Debug/Obj/Source/Driver/Timer/Timer.o	f361b8affd156d05
+1294	1448	6459144019041941	D:/embedded/DEVELOPMENT/I2C/Software_v1.40_I2C_Dev - Copy/Debug/Exe/tiva.out	efdb8ab9b442c06f
+1294	1448	6459144019041941	D:/embedded/DEVELOPMENT/I2C/Software_v1.40_I2C_Dev - Copy/Debug/List/tiva.map	efdb8ab9b442c06f
+1470	1507	6459144019701576	D:/embedded/DEVELOPMENT/I2C/Software_v1.40_I2C_Dev - Copy/Debug/Exe/tiva.bin	c1511e4e685f03d3
+3	111	6459144058712305	D:/embedded/DEVELOPMENT/I2C/Software_v1.40_I2C_Dev - Copy/Debug/Exe/tiva.out	2b8ee5854038a2f7
+134	153	6459144059281982	D:/embedded/DEVELOPMENT/I2C/Software_v1.40_I2C_Dev - Copy/Debug/Exe/tiva.bin	c1511e4e685f03d3
+4	290	6459146247658412	D:/embedded/DEVELOPMENT/I2C/Software_v1.40_I2C_Dev - Copy/Debug/Obj/Source/Driver/I2C/I2C.o	172449c2bab07455
+303	425	6459146249057623	D:/embedded/DEVELOPMENT/I2C/Software_v1.40_I2C_Dev - Copy/Debug/Exe/tiva.out	2b8ee5854038a2f7
+446	467	6459146249597309	D:/embedded/DEVELOPMENT/I2C/Software_v1.40_I2C_Dev - Copy/Debug/Exe/tiva.bin	c1511e4e685f03d3
+3	294	6459146954412477	D:/embedded/DEVELOPMENT/I2C/Software_v1.40_I2C_Dev - Copy/Debug/Obj/Source/Driver/I2C/I2C.o	172449c2bab07455
+308	431	6459146955791679	D:/embedded/DEVELOPMENT/I2C/Software_v1.40_I2C_Dev - Copy/Debug/Exe/tiva.out	2b8ee5854038a2f7
+457	476	6459146956411329	D:/embedded/DEVELOPMENT/I2C/Software_v1.40_I2C_Dev - Copy/Debug/Exe/tiva.bin	c1511e4e685f03d3
+4	266	6459161221936586	D:/embedded/DEVELOPMENT/I2C/Software_v1.40_I2C_Dev - Copy/Debug/Obj/Source/Driver/I2C/I2C.o	172449c2bab07455
+279	396	6459161223324974	D:/embedded/DEVELOPMENT/I2C/Software_v1.40_I2C_Dev - Copy/Debug/Exe/tiva.out	2b8ee5854038a2f7
+420	455	6459161224004600	D:/embedded/DEVELOPMENT/I2C/Software_v1.40_I2C_Dev - Copy/Debug/Exe/tiva.bin	c1511e4e685f03d3
+3	249	6459167034570825	D:/embedded/DEVELOPMENT/I2C/Software_v1.40_I2C_Dev - Copy/Debug/Obj/Source/App/Main/main.o	a37c5ce174b0f90e
+13	306	6459167035040540	D:/embedded/DEVELOPMENT/I2C/Software_v1.40_I2C_Dev - Copy/Debug/Obj/Source/Driver/ADC/ADC_Driver.o	22e358152838998e
+262	514	6459167037249262	D:/embedded/DEVELOPMENT/I2C/Software_v1.40_I2C_Dev - Copy/Debug/Obj/Source/Driver/LCD/LCD.o	bae267b55aece441
+322	561	6459167037419160	D:/embedded/DEVELOPMENT/I2C/Software_v1.40_I2C_Dev - Copy/Debug/Obj/Source/Driver/Timer/Timer.o	f361b8affd156d05
+528	815	6459167040237568	D:/embedded/DEVELOPMENT/I2C/Software_v1.40_I2C_Dev - Copy/Debug/Obj/Source/Driver/GPIO/GPIOdriver.o	f90c2853012fbcf4
+11	239	6459167407112473	D:/embedded/DEVELOPMENT/I2C/Software_v1.40_I2C_Dev - Copy/Debug/Obj/Source/App/Main/main.o	a37c5ce174b0f90e
+1	304	6459167407662151	D:/embedded/DEVELOPMENT/I2C/Software_v1.40_I2C_Dev - Copy/Debug/Obj/Source/Driver/ADC/ADC_Driver.o	22e358152838998e
+252	520	6459167409890873	D:/embedded/DEVELOPMENT/I2C/Software_v1.40_I2C_Dev - Copy/Debug/Obj/Source/Driver/GPIO/GPIOdriver.o	f90c2853012fbcf4
+320	638	6459167411080233	D:/embedded/DEVELOPMENT/I2C/Software_v1.40_I2C_Dev - Copy/Debug/Obj/Source/Driver/LCD/LCD.o	bae267b55aece441
+535	851	6459167413268946	D:/embedded/DEVELOPMENT/I2C/Software_v1.40_I2C_Dev - Copy/Debug/Obj/Source/Driver/Timer/Timer.o	f361b8affd156d05
+653	943	6459167414118470	D:/embedded/DEVELOPMENT/I2C/Software_v1.40_I2C_Dev - Copy/Debug/Obj/Source/Driver/I2C/I2C.o	172449c2bab07455
+957	1074	6459167415487686	D:/embedded/DEVELOPMENT/I2C/Software_v1.40_I2C_Dev - Copy/Debug/Exe/tiva.out	2b8ee5854038a2f7
+1091	1109	6459167415977395	D:/embedded/DEVELOPMENT/I2C/Software_v1.40_I2C_Dev - Copy/Debug/Exe/tiva.bin	c1511e4e685f03d3
+3	719	6459854855152215	D:/embedded/DEVELOPMENT/I2C/Software_v1.40_I2C_Dev - Copy/Debug/Obj/Source/App/Main/main.o	a37c5ce174b0f90e
+737	1440	6459854862339891	D:/embedded/DEVELOPMENT/I2C/Software_v1.40_I2C_Dev - Copy/Debug/Exe/tiva.out	2b8ee5854038a2f7
+1469	1658	6459854864683300	D:/embedded/DEVELOPMENT/I2C/Software_v1.40_I2C_Dev - Copy/Debug/Exe/tiva.bin	c1511e4e685f03d3
+2	254	6459857736755431	D:/embedded/DEVELOPMENT/I2C/Software_v1.40_I2C_Dev - Copy/Debug/Obj/Source/Driver/I2C/I2C.o	172449c2bab07455
+271	381	6459857738005351	D:/embedded/DEVELOPMENT/I2C/Software_v1.40_I2C_Dev - Copy/Debug/Exe/tiva.out	2b8ee5854038a2f7
+405	441	6459857738630312	D:/embedded/DEVELOPMENT/I2C/Software_v1.40_I2C_Dev - Copy/Debug/Exe/tiva.bin	c1511e4e685f03d3

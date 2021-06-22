@@ -24,38 +24,38 @@ rule PDBLINK
 
 
 #Build steps
-build D$:\embedded\Software_v1.01\Debug\BrowseInfo\Software\App\Main\main.xcl : COMPILER_XCL 
-  xclcommand = -source_file D$:\embedded\Software_v1.01\Software\App\Main\main.c -xcl_file D$:\embedded\Software_v1.01\Debug\BrowseInfo\Software\App\Main\main.xcl -macro_file D$:\embedded\Software_v1.01\Debug\BrowseInfo\Software\App\Main\main.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
-  flags = D$:\embedded\Software_v1.01\Software\App\Main\main.c -o D$:\embedded\Software_v1.01\Debug\Obj\Software\App\Main --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -I D$:\embedded\Software_v1.01/Software/Interface\ -I D$:\embedded\Software_v1.01/Software/Common\ -I D$:\embedded\Software_v1.01/Software/Controller\ -Ol --predef_macros D$:\embedded\Software_v1.01\Debug\BrowseInfo\Software\App\Main\main.tmp
-  rspfile_name = D$:\embedded\Software_v1.01\Debug\BrowseInfo\Software\App\Main\main.xcl.rsp
+build D$:\embedded\Firmware\Tiva-c-software\Software_v1.01\Debug\BrowseInfo\Software\App\Main\main.xcl : COMPILER_XCL 
+  xclcommand = -source_file D$:\embedded\Firmware\Tiva-c-software\Software_v1.01\Software\App\Main\main.c -xcl_file D$:\embedded\Firmware\Tiva-c-software\Software_v1.01\Debug\BrowseInfo\Software\App\Main\main.xcl -macro_file D$:\embedded\Firmware\Tiva-c-software\Software_v1.01\Debug\BrowseInfo\Software\App\Main\main.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = D$:\embedded\Firmware\Tiva-c-software\Software_v1.01\Software\App\Main\main.c -o D$:\embedded\Firmware\Tiva-c-software\Software_v1.01\Debug\Obj\Software\App\Main --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -I D$:\embedded\Firmware\Tiva-c-software\Software_v1.01/Software/Interface\ -I D$:\embedded\Firmware\Tiva-c-software\Software_v1.01/Software/Common\ -I D$:\embedded\Firmware\Tiva-c-software\Software_v1.01/Software/Controller\ -Ol --predef_macros D$:\embedded\Firmware\Tiva-c-software\Software_v1.01\Debug\BrowseInfo\Software\App\Main\main.tmp
+  rspfile_name = D$:\embedded\Firmware\Tiva-c-software\Software_v1.01\Debug\BrowseInfo\Software\App\Main\main.xcl.rsp
 
-build D$:\embedded\Software_v1.01\Debug\BrowseInfo\Software\Driver\GPIO\GPIOdriver.xcl : COMPILER_XCL 
-  xclcommand = -source_file D$:\embedded\Software_v1.01\Software\Driver\GPIO\GPIOdriver.c -xcl_file D$:\embedded\Software_v1.01\Debug\BrowseInfo\Software\Driver\GPIO\GPIOdriver.xcl -macro_file D$:\embedded\Software_v1.01\Debug\BrowseInfo\Software\Driver\GPIO\GPIOdriver.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
-  flags = D$:\embedded\Software_v1.01\Software\Driver\GPIO\GPIOdriver.c -o D$:\embedded\Software_v1.01\Debug\Obj\Software\Driver\GPIO --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -I D$:\embedded\Software_v1.01/Software/Interface\ -I D$:\embedded\Software_v1.01/Software/Common\ -I D$:\embedded\Software_v1.01/Software/Controller\ -Ol --predef_macros D$:\embedded\Software_v1.01\Debug\BrowseInfo\Software\Driver\GPIO\GPIOdriver.tmp
-  rspfile_name = D$:\embedded\Software_v1.01\Debug\BrowseInfo\Software\Driver\GPIO\GPIOdriver.xcl.rsp
+build D$:\embedded\Firmware\Tiva-c-software\Software_v1.01\Debug\BrowseInfo\Software\Driver\GPIO\GPIOdriver.xcl : COMPILER_XCL 
+  xclcommand = -source_file D$:\embedded\Firmware\Tiva-c-software\Software_v1.01\Software\Driver\GPIO\GPIOdriver.c -xcl_file D$:\embedded\Firmware\Tiva-c-software\Software_v1.01\Debug\BrowseInfo\Software\Driver\GPIO\GPIOdriver.xcl -macro_file D$:\embedded\Firmware\Tiva-c-software\Software_v1.01\Debug\BrowseInfo\Software\Driver\GPIO\GPIOdriver.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = D$:\embedded\Firmware\Tiva-c-software\Software_v1.01\Software\Driver\GPIO\GPIOdriver.c -o D$:\embedded\Firmware\Tiva-c-software\Software_v1.01\Debug\Obj\Software\Driver\GPIO --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -I D$:\embedded\Firmware\Tiva-c-software\Software_v1.01/Software/Interface\ -I D$:\embedded\Firmware\Tiva-c-software\Software_v1.01/Software/Common\ -I D$:\embedded\Firmware\Tiva-c-software\Software_v1.01/Software/Controller\ -Ol --predef_macros D$:\embedded\Firmware\Tiva-c-software\Software_v1.01\Debug\BrowseInfo\Software\Driver\GPIO\GPIOdriver.tmp
+  rspfile_name = D$:\embedded\Firmware\Tiva-c-software\Software_v1.01\Debug\BrowseInfo\Software\Driver\GPIO\GPIOdriver.xcl.rsp
 
-build D$:\embedded\Software_v1.01\Debug\BrowseInfo\Software\Driver\Timer\Timer.xcl : COMPILER_XCL 
-  xclcommand = -source_file D$:\embedded\Software_v1.01\Software\Driver\Timer\Timer.c -xcl_file D$:\embedded\Software_v1.01\Debug\BrowseInfo\Software\Driver\Timer\Timer.xcl -macro_file D$:\embedded\Software_v1.01\Debug\BrowseInfo\Software\Driver\Timer\Timer.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
-  flags = D$:\embedded\Software_v1.01\Software\Driver\Timer\Timer.c -o D$:\embedded\Software_v1.01\Debug\Obj\Software\Driver\Timer --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -I D$:\embedded\Software_v1.01/Software/Interface\ -I D$:\embedded\Software_v1.01/Software/Common\ -I D$:\embedded\Software_v1.01/Software/Controller\ -Ol --predef_macros D$:\embedded\Software_v1.01\Debug\BrowseInfo\Software\Driver\Timer\Timer.tmp
-  rspfile_name = D$:\embedded\Software_v1.01\Debug\BrowseInfo\Software\Driver\Timer\Timer.xcl.rsp
+build D$:\embedded\Firmware\Tiva-c-software\Software_v1.01\Debug\BrowseInfo\Software\Driver\Timer\Timer.xcl : COMPILER_XCL 
+  xclcommand = -source_file D$:\embedded\Firmware\Tiva-c-software\Software_v1.01\Software\Driver\Timer\Timer.c -xcl_file D$:\embedded\Firmware\Tiva-c-software\Software_v1.01\Debug\BrowseInfo\Software\Driver\Timer\Timer.xcl -macro_file D$:\embedded\Firmware\Tiva-c-software\Software_v1.01\Debug\BrowseInfo\Software\Driver\Timer\Timer.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = D$:\embedded\Firmware\Tiva-c-software\Software_v1.01\Software\Driver\Timer\Timer.c -o D$:\embedded\Firmware\Tiva-c-software\Software_v1.01\Debug\Obj\Software\Driver\Timer --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -I D$:\embedded\Firmware\Tiva-c-software\Software_v1.01/Software/Interface\ -I D$:\embedded\Firmware\Tiva-c-software\Software_v1.01/Software/Common\ -I D$:\embedded\Firmware\Tiva-c-software\Software_v1.01/Software/Controller\ -Ol --predef_macros D$:\embedded\Firmware\Tiva-c-software\Software_v1.01\Debug\BrowseInfo\Software\Driver\Timer\Timer.tmp
+  rspfile_name = D$:\embedded\Firmware\Tiva-c-software\Software_v1.01\Debug\BrowseInfo\Software\Driver\Timer\Timer.xcl.rsp
 
-build D$:\embedded\Software_v1.01\Debug\BrowseInfo\Software\App\Main\main.pbi : INDEXER D$:\embedded\Software_v1.01\Debug\BrowseInfo\Software\App\Main\main.xcl |  $
-D$:\embedded\Software_v1.01\Software\App\Main\main.c
-  flags = -out=D$:\embedded\Software_v1.01\Debug\BrowseInfo\Software\App\Main\main.pbi -f D$:\embedded\Software_v1.01\Debug\BrowseInfo\Software\App\Main\main.xcl
+build D$:\embedded\Firmware\Tiva-c-software\Software_v1.01\Debug\BrowseInfo\Software\App\Main\main.pbi : INDEXER D$:\embedded\Firmware\Tiva-c-software\Software_v1.01\Debug\BrowseInfo\Software\App\Main\main.xcl |  $
+D$:\embedded\Firmware\Tiva-c-software\Software_v1.01\Software\App\Main\main.c
+  flags = -out=D$:\embedded\Firmware\Tiva-c-software\Software_v1.01\Debug\BrowseInfo\Software\App\Main\main.pbi -f D$:\embedded\Firmware\Tiva-c-software\Software_v1.01\Debug\BrowseInfo\Software\App\Main\main.xcl
 
-build D$:\embedded\Software_v1.01\Debug\BrowseInfo\Software\Driver\GPIO\GPIOdriver.pbi : INDEXER D$:\embedded\Software_v1.01\Debug\BrowseInfo\Software\Driver\GPIO\GPIOdriver.xcl |  $
-D$:\embedded\Software_v1.01\Software\Driver\GPIO\GPIOdriver.c
-  flags = -out=D$:\embedded\Software_v1.01\Debug\BrowseInfo\Software\Driver\GPIO\GPIOdriver.pbi -f D$:\embedded\Software_v1.01\Debug\BrowseInfo\Software\Driver\GPIO\GPIOdriver.xcl
+build D$:\embedded\Firmware\Tiva-c-software\Software_v1.01\Debug\BrowseInfo\Software\Driver\GPIO\GPIOdriver.pbi : INDEXER D$:\embedded\Firmware\Tiva-c-software\Software_v1.01\Debug\BrowseInfo\Software\Driver\GPIO\GPIOdriver.xcl |  $
+D$:\embedded\Firmware\Tiva-c-software\Software_v1.01\Software\Driver\GPIO\GPIOdriver.c
+  flags = -out=D$:\embedded\Firmware\Tiva-c-software\Software_v1.01\Debug\BrowseInfo\Software\Driver\GPIO\GPIOdriver.pbi -f D$:\embedded\Firmware\Tiva-c-software\Software_v1.01\Debug\BrowseInfo\Software\Driver\GPIO\GPIOdriver.xcl
 
-build D$:\embedded\Software_v1.01\Debug\BrowseInfo\Software\Driver\Timer\Timer.pbi : INDEXER D$:\embedded\Software_v1.01\Debug\BrowseInfo\Software\Driver\Timer\Timer.xcl |  $
-D$:\embedded\Software_v1.01\Software\Driver\Timer\Timer.c
-  flags = -out=D$:\embedded\Software_v1.01\Debug\BrowseInfo\Software\Driver\Timer\Timer.pbi -f D$:\embedded\Software_v1.01\Debug\BrowseInfo\Software\Driver\Timer\Timer.xcl
+build D$:\embedded\Firmware\Tiva-c-software\Software_v1.01\Debug\BrowseInfo\Software\Driver\Timer\Timer.pbi : INDEXER D$:\embedded\Firmware\Tiva-c-software\Software_v1.01\Debug\BrowseInfo\Software\Driver\Timer\Timer.xcl |  $
+D$:\embedded\Firmware\Tiva-c-software\Software_v1.01\Software\Driver\Timer\Timer.c
+  flags = -out=D$:\embedded\Firmware\Tiva-c-software\Software_v1.01\Debug\BrowseInfo\Software\Driver\Timer\Timer.pbi -f D$:\embedded\Firmware\Tiva-c-software\Software_v1.01\Debug\BrowseInfo\Software\Driver\Timer\Timer.xcl
 
-build D$:\embedded\Software_v1.01\Debug\BrowseInfo\tiva.pbw : MAKEBROWSE D$:\embedded\Software_v1.01\Debug\BrowseInfo\tiva.pbd
-  flags = D$:\embedded\Software_v1.01\Debug\BrowseInfo\tiva.pbd -output D$:\embedded\Software_v1.01\Debug\BrowseInfo\tiva.pbw
+build D$:\embedded\Firmware\Tiva-c-software\Software_v1.01\Debug\BrowseInfo\tiva.pbw : MAKEBROWSE D$:\embedded\Firmware\Tiva-c-software\Software_v1.01\Debug\BrowseInfo\tiva.pbd
+  flags = D$:\embedded\Firmware\Tiva-c-software\Software_v1.01\Debug\BrowseInfo\tiva.pbd -output D$:\embedded\Firmware\Tiva-c-software\Software_v1.01\Debug\BrowseInfo\tiva.pbw
 
-build D$:\embedded\Software_v1.01\Debug\BrowseInfo\tiva.pbd : PDBLINK D$:\embedded\Software_v1.01\Debug\BrowseInfo\Software\App\Main\main.pbi |  $
-D$:\embedded\Software_v1.01\Debug\BrowseInfo\Software\Driver\GPIO\GPIOdriver.pbi $
-D$:\embedded\Software_v1.01\Debug\BrowseInfo\Software\Driver\Timer\Timer.pbi
-  flags = -M D$:\embedded\Software_v1.01\Debug\BrowseInfo\tiva.pbd D$:\embedded\Software_v1.01\Debug\BrowseInfo\Software\App\Main\main.pbi D$:\embedded\Software_v1.01\Debug\BrowseInfo\Software\Driver\GPIO\GPIOdriver.pbi D$:\embedded\Software_v1.01\Debug\BrowseInfo\Software\Driver\Timer\Timer.pbi
+build D$:\embedded\Firmware\Tiva-c-software\Software_v1.01\Debug\BrowseInfo\tiva.pbd : PDBLINK D$:\embedded\Firmware\Tiva-c-software\Software_v1.01\Debug\BrowseInfo\Software\App\Main\main.pbi |  $
+D$:\embedded\Firmware\Tiva-c-software\Software_v1.01\Debug\BrowseInfo\Software\Driver\GPIO\GPIOdriver.pbi $
+D$:\embedded\Firmware\Tiva-c-software\Software_v1.01\Debug\BrowseInfo\Software\Driver\Timer\Timer.pbi
+  flags = -M D$:\embedded\Firmware\Tiva-c-software\Software_v1.01\Debug\BrowseInfo\tiva.pbd D$:\embedded\Firmware\Tiva-c-software\Software_v1.01\Debug\BrowseInfo\Software\App\Main\main.pbi D$:\embedded\Firmware\Tiva-c-software\Software_v1.01\Debug\BrowseInfo\Software\Driver\GPIO\GPIOdriver.pbi D$:\embedded\Firmware\Tiva-c-software\Software_v1.01\Debug\BrowseInfo\Software\Driver\Timer\Timer.pbi
 

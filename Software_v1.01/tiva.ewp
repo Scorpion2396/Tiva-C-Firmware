@@ -734,7 +734,7 @@
                 </option>
                 <option>
                     <name>IlinkLogSection</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>IlinkLogVeneer</name>
@@ -742,11 +742,11 @@
                 </option>
                 <option>
                     <name>IlinkIcfOverride</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>IlinkIcfFile</name>
-                    <state>$TOOLKIT_DIR$\config\linker\TexasInstruments\TM4C123GH6.icf</state>
+                    <state>$PROJ_DIR$/settings</state>
                 </option>
                 <option>
                     <name>IlinkIcfFileSlave</name>
@@ -822,7 +822,7 @@
                 </option>
                 <option>
                     <name>FillerEnd</name>
-                    <state>0x0</state>
+                    <state>0x100</state>
                 </option>
                 <option>
                     <name>CrcSize</name>
@@ -853,7 +853,7 @@
                 </option>
                 <option>
                     <name>DoCrc</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>IlinkBE8Slave</name>

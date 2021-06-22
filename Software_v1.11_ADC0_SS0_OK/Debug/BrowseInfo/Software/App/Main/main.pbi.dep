@@ -1,2 +1,22 @@
-D:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST\Debug\BrowseInfo\Software\App\Main\main.pbi: \
-  D:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST\Software\App\Main\main.c
+D:\embedded\Firmware\Tiva-c-software\Software_v1.11_ADC0_SS0_OK\Debug\BrowseInfo\Software\App\Main\main.pbi: \
+  D:\embedded\Firmware\Tiva-c-software\Software_v1.11_ADC0_SS0_OK\Software\App\Main\main.c \
+  D:\embedded\Firmware\Tiva-c-software\Software_v1.11_ADC0_SS0_OK\Software\Controller\TM4C123GH6PM.h \
+  D:\embedded\Firmware\Tiva-c-software\Software_v1.11_ADC0_SS0_OK\Software\Controller\core_cm4.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\stdint.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\ycheck.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\yvals.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\DLib_Defaults.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\DLib_Config_Normal.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\DLib_Product.h \
+  D:\embedded\Firmware\Tiva-c-software\Software_v1.11_ADC0_SS0_OK\Software\Controller\core_cmInstr.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\aarch32\cmsis_iar.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\aarch32\iccarm_builtin.h \
+  D:\embedded\Firmware\Tiva-c-software\Software_v1.11_ADC0_SS0_OK\Software\Controller\core_cmFunc.h \
+  D:\embedded\Firmware\Tiva-c-software\Software_v1.11_ADC0_SS0_OK\Software\Controller\core_cmSimd.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\stdio.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\ysizet.h \
+  D:\embedded\Firmware\Tiva-c-software\Software_v1.11_ADC0_SS0_OK\Software\Interface\GPIO_Driver_Interface.h \
+  D:\embedded\Firmware\Tiva-c-software\Software_v1.11_ADC0_SS0_OK\Software\Common\Common_Datatype.h \
+  D:\embedded\Firmware\Tiva-c-software\Software_v1.11_ADC0_SS0_OK\Software\Interface\Timer_Interface.h \
+  D:\embedded\Firmware\Tiva-c-software\Software_v1.11_ADC0_SS0_OK\Software\Interface\ADC_Driver_Interface.h \
+  D:\embedded\Firmware\Tiva-c-software\Software_v1.11_ADC0_SS0_OK\Software\Common\Common_Macros.h

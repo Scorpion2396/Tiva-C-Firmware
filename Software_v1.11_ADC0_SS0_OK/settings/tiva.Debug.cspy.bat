@@ -25,7 +25,7 @@ if not "%~1" == "" goto debugFile
 
 @echo on 
 
-"C:\Program Files\IAR Systems\Embedded Workbench 9.0\common\bin\cspybat" -f "D:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST\settings\tiva.Debug.general.xcl" --backend -f "D:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST\settings\tiva.Debug.driver.xcl" 
+"C:\Program Files\IAR Systems\Embedded Workbench 9.0\common\bin\cspybat" -f "D:\embedded\Firmware\Tiva-c-software\Software_v1.11_ADC0_SS0_OK\settings\tiva.Debug.general.xcl" --backend -f "D:\embedded\Firmware\Tiva-c-software\Software_v1.11_ADC0_SS0_OK\settings\tiva.Debug.driver.xcl" 
 
 @echo off 
 goto end 
@@ -34,7 +34,7 @@ goto end
 
 @echo on 
 
-"C:\Program Files\IAR Systems\Embedded Workbench 9.0\common\bin\cspybat" -f "D:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST\settings\tiva.Debug.general.xcl" "--debug_file=%~1" --backend -f "D:\embedded\ADC\Software_v1.10_ADC0_SS0_TEST\settings\tiva.Debug.driver.xcl" 
+"C:\Program Files\IAR Systems\Embedded Workbench 9.0\common\bin\cspybat" -f "D:\embedded\Firmware\Tiva-c-software\Software_v1.11_ADC0_SS0_OK\settings\tiva.Debug.general.xcl" "--debug_file=%~1" --backend -f "D:\embedded\Firmware\Tiva-c-software\Software_v1.11_ADC0_SS0_OK\settings\tiva.Debug.driver.xcl" 
 
 @echo off 
 :end

@@ -23,3 +23,11 @@
 320	551	6442667310000000	D:/embedded/Software_v1.01/Debug/BrowseInfo/Software/App/Main/main.xcl	7844301e680090fc
 561	775	6442667316871528	D:/embedded/Software_v1.01/Debug/BrowseInfo/Software/Driver/Timer/Timer.pbi	2d3413f787b4be3
 658	850	6442667317652751	D:/embedded/Software_v1.01/Debug/BrowseInfo/Software/App/Main/main.pbi	bb6c0b7b90ad953f
+75	818	6452724350000000	D:/embedded/Firmware/Tiva-c-software/Software_v1.01/Debug/BrowseInfo/Software/Driver/GPIO/GPIOdriver.xcl	fcd661921f0828d7
+151	857	6452724350000000	D:/embedded/Firmware/Tiva-c-software/Software_v1.01/Debug/BrowseInfo/Software/App/Main/main.xcl	20086b4fee0fcc62
+834	1139	6452724360000000	D:/embedded/Firmware/Tiva-c-software/Software_v1.01/Debug/BrowseInfo/Software/Driver/Timer/Timer.xcl	f9bbdc92fd7f88f7
+868	1492	6452724364702076	D:/embedded/Firmware/Tiva-c-software/Software_v1.01/Debug/BrowseInfo/Software/Driver/GPIO/GPIOdriver.pbi	fae2ffba9d51c396
+1152	1559	6452724365483276	D:/embedded/Firmware/Tiva-c-software/Software_v1.01/Debug/BrowseInfo/Software/App/Main/main.pbi	83d652fc4019fe28
+1500	1734	6452724367201888	D:/embedded/Firmware/Tiva-c-software/Software_v1.01/Debug/BrowseInfo/Software/Driver/Timer/Timer.pbi	26a3cdbfb8cdd799
+1742	1881	6452724368608099	D:/embedded/Firmware/Tiva-c-software/Software_v1.01/Debug/BrowseInfo/tiva.pbd	1550e31840342030
+1893	5129	6452724400637283	D:/embedded/Firmware/Tiva-c-software/Software_v1.01/Debug/BrowseInfo/tiva.pbw	6ce017abdf039edd
