@@ -10,7 +10,7 @@ extern void LCD_Init();
 extern void LCD_SetCursor(uint8_t row , uint8_t pos);
 extern void LCD_Clear();
 extern void LCD_Write(char* lcd_data);
-extern void LCD_nextline();
+
 
 
 #endif	

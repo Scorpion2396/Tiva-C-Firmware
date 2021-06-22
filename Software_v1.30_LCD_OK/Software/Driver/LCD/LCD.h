@@ -18,6 +18,5 @@ static void upper_nibble(uint8_t UpperNibble_data);
 static void lower_nibble(uint8_t LowerNibble_data);
 static void toggle_enable_signal();
 static void delay(uint8_t count);
-void LCD_nextline();
 
 #endif			
