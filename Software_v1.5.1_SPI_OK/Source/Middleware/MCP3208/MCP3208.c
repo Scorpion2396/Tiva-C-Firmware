@@ -9,6 +9,7 @@
 
 #include "SPI_Interface.h"
 #include "TM4C123GH6PM.h"
+#include "MCP3208.h"
 
 unsigned int MCP3208_Rec_data[8]        = {0};
 static volatile	uint8_t  channel_no     = 0U;
