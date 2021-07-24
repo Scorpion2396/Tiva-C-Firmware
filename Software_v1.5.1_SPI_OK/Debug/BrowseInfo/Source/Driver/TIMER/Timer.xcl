@@ -1,23 +1,21 @@
-"D:\embedded\DEVELOPMENT\SPI\Software_v1.5.1_SPI_DEV\Source\Driver\Timer\Timer.c"
+"D:\embedded\DEVELOPMENT\SPI\Software_v1.5.1_SPI_OK\Source\Driver\Timer\Timer.c"
 -std=c11
 -ferror-limit=0
 -fbracket-depth=512
 -funsigned-char
 -MD
 -MF
-D:\embedded\DEVELOPMENT\SPI\Software_v1.5.1_SPI_DEV\Debug\BrowseInfo\Source\Driver\TIMER\Timer.pbi.dep
+D:\embedded\DEVELOPMENT\SPI\Software_v1.5.1_SPI_OK\Debug\BrowseInfo\Source\Driver\TIMER\Timer.pbi.dep
 -o
-D:\embedded\DEVELOPMENT\SPI\Software_v1.5.1_SPI_DEV\Debug\BrowseInfo\Source\Driver\TIMER\Timer.pbi
+D:\embedded\DEVELOPMENT\SPI\Software_v1.5.1_SPI_OK\Debug\BrowseInfo\Source\Driver\TIMER\Timer.pbi
 -I
-D:\embedded\DEVELOPMENT\SPI\Software_v1.5.1_SPI_DEV\Source\Driver\Timer
+D:\embedded\DEVELOPMENT\SPI\Software_v1.5.1_SPI_OK\Source\Driver\Timer
 -I
-D:\embedded\DEVELOPMENT\SPI\Software_v1.5.1_SPI_DEV/Source/Interface
+D:\embedded\DEVELOPMENT\SPI\Software_v1.5.1_SPI_OK/Source/Interface
 -I
-D:\embedded\DEVELOPMENT\SPI\Software_v1.5.1_SPI_DEV/Source/Common
+D:\embedded\DEVELOPMENT\SPI\Software_v1.5.1_SPI_OK/Source/Common
 -I
-D:\embedded\DEVELOPMENT\SPI\Software_v1.5.1_SPI_DEV/Source/Controller
--I
-D:\embedded\DEVELOPMENT\SPI\Software_v1.5.1_SPI_DEV/Source/Middleware
+D:\embedded\DEVELOPMENT\SPI\Software_v1.5.1_SPI_OK/Source/Controller
 -I
 C:\Program Files\IAR Systems\Embedded Workbench 9.0\arm\inc\c\aarch32
 -I
@@ -25,13 +23,11 @@ C:\Program Files\IAR Systems\Embedded Workbench 9.0\arm\inc
 -I
 C:\Program Files\IAR Systems\Embedded Workbench 9.0\arm\inc\c
 -I
-D:\embedded\DEVELOPMENT\SPI\Software_v1.5.1_SPI_DEV\Source\Interface
+D:\embedded\DEVELOPMENT\SPI\Software_v1.5.1_SPI_OK\Source\Interface
 -I
-D:\embedded\DEVELOPMENT\SPI\Software_v1.5.1_SPI_DEV\Source\Common
+D:\embedded\DEVELOPMENT\SPI\Software_v1.5.1_SPI_OK\Source\Common
 -I
-D:\embedded\DEVELOPMENT\SPI\Software_v1.5.1_SPI_DEV\Source\Controller
--I
-D:\embedded\DEVELOPMENT\SPI\Software_v1.5.1_SPI_DEV\Source\Middleware
+D:\embedded\DEVELOPMENT\SPI\Software_v1.5.1_SPI_OK\Source\Controller
 -D__CHAR_BITS__=8
 -D__CHAR_MAX__=0xff
 -D__CHAR_MIN__=0

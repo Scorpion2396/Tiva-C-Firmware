@@ -9,16 +9,17 @@
 
 #include "SPI_Interface.h"
 #include "TM4C123GH6PM.h"
+#include "MCP3208.h"
 
 unsigned int MCP3208_Rec_data[8]        = {0};
-static volatile	uint8_t  channel_no     = 0U;
-static volatile	uint8_t  byte_num       = 0U;
+static 	uint8_t  channel_no     = 0U;
+static 	uint8_t  byte_num       = 0U;
 
 unsigned int* MCP3208()
 {
-	static	volatile uint8_t  temp_rev_byte  = 0U;
-	static  volatile uint8_t  temp_send_byte = 0U;
-	static  volatile uint32_t temp_rev_data  = 0U;
+	static	 uint8_t  temp_rev_byte  = 0U;
+	static   uint8_t  temp_send_byte = 0U;
+	static   uint32_t temp_rev_data  = 0U;
 		
 	SSI_2_Init();
 	

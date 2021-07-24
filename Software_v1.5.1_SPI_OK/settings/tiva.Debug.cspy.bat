@@ -25,7 +25,7 @@ if not "%~1" == "" goto debugFile
 
 @echo on 
 
-"C:\Program Files\IAR Systems\Embedded Workbench 9.0\common\bin\cspybat" -f "D:\embedded\DEVELOPMENT\SPI\Software_v1.5.1_SPI_DEV\settings\tiva.Debug.general.xcl" --backend -f "D:\embedded\DEVELOPMENT\SPI\Software_v1.5.1_SPI_DEV\settings\tiva.Debug.driver.xcl" 
+"C:\Program Files\IAR Systems\Embedded Workbench 9.0\common\bin\cspybat" -f "D:\embedded\DEVELOPMENT\SPI\Software_v1.5.1_SPI_OK\settings\tiva.Debug.general.xcl" --backend -f "D:\embedded\DEVELOPMENT\SPI\Software_v1.5.1_SPI_OK\settings\tiva.Debug.driver.xcl" 
 
 @echo off 
 goto end 
@@ -34,7 +34,7 @@ goto end
 
 @echo on 
 
-"C:\Program Files\IAR Systems\Embedded Workbench 9.0\common\bin\cspybat" -f "D:\embedded\DEVELOPMENT\SPI\Software_v1.5.1_SPI_DEV\settings\tiva.Debug.general.xcl" "--debug_file=%~1" --backend -f "D:\embedded\DEVELOPMENT\SPI\Software_v1.5.1_SPI_DEV\settings\tiva.Debug.driver.xcl" 
+"C:\Program Files\IAR Systems\Embedded Workbench 9.0\common\bin\cspybat" -f "D:\embedded\DEVELOPMENT\SPI\Software_v1.5.1_SPI_OK\settings\tiva.Debug.general.xcl" "--debug_file=%~1" --backend -f "D:\embedded\DEVELOPMENT\SPI\Software_v1.5.1_SPI_OK\settings\tiva.Debug.driver.xcl" 
 
 @echo off 
 :end

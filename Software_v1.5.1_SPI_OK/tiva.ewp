@@ -338,7 +338,6 @@
                     <state>$PROJ_DIR$/Source/Interface</state>
                     <state>$PROJ_DIR$/Source/Common</state>
                     <state>$PROJ_DIR$/Source/Controller</state>
-                    <state>$PROJ_DIR$/Source/Middleware</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -654,7 +653,7 @@
             <data>
                 <extensions></extensions>
                 <cmdline></cmdline>
-                <hasPrio>64</hasPrio>
+                <hasPrio>1</hasPrio>
                 <buildSequence>inputOutputBased</buildSequence>
             </data>
         </settings>
