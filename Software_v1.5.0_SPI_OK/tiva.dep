@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+    <fileVersion>5</fileVersion>
+    <fileChecksum>3051506912</fileChecksum>
+    <configuration>
+        <name>Debug</name>
+        <outputs>
+            <file>$PROJ_DIR$\Source\Driver\LCD\LCD.c</file>
+            <file>$PROJ_DIR$\Source\Driver\I2C\I2C.h</file>
+            <file>$PROJ_DIR$\Source\App\Main\main.c</file>
+            <file>$PROJ_DIR$\Source\Driver\ADC\ADC_Driver.c</file>
+            <file>$PROJ_DIR$\Source\Driver\ADC\ADC_Driver.h</file>
+            <file>$PROJ_DIR$\Source\Driver\LCD\LCD.h</file>
+            <file>$PROJ_DIR$\Source\Driver\I2C\I2C.c</file>
+            <file>$PROJ_DIR$\Source\Common\Common_Macros.h</file>
+            <file>$PROJ_DIR$\Source\Common\Common_Const.h</file>
+            <file>$PROJ_DIR$\Source\Controller\core_cm4.h</file>
+            <file>$PROJ_DIR$\Source\Common\Common_Datatype.h</file>
+            <file>$PROJ_DIR$\Source\Driver\GPIO\GPIOdriver.c</file>
+            <file>$PROJ_DIR$\Source\Driver\GPIO\GPIOdriver.h</file>
+            <file>$PROJ_DIR$\Source\Controller\TM4C123GH6PM.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\Source\Driver\ADC\ADC_Driver.o</file>
+            <file>$PROJ_DIR$\Source\Interface\I2C_Interface.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\aarch32\iccarm_builtin.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\Source\Driver\Timer\Timer.o</file>
+            <file>$PROJ_DIR$\Source\Interface\LCD_Interface.h</file>
+            <file>$PROJ_DIR$\Source\Interface\GPIO_Driver_Interface.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
+            <file>$TOOLKIT_DIR$\lib\dl7M_tln.a</file>
+            <file>$PROJ_DIR$\Source\Interface\Timer_Interface.h</file>
+            <file>$TOOLKIT_DIR$\config\linker\TexasInstruments\TM4C123GH6.icf</file>
+            <file>$PROJ_DIR$\Debug\Obj\Source\Driver\I2C\I2C.o</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
+            <file>$PROJ_DIR$\Source\Driver\Timer\Timer.c</file>
+            <file>$PROJ_DIR$\Debug\Obj\Source\App\Main\main.o</file>
+            <file>$TOOLKIT_DIR$\lib\shb_l.a</file>
+            <file>$TOOLKIT_DIR$\inc\c\aarch32\cmsis_iar.h</file>
+            <file>$PROJ_DIR$\Source\Controller\core_cmSimd.h</file>
+            <file>$PROJ_DIR$\Source\Driver\Timer\Timer.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Normal.h</file>
+            <file>$TOOLKIT_DIR$\lib\m7M_tls.a</file>
+            <file>$PROJ_DIR$\Source\Controller\core_cmFunc.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\Source\Driver\GPIO\GPIOdriver.o</file>
+            <file>$PROJ_DIR$\Debug\List\tiva.map</file>
+            <file>$PROJ_DIR$\Source\Interface\ADC_Driver_Interface.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\Source\Driver\LCD\LCD.o</file>
+            <file>$PROJ_DIR$\Debug\Exe\tiva.bin</file>
+            <file>$PROJ_DIR$\Source\Controller\core_cmInstr.h</file>
+            <file>$TOOLKIT_DIR$\lib\rt7M_tl.a</file>
+            <file>$PROJ_DIR$\Debug\Exe\tiva.out</file>
+            <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
+            <file>$PROJ_DIR$\Source\Interface\SPI_Interface.h</file>
+            <file>$PROJ_DIR$\Source\Controller\core_cm0.h</file>
+            <file>$PROJ_DIR$\Source\Controller\arm_math.h</file>
+            <file>$PROJ_DIR$\Source\Controller\core_sc000.h</file>
+            <file>$PROJ_DIR$\Source\Controller\core_sc300.h</file>
+            <file>$PROJ_DIR$\Source\Controller\arm_const_structs.h</file>
+            <file>$PROJ_DIR$\Source\Controller\cmsis_gcc.h</file>
+            <file>$PROJ_DIR$\Source\Controller\cmsis_armcc.h</file>
+            <file>$PROJ_DIR$\Source\Controller\cmsis_armcc_V6.h</file>
+            <file>$PROJ_DIR$\Source\Controller\arm_common_tables.h</file>
+            <file>$PROJ_DIR$\Source\Driver\SPI\SPI.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\Source\Driver\SPI\SPI.o</file>
+            <file>$PROJ_DIR$\Source\Driver\SPI\SPI.c</file>
+        </outputs>
+        <file>
+            <name>$PROJ_DIR$\Source\Driver\LCD\LCD.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 40</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 34 16 27 31 17 26 21 45 10 13 9 36 42 32 5 20</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Source\App\Main\main.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 29</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 34 16 27 31 17 26 21 45 10 7 13 9 36 42 32 39 20 15 19 46 23</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Source\Driver\ADC\ADC_Driver.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 14</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 34 16 27 31 17 26 21 45 8 10 7 13 9 36 42 32 4 20</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Source\Driver\I2C\I2C.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 25</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 34 16 27 31 17 26 21 45 13 9 36 42 32 1</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Source\Driver\GPIO\GPIOdriver.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 37</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 34 16 27 31 17 26 21 45 8 10 13 9 36 42 32 12</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>[ROOT_NODE]</name>
+            <outputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 44 38</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Source\Driver\Timer\Timer.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 18</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 34 16 27 31 17 26 21 45 10 7 13 9 36 42 32 33</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Debug\Exe\tiva.bin</name>
+            <inputs>
+                <tool>
+                    <name>OBJCOPY</name>
+                    <file> 44</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Debug\Exe\tiva.out</name>
+            <outputs>
+                <tool>
+                    <name>OBJCOPY</name>
+                    <file> 41</file>
+                </tool>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 38</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 24 22 35 43 30 29 14 37 25 40 57 18</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Source\Driver\SPI\SPI.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 57</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 34 16 27 31 17 26 21 45 10 7 13 9 36 42 32 56 20</file>
+                </tool>
+            </inputs>
+        </file>
+        <forcedrebuild>
+            <name>[REBUILD_ALL]</name>
+        </forcedrebuild>
+    </configuration>
+    <configuration>
+        <name>Release</name>
+        <outputs />
+        <forcedrebuild>
+            <name>[MULTI_TOOL]</name>
+            <tool>ILINK</tool>
+        </forcedrebuild>
+    </configuration>
+</project>
