@@ -1,18 +1,18 @@
-D:\embedded\DEVELOPMENT\RTC\Software_v1.7.2_RTC_DEV\Debug\BrowseInfo\Source\Middleware\RTC_DS3231\DS3231.pbi: \
-  D:\embedded\DEVELOPMENT\RTC\Software_v1.7.2_RTC_DEV\Source\Middleware\RTC_DS3231\DS3231.c \
-  D:\embedded\DEVELOPMENT\RTC\Software_v1.7.2_RTC_DEV\Source\Middleware\RTC_DS3231\DS3231.h \
-  D:\embedded\DEVELOPMENT\RTC\Software_v1.7.2_RTC_DEV\Source\Interface\I2C_Interface.h \
-  D:\embedded\DEVELOPMENT\RTC\Software_v1.7.2_RTC_DEV\Source\CMSIS\TM4C123GH6PM.h \
-  D:\embedded\DEVELOPMENT\RTC\Software_v1.7.2_RTC_DEV\Source\CMSIS\core_cm4.h \
-  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\stdint.h \
-  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\ycheck.h \
-  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\yvals.h \
-  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\DLib_Defaults.h \
-  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\DLib_Config_Normal.h \
-  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\DLib_Product.h \
-  D:\embedded\DEVELOPMENT\RTC\Software_v1.7.2_RTC_DEV\Source\CMSIS\core_cmInstr.h \
-  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\aarch32\cmsis_iar.h \
+D:\embedded\DEVELOPMENT\RTC\Software_v1.7.2_RTC_OK\Debug\BrowseInfo\Source\Middleware\RTC_DS3231\DS3231.pbi: \
+  D:\embedded\DEVELOPMENT\RTC\Software_v1.7.2_RTC_OK\Source\Common\Common_Datatype.h \
+  D:\embedded\DEVELOPMENT\RTC\Software_v1.7.2_RTC_OK\Source\CMSIS\core_cmSimd.h \
+  D:\embedded\DEVELOPMENT\RTC\Software_v1.7.2_RTC_OK\Source\CMSIS\core_cmFunc.h \
   C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\aarch32\iccarm_builtin.h \
-  D:\embedded\DEVELOPMENT\RTC\Software_v1.7.2_RTC_DEV\Source\CMSIS\core_cmFunc.h \
-  D:\embedded\DEVELOPMENT\RTC\Software_v1.7.2_RTC_DEV\Source\CMSIS\core_cmSimd.h \
-  D:\embedded\DEVELOPMENT\RTC\Software_v1.7.2_RTC_DEV\Source\Common\Common_Datatype.h
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\aarch32\cmsis_iar.h \
+  D:\embedded\DEVELOPMENT\RTC\Software_v1.7.2_RTC_OK\Source\CMSIS\core_cmInstr.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\DLib_Product.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\DLib_Config_Normal.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\DLib_Defaults.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\yvals.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\ycheck.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\stdint.h \
+  D:\embedded\DEVELOPMENT\RTC\Software_v1.7.2_RTC_OK\Source\CMSIS\core_cm4.h \
+  D:\embedded\DEVELOPMENT\RTC\Software_v1.7.2_RTC_OK\Source\CMSIS\TM4C123GH6PM.h \
+  D:\embedded\DEVELOPMENT\RTC\Software_v1.7.2_RTC_OK\Source\Interface\I2C_Interface.h \
+  D:\embedded\DEVELOPMENT\RTC\Software_v1.7.2_RTC_OK\Source\Middleware\RTC_DS3231\DS3231.h \
+  D:\embedded\DEVELOPMENT\RTC\Software_v1.7.2_RTC_OK\Source\Middleware\RTC_DS3231\DS3231.c

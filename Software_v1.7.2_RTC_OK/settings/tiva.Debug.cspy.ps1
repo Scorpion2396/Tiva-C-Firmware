@@ -23,9 +23,9 @@
 
 if ($debugfile -eq "")
 {
-& "C:\Program Files\IAR Systems\Embedded Workbench 9.0\common\bin\cspybat" -f "D:\embedded\DEVELOPMENT\RTC\Software_v1.7.2_RTC_DEV\settings\tiva.Debug.general.xcl" --backend -f "D:\embedded\DEVELOPMENT\RTC\Software_v1.7.2_RTC_DEV\settings\tiva.Debug.driver.xcl" 
+& "C:\Program Files\IAR Systems\Embedded Workbench 9.0\common\bin\cspybat" -f "D:\embedded\DEVELOPMENT\RTC\Software_v1.7.2_RTC_OK\settings\tiva.Debug.general.xcl" --backend -f "D:\embedded\DEVELOPMENT\RTC\Software_v1.7.2_RTC_OK\settings\tiva.Debug.driver.xcl" 
 }
 else
 {
-& "C:\Program Files\IAR Systems\Embedded Workbench 9.0\common\bin\cspybat" -f "D:\embedded\DEVELOPMENT\RTC\Software_v1.7.2_RTC_DEV\settings\tiva.Debug.general.xcl" --debug_file=$debugfile --backend -f "D:\embedded\DEVELOPMENT\RTC\Software_v1.7.2_RTC_DEV\settings\tiva.Debug.driver.xcl" 
+& "C:\Program Files\IAR Systems\Embedded Workbench 9.0\common\bin\cspybat" -f "D:\embedded\DEVELOPMENT\RTC\Software_v1.7.2_RTC_OK\settings\tiva.Debug.general.xcl" --debug_file=$debugfile --backend -f "D:\embedded\DEVELOPMENT\RTC\Software_v1.7.2_RTC_OK\settings\tiva.Debug.driver.xcl" 
 }

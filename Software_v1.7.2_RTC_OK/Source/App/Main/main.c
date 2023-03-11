@@ -25,8 +25,7 @@ void main()
     int rtc_val = 0;
     char str[100];
 
-    ds3231_write_hrs(0x65);
-    ds3231_write_hrs(0x66);
+    ds3231_write_hrs(12);
     ds3231_write_min(52);
     ds3231_write_sec(0);
       
