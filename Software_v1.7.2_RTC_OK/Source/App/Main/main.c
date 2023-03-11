@@ -19,7 +19,7 @@ uint8_t led_State = 0U;
 
 void main()
 {
-  I2C_Init(I2C_1, 20);
+  I2C_Init(I2C_2, 20);
   UART_init(UART_0, 115200);
   
     int rtc_val = 0;

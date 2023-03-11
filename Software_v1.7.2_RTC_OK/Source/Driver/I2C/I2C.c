@@ -332,7 +332,7 @@ void I2C_Read_Multiple(uint8_t slave_address , char *data , uint8_t num_of_data)
 			
 			if(Check_I2C_error())
 			{
-				*data  =  I2C1->MDR ;
+				*data  =  I2C_config[I2C_Index].I2C_Perif_Addr->MDR ;
 			}
 		}
 		
