@@ -284,15 +284,16 @@ void ssd1306_Print_String(uint8_t* str)
 			{
 				ssd1306_data(font_5x8[str[str_cnt] - 32][font_col]);
                                 
-                                if(ssd1306_current_col < SSD1306_WIDTH)
+                                if(ssd1306_current_col < (SSD1306_WIDTH - font_width))
                                 {
                                    ssd1306_current_col += font_width;
                                 }
                                 else
                                 {
+                                   ssd1306_current_col += font_width;
                                    ssd1306_current_col %= SSD1306_WIDTH ;
                                    
-                                   if(ssd1306_current_page < SSD1306_PAGES)
+                                   if(ssd1306_current_page < (SSD1306_PAGES - 1))
                                    {
                                        ssd1306_current_page++;
                                    }
