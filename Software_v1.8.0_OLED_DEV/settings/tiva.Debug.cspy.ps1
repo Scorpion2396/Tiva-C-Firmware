@@ -23,9 +23,9 @@
 
 if ($debugfile -eq "")
 {
-& "C:\Program Files\IAR Systems\Embedded Workbench 9.0\common\bin\cspybat" -f "D:\embedded\DEVELOPMENT\OLED\Software_v1.8.0_OLED_DEV\settings\tiva.Debug.general.xcl" --backend -f "D:\embedded\DEVELOPMENT\OLED\Software_v1.8.0_OLED_DEV\settings\tiva.Debug.driver.xcl" 
+& "C:\Program Files\IAR Systems\Embedded Workbench 9.0\common\bin\cspybat" -f "D:\embedded\Firmware\Tiva-c-software\Software_v1.8.0_OLED_DEV\settings\tiva.Debug.general.xcl" --backend -f "D:\embedded\Firmware\Tiva-c-software\Software_v1.8.0_OLED_DEV\settings\tiva.Debug.driver.xcl" 
 }
 else
 {
-& "C:\Program Files\IAR Systems\Embedded Workbench 9.0\common\bin\cspybat" -f "D:\embedded\DEVELOPMENT\OLED\Software_v1.8.0_OLED_DEV\settings\tiva.Debug.general.xcl" --debug_file=$debugfile --backend -f "D:\embedded\DEVELOPMENT\OLED\Software_v1.8.0_OLED_DEV\settings\tiva.Debug.driver.xcl" 
+& "C:\Program Files\IAR Systems\Embedded Workbench 9.0\common\bin\cspybat" -f "D:\embedded\Firmware\Tiva-c-software\Software_v1.8.0_OLED_DEV\settings\tiva.Debug.general.xcl" --debug_file=$debugfile --backend -f "D:\embedded\Firmware\Tiva-c-software\Software_v1.8.0_OLED_DEV\settings\tiva.Debug.driver.xcl" 
 }
