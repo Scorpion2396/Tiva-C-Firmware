@@ -11,5 +11,6 @@
 "./Source/Driver/Timer/timercnter.o"
 "./Source/Driver/UART/UART.o"
 "./Source/Middleware/MCP3208/MCP3208.o"
+"./Source/Middleware/OLED_SSD1306/SSD1306.o"
 "./Source/Middleware/RTC_DS3231/DS3231.o"
 -Wl,-T"../tm4c123gh6pm.lds"

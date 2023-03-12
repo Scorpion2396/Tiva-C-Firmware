@@ -2,8 +2,10 @@
 #define I2C_H
 
 #include "TM4C123GH6PM.h"
+#include "Common_Datatype.h"
 
-void I2C_1_Init();
+/******************* function prototypes *********************/
+void I2C_Init(I2C_Channel I2C_Ch_Index, uint32_t I2C_Freq_KHz);
 
 void I2C_Write(uint8_t slave_address , uint8_t data );
 void I2C_Write_Memory(uint8_t slave_address , uint8_t slave_memory_address , uint8_t data );

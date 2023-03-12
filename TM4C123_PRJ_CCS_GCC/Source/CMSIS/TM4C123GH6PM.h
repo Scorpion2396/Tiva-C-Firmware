@@ -431,7 +431,7 @@ void PWM1Fault_IRQHandler(void);
 
 #include "core_cm4.h"                               /*!< Cortex-M4 processor and core peripherals                              */
 //#include "system_TM4C123GH6PM.h"                    /*!< TM4C123GH6PM System                                                   */
-#include "cmsis_gcc.h"
+//#include "cmsis_gcc.h"
 
 /* ================================================================================ */
 /* ================       Device Specific Peripheral Section       ================ */

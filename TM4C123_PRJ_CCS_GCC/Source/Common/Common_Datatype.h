@@ -92,6 +92,52 @@ typedef struct
 	uint8_t  MSG_DLC   ;
 	uint8_t  MSG_ObjNo ;
 }CAN0_MSG_Obj;
-		
+
+
+/********************* I2C ***************************/
+typedef struct
+{
+    I2C0_Type* const I2C_Perif_Addr;           
+    GPIOA_Type* const GPIO_Perif_Addr;  
+    const uint8_t GPIO_Perif_Index;
+    const uint8_t SCL_Pin;
+    const uint8_t SDA_Pin;
+    const uint8_t GPIOPCTL_Index;
+}I2C_config_type;
+
+
+typedef enum
+{
+  I2C_0 = 0,
+  I2C_1 = 1,
+  I2C_2 = 2,
+  I2C_3 = 3
+}I2C_Channel;
+	
+
+/********************* UART ***************************/
+typedef struct
+{
+    UART0_Type* const UART_Perif_Addr;           
+    GPIOA_Type* const GPIO_Perif_Addr;  
+    const uint8_t GPIO_Perif_Index;
+    const uint8_t RX_Pin;
+    const uint8_t TX_Pin;
+    const uint8_t GPIOPCTL_Index;
+}UART_config_type;
+
+
+typedef enum
+{
+  UART_0 = 0,
+  UART_1 = 1,
+  UART_2 = 2,
+  UART_3 = 3,
+  UART_4 = 4,
+  UART_5 = 5,
+  UART_6 = 6,
+  UART_7 = 7
+}UART_Channel;
+
 
 #endif

@@ -123,5 +123,6 @@ Source/Driver/SPI \
 Source/Driver/Timer \
 Source/Driver/UART \
 Source/Middleware/MCP3208 \
+Source/Middleware/OLED_SSD1306 \
 Source/Middleware/RTC_DS3231 \
 

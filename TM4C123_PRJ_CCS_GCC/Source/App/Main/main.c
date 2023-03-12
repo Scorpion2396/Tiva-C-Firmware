@@ -1,83 +1,63 @@
+#include<stdio.h>
 #include "TM4C123GH6PM.h"
-//#include "GPIOdriver.h"
-//#include "Timer.h"
-
-#include "GPIO_Driver_Interface.h"
+//#include "GPIO_Driver_Interface.h"
 #include "Timer_Interface.h"
+#include "ADC_Driver_Interface.h"
 #include "Common_Datatype.h"
+#include "Common_Macros.h"
+//#include "LCD_Interface.h"
+#include "I2C_Interface.h"
+//#include "SPI_Interface.h"
+//#include "MCP3208_Interface.h"
+//#include "CAN_Interface.h"
+#include "UART_Interface.h"
+#include "timercnter_interface.h"
+#include "DS3231_Interface.h"
+#include "SSD1306_Interface.h"
+
+uint8_t led_State = 0U;
 
 
-int main()
+void main()
 {
-    __enable_irq();
-
-	int sw1 = 0 ;
-    int sw2 = 0 ;
-
+  I2C_Init(I2C_2, 20);
+  UART_init(UART_0, 115200);
+  ssd1306_init();
   
-  while(1)
-  {
+    int rtc_val = 0;
+    char str[100];
 
-      sw1 = DigitalRead(PF0,PU);  //normally sw1 = 1, when sw1 is pressed sw1 = 0
-      sw2 = DigitalRead(PF4,PU);  //normally sw2 = 1, when sw2 is pressed sw2 = 0
-
-      if(sw1 == 0 && sw2 == 1)
-          DigitalWrite( PF3 , HIGH);
-      else
-          DigitalWrite( PF3 , LOW);
-
-
-      if(sw2 == 0 && sw1 == 1)
-          DigitalWrite( PF1 , HIGH);
-      else
-          DigitalWrite( PF1 , LOW);
-
-
-      if(sw1 == 0 && sw2 == 0)
-          DigitalWrite( PF2 , HIGH);
-      else
-          DigitalWrite( PF2 , LOW);
-
-
-/*  	Timer_0();
-  	
-    
-    if(Flag_500ms == 1)
+    ds3231_write_hrs(12);
+    ds3231_write_min(52);
+    ds3231_write_sec(0);
+      
+    while(1)
     {
-    	a ^= 1;
-    	
-    	if(a == 1)
-       		DigitalWrite( PF1 , HIGH);
-       		
-   		else
-   		   DigitalWrite( PF1 , LOW);
-      		    
-	}
+        Timer_scheduler();
+        
+        if(Flag_1000ms == 1)
+        {
+          ssd1306_setcursor(0,0);
+          ssd1306_Print_String("Saksham Raj");
+          
+          
+ /*           rtc_val = ds3231_read_hrs();
+            sprintf(str,"%d", rtc_val);
+            UART_print("HRS = ");
+            UART_print(str);
+            
+            rtc_val = ds3231_read_min();
+            sprintf(str,"%d", rtc_val);
+            UART_print(" : MIN = ");
+            UART_print(str);
+           
+            rtc_val = ds3231_read_sec();
+            sprintf(str,"%d\r\n", rtc_val);
+            UART_print(" : SEC = ");
+            UART_print(str);
+*/
+            
+        }
 
-    if(Flag_1000ms == 1)
-    {
-    	b ^= 1;
-    	
-    	if(b == 1)
-       		DigitalWrite( PF2 , HIGH);
-       		
-   		else
-   		   DigitalWrite( PF2 , LOW);
-      		    
-	}
-    
-        if(Flag_2000ms == 1)
-    {
-    	c ^= 1;
-    	
-    	if(c == 1)
-       		DigitalWrite( PF3 , HIGH);
-       		
-   		else
-   		   DigitalWrite( PF3 , LOW);
-      		    
-	} */
-
-
-  }
+    }
 }

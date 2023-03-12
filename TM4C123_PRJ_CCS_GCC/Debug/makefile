@@ -23,6 +23,7 @@ ORDERED_OBJS += \
 "./Source/Driver/Timer/timercnter.o" \
 "./Source/Driver/UART/UART.o" \
 "./Source/Middleware/MCP3208/MCP3208.o" \
+"./Source/Middleware/OLED_SSD1306/SSD1306.o" \
 "./Source/Middleware/RTC_DS3231/DS3231.o" \
 -Wl,-T"../tm4c123gh6pm.lds" \
 $(GEN_CMDS__FLAG) \
@@ -46,6 +47,7 @@ RMDIR := RMDIR /S/Q
 -include Source/Driver/Timer/subdir_vars.mk
 -include Source/Driver/UART/subdir_vars.mk
 -include Source/Middleware/MCP3208/subdir_vars.mk
+-include Source/Middleware/OLED_SSD1306/subdir_vars.mk
 -include Source/Middleware/RTC_DS3231/subdir_vars.mk
 -include subdir_rules.mk
 -include Source/App/Main/subdir_rules.mk
@@ -59,6 +61,7 @@ RMDIR := RMDIR /S/Q
 -include Source/Driver/Timer/subdir_rules.mk
 -include Source/Driver/UART/subdir_rules.mk
 -include Source/Middleware/MCP3208/subdir_rules.mk
+-include Source/Middleware/OLED_SSD1306/subdir_rules.mk
 -include Source/Middleware/RTC_DS3231/subdir_rules.mk
 -include objects.mk
 
@@ -177,8 +180,8 @@ TM4C123_PRJ_TEST.out: $(OBJS) $(LDS_SRCS) $(GEN_CMDS)
 # Other Targets
 clean:
 	-$(RM) $(EXE_OUTPUTS__QUOTED)
-	-$(RM) "Source\App\Main\main.o" "Source\BSP\bsp.o" "Source\BSP\startup_tm4c_gnu.o" "Source\Driver\ADC\ADC_Driver.o" "Source\Driver\CAN\CAN_Driver.o" "Source\Driver\GPIO\GPIOdriver.o" "Source\Driver\I2C\I2C.o" "Source\Driver\LCD\LCD.o" "Source\Driver\SPI\SPI.o" "Source\Driver\Timer\Timer.o" "Source\Driver\Timer\timercnter.o" "Source\Driver\UART\UART.o" "Source\Middleware\MCP3208\MCP3208.o" "Source\Middleware\RTC_DS3231\DS3231.o" 
-	-$(RM) "Source\App\Main\main.d" "Source\BSP\bsp.d" "Source\BSP\startup_tm4c_gnu.d" "Source\Driver\ADC\ADC_Driver.d" "Source\Driver\CAN\CAN_Driver.d" "Source\Driver\GPIO\GPIOdriver.d" "Source\Driver\I2C\I2C.d" "Source\Driver\LCD\LCD.d" "Source\Driver\SPI\SPI.d" "Source\Driver\Timer\Timer.d" "Source\Driver\Timer\timercnter.d" "Source\Driver\UART\UART.d" "Source\Middleware\MCP3208\MCP3208.d" "Source\Middleware\RTC_DS3231\DS3231.d" 
+	-$(RM) "Source\App\Main\main.o" "Source\BSP\bsp.o" "Source\BSP\startup_tm4c_gnu.o" "Source\Driver\ADC\ADC_Driver.o" "Source\Driver\CAN\CAN_Driver.o" "Source\Driver\GPIO\GPIOdriver.o" "Source\Driver\I2C\I2C.o" "Source\Driver\LCD\LCD.o" "Source\Driver\SPI\SPI.o" "Source\Driver\Timer\Timer.o" "Source\Driver\Timer\timercnter.o" "Source\Driver\UART\UART.o" "Source\Middleware\MCP3208\MCP3208.o" "Source\Middleware\OLED_SSD1306\SSD1306.o" "Source\Middleware\RTC_DS3231\DS3231.o" 
+	-$(RM) "Source\App\Main\main.d" "Source\BSP\bsp.d" "Source\BSP\startup_tm4c_gnu.d" "Source\Driver\ADC\ADC_Driver.d" "Source\Driver\CAN\CAN_Driver.d" "Source\Driver\GPIO\GPIOdriver.d" "Source\Driver\I2C\I2C.d" "Source\Driver\LCD\LCD.d" "Source\Driver\SPI\SPI.d" "Source\Driver\Timer\Timer.d" "Source\Driver\Timer\timercnter.d" "Source\Driver\UART\UART.d" "Source\Middleware\MCP3208\MCP3208.d" "Source\Middleware\OLED_SSD1306\SSD1306.d" "Source\Middleware\RTC_DS3231\DS3231.d" 
 	-@echo 'Finished clean'
 	-@echo ' '
 

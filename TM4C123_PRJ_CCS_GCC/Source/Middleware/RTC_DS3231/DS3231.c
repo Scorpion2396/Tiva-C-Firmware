@@ -79,6 +79,6 @@ void ds3231_write_hrs(int hrs_value)
         
         send_hrs_data = process_set_data(hrs_value);
 	
-	I2C_Write_Memory(DS3231_SLAVE_ADD, DS3231_SEC_ADD, send_hrs_data);	
+	I2C_Write_Memory(DS3231_SLAVE_ADD, DS3231_HRS_ADD, send_hrs_data);	
 }
 
