@@ -112,7 +112,7 @@ static int Check_I2C_error()
 /*****************************************************************************************************************************************/
 void I2C_Write(uint8_t slave_address , uint8_t data)
 {
-	char temp_data[1] = {data};	
+	uint8_t temp_data[1] = {data};	
 	I2C_Write_Multiple(slave_address , temp_data  , 1);
 }
 /*****************************************************************************************************************************************/
@@ -120,14 +120,14 @@ void I2C_Write(uint8_t slave_address , uint8_t data)
 /*****************************************************************************************************************************************/
 void I2C_Write_Memory(uint8_t slave_address , uint8_t slave_memory_address , uint8_t data)
 {
-	char temp_data[2] = {slave_memory_address , data};	
+	uint8_t temp_data[2] = {slave_memory_address , data};	
 	I2C_Write_Multiple(slave_address , temp_data  , 2);
 }
 /*****************************************************************************************************************************************/
 
 
 /*****************************************************************************************************************************************/
-void I2C_Write_Multiple(uint8_t slave_address , char *data , uint8_t num_of_data)
+void I2C_Write_Multiple(uint8_t slave_address , uint8_t *data , uint8_t num_of_data)
 {
  //       num_of_data++;
         
@@ -207,7 +207,7 @@ void I2C_Write_Multiple(uint8_t slave_address , char *data , uint8_t num_of_data
 /*****************************************************************************************************************************************/
 
 /*****************************************************************************************************************************************/
-void I2C_Write_Memory_Multiple(uint8_t slave_address , uint8_t slave_memory_address , char* data , uint8_t num_of_data)
+void I2C_Write_Memory_Multiple(uint8_t slave_address , uint8_t slave_memory_address , uint8_t* data , uint8_t num_of_data)
 {
 	int  error  =  0;
 	
@@ -296,7 +296,7 @@ void I2C_Write_Memory_Multiple(uint8_t slave_address , uint8_t slave_memory_addr
 /*****************************************************************************************************************************************/
 int I2C_Read(uint8_t slave_address)
 {
-	 char temp_data[1] = {0};	
+	 uint8_t temp_data[1] = {0};	
 	I2C_Read_Multiple(slave_address , temp_data  , 1);
 	return (*temp_data);
 }
@@ -304,7 +304,7 @@ int I2C_Read(uint8_t slave_address)
 
 
 /*****************************************************************************************************************************************/
-void I2C_Read_Multiple(uint8_t slave_address , char *data , uint8_t num_of_data)
+void I2C_Read_Multiple(uint8_t slave_address , uint8_t *data , uint8_t num_of_data)
 {
 	int  error  =  0;
 	
@@ -402,7 +402,7 @@ int I2C_Read_Memory(uint8_t slave_address , uint8_t slave_memory_address)
 /*****************************************************************************************************************************************/
 
 /*****************************************************************************************************************************************/
-void I2C_Read_Memory_Multiple(uint8_t slave_address , uint8_t slave_memory_address , char *data , uint8_t num_of_data)
+void I2C_Read_Memory_Multiple(uint8_t slave_address , uint8_t slave_memory_address , uint8_t *data , uint8_t num_of_data)
 {
 	
 	I2C_Write(slave_address , slave_memory_address);

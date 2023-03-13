@@ -15,49 +15,18 @@
 #include "DS3231_Interface.h"
 #include "SSD1306_Interface.h"
 
-uint8_t led_State = 0U;
-
-
 void main()
 {
-  I2C_Init(I2C_2, 20);
+  I2C_Init(I2C_2, 300);
   UART_init(UART_0, 115200);
   ssd1306_init();
-  
-    int rtc_val = 0;
-    char str[100];
-
-    ds3231_write_hrs(12);
-    ds3231_write_min(52);
-    ds3231_write_sec(0);
       
-    while(1)
-    {
-        Timer_scheduler();
-        
-        if(Flag_1000ms == 1)
-        {
-          ssd1306_setcursor(0,0);
-          ssd1306_Print_String("Saksham Raj");
+    ssd1306_setcursor(1,0);
+    ssd1306_Print_String("Saksham Raj");
           
+    ssd1306_setcursor(3,15);
+    ssd1306_Print_String("Loves");
           
- /*           rtc_val = ds3231_read_hrs();
-            sprintf(str,"%d", rtc_val);
-            UART_print("HRS = ");
-            UART_print(str);
-            
-            rtc_val = ds3231_read_min();
-            sprintf(str,"%d", rtc_val);
-            UART_print(" : MIN = ");
-            UART_print(str);
-           
-            rtc_val = ds3231_read_sec();
-            sprintf(str,"%d\r\n", rtc_val);
-            UART_print(" : SEC = ");
-            UART_print(str);
-*/
-            
-        }
-
-    }
+    ssd1306_setcursor(5,30);
+    ssd1306_Print_String("Pratyusha Jha");          
 }

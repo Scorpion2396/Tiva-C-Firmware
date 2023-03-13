@@ -52,9 +52,43 @@ void ssd1306_clear(void);
 void ssd1306_set_pixel(uint8_t x, uint8_t y, uint8_t value) ;
 void ssd1306_draw_line(uint8_t x0, uint8_t y0, uint8_t x1, uint8_t y1, uint8_t value) ;
 void ssd1306_refresh() ;
-void ssd1306_setcursor(uint8_t column, uint8_t page);
+void ssd1306_setcursor(uint8_t page, uint8_t column);
 void ssd1306_Print_String(uint8_t* str);
 
+
+
+
+
+  #define SSD1306_SET_MUX_RATIO     0xA8
+  #define SSD1306_SET_DIS_CLK_DIV   0xD5
+  #define SSD1306_DISPLAY_OFFSET    0xD3
+  #define SSD1306_DISPLAY_ON        0xAF
+  #define SSD1306_DISPLAY_OFF       0xAE
+  #define SSD1306_DIS_ENT_DISP_ON   0xA4
+  #define SSD1306_DIS_IGNORE_RAM    0xA5
+  #define SSD1306_DIS_NORMAL        0xA6
+  #define SSD1306_DIS_INVERSE       0xA7
+  #define SSD1306_DEACT_SCROLL      0x2E
+  #define SSD1306_ACTIVE_SCROLL     0x2F
+  #define SSD1306_SET_START_LINE    0x40
+  #define SSD1306_MEMORY_ADDR_MODE  0x20
+  #define SSD1306_SET_COLUMN_ADDR   0x21
+  #define SSD1306_SET_PAGE_ADDR     0x22
+  #define SSD1306_SEG_REMAP         0xA0
+  #define SSD1306_SEG_REMAP_OP      0xA1
+  #define SSD1306_COM_SCAN_DIR      0xC0
+  #define SSD1306_COM_SCAN_DIR_OP   0xC8
+  #define SSD1306_COM_PIN_CONF      0xDA
+  #define SSD1306_SET_CONTRAST      0x81
+  #define SSD1306_SET_OSC_FREQ      0xD5
+  #define SSD1306_SET_CHAR_REG      0x8D
+  #define SSD1306_SET_PRECHARGE     0xD9
+  #define SSD1306_VCOM_DESELECT     0xDB
+
+  #define START_PAGE_ADDR           0
+  #define END_PAGE_ADDR             7     // 7 for 128x64, 3 for 128x32 version
+  #define START_COLUMN_ADDR         0
+  #define END_COLUMN_ADDR           127
 
 
 #endif
