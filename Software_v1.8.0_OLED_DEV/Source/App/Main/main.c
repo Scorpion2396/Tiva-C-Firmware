@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include "TM4C123GH6PM.h"
-//#include "GPIO_Driver_Interface.h"
+#include "GPIO_Driver_Interface.h"
 #include "Timer_Interface.h"
 #include "ADC_Driver_Interface.h"
 #include "Common_Datatype.h"
@@ -15,12 +15,22 @@
 #include "DS3231_Interface.h"
 #include "SSD1306_Interface.h"
 
+void delay(uint8_t count);
+
 void main()
 {
-  I2C_Init(I2C_2, 300);
+  int col = 0;
+  
+  DigitalWrite(PB0,LOW );
+  DigitalWrite(PB1, HIGH);
+ 
+  delay(10);
+  
+  I2C_Init(I2C_2, 500);
   UART_init(UART_0, 115200);
   ssd1306_init();
-      
+
+  /*
     ssd1306_setcursor(1,0);
     ssd1306_Print_String("Saksham Raj");
           
@@ -28,5 +38,18 @@ void main()
     ssd1306_Print_String("Loves");
           
     ssd1306_setcursor(5,30);
-    ssd1306_Print_String("Pratyusha Jha");          
+    ssd1306_Print_String("Pratyusha Jha");  
+*/
+    ssd1306_shiva_logo();
+}
+
+
+void delay(uint8_t count)
+{
+	uint32_t i = 0;
+	uint32_t j = 0;
+	for(i=0 ; i<count ; i++)
+	{
+		for(j=0 ; j < 3180 ; j++);
+	}
 }

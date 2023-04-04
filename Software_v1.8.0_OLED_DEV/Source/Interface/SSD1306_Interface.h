@@ -10,5 +10,6 @@ extern void ssd1306_draw_line(uint8_t x0, uint8_t y0, uint8_t x1, uint8_t y1, ui
 extern void ssd1306_refresh() ;
 extern void ssd1306_setcursor(uint8_t page, uint8_t column);
 extern void ssd1306_Print_String(uint8_t* str);
+extern void ssd1306_shiva_logo(void);
 
 #endif
