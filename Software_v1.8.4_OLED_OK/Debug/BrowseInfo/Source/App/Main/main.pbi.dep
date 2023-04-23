@@ -1,0 +1,27 @@
+D:\embedded\DEVELOPMENT\OLED\Software_v1.8.4_OLED_Dev\Debug\BrowseInfo\Source\App\Main\main.pbi: \
+  D:\embedded\DEVELOPMENT\OLED\Software_v1.8.4_OLED_Dev\Source\Interface\SSD1306_Interface.h \
+  D:\embedded\DEVELOPMENT\OLED\Software_v1.8.4_OLED_Dev\Source\Interface\DS3231_Interface.h \
+  D:\embedded\DEVELOPMENT\OLED\Software_v1.8.4_OLED_Dev\Source\Interface\timercnter_interface.h \
+  D:\embedded\DEVELOPMENT\OLED\Software_v1.8.4_OLED_Dev\Source\Interface\UART_Interface.h \
+  D:\embedded\DEVELOPMENT\OLED\Software_v1.8.4_OLED_Dev\Source\Interface\I2C_Interface.h \
+  D:\embedded\DEVELOPMENT\OLED\Software_v1.8.4_OLED_Dev\Source\Common\Common_Macros.h \
+  D:\embedded\DEVELOPMENT\OLED\Software_v1.8.4_OLED_Dev\Source\Interface\ADC_Driver_Interface.h \
+  D:\embedded\DEVELOPMENT\OLED\Software_v1.8.4_OLED_Dev\Source\Interface\Timer_Interface.h \
+  D:\embedded\DEVELOPMENT\OLED\Software_v1.8.4_OLED_Dev\Source\Common\Common_Datatype.h \
+  D:\embedded\DEVELOPMENT\OLED\Software_v1.8.4_OLED_Dev\Source\Interface\GPIO_Driver_Interface.h \
+  D:\embedded\DEVELOPMENT\OLED\Software_v1.8.4_OLED_Dev\Source\CMSIS\core_cmSimd.h \
+  D:\embedded\DEVELOPMENT\OLED\Software_v1.8.4_OLED_Dev\Source\CMSIS\core_cmFunc.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\aarch32\iccarm_builtin.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\aarch32\cmsis_iar.h \
+  D:\embedded\DEVELOPMENT\OLED\Software_v1.8.4_OLED_Dev\Source\CMSIS\core_cmInstr.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\ycheck.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\stdint.h \
+  D:\embedded\DEVELOPMENT\OLED\Software_v1.8.4_OLED_Dev\Source\CMSIS\core_cm4.h \
+  D:\embedded\DEVELOPMENT\OLED\Software_v1.8.4_OLED_Dev\Source\CMSIS\TM4C123GH6PM.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\ysizet.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\DLib_Product.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\DLib_Config_Normal.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\DLib_Defaults.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\yvals.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\stdio.h \
+  D:\embedded\DEVELOPMENT\OLED\Software_v1.8.4_OLED_Dev\Source\App\Main\main.c

@@ -30,16 +30,6 @@ void main()
   UART_init(UART_0, 115200);
   ssd1306_init();
 
-  /*
-    ssd1306_setcursor(1,0);
-    ssd1306_Print_String("Saksham Raj");
-          
-    ssd1306_setcursor(3,15);
-    ssd1306_Print_String("Loves");
-          
-    ssd1306_setcursor(5,30);
-    ssd1306_Print_String("Pratyusha Jha");  
-*/
     ssd1306_shiva_logo();
 }
 
