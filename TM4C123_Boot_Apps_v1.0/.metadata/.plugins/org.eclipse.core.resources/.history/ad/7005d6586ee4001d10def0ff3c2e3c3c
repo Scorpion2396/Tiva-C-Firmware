@@ -1,0 +1,9 @@
+# FIXED
+
+Source/Driver/Timer/timercnter.obj: ../Source/Driver/Timer/timercnter.c
+Source/Driver/Timer/timercnter.obj: ../Source/Driver/Timer/timercnter.h
+
+../Source/Driver/Timer/timercnter.c:
+
+../Source/Driver/Timer/timercnter.h:
+

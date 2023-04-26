@@ -1,0 +1,9 @@
+# FIXED
+
+Source/Middleware/OLED_SSD1306/SSD1306.obj: ../Source/Middleware/OLED_SSD1306/SSD1306.c
+Source/Middleware/OLED_SSD1306/SSD1306.obj: ../Source/Middleware/OLED_SSD1306/SSD1306.h
+
+../Source/Middleware/OLED_SSD1306/SSD1306.c:
+
+../Source/Middleware/OLED_SSD1306/SSD1306.h:
+

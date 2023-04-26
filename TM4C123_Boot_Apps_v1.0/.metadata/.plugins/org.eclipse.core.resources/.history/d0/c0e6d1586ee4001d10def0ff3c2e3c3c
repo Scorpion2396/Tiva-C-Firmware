@@ -1,0 +1,6 @@
+# FIXED
+
+Source/BSP/bsp.obj: ../Source/BSP/bsp.c
+
+../Source/BSP/bsp.c:
+

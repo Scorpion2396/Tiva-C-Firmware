@@ -1,0 +1,9 @@
+# FIXED
+
+Source/Driver/I2C/I2C.obj: ../Source/Driver/I2C/I2C.c
+Source/Driver/I2C/I2C.obj: ../Source/Driver/I2C/I2C.h
+
+../Source/Driver/I2C/I2C.c:
+
+../Source/Driver/I2C/I2C.h:
+

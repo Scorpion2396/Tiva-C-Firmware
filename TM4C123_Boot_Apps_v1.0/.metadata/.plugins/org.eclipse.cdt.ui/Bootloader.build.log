@@ -3,6 +3,140 @@
 
 "C:\\ti\\ccs1220\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
  
-gmake[1]: 'Bootloader.out' is up to date.
+Building file: "../Source/App/Main/main.c"
+Invoking: GNU Compiler
+"C:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc-9.2.1.exe" -c -mcpu=cortex-m4 -march=armv7e-m -mthumb -mfloat-abi=soft -mfpu=fpv4-sp-d16 -DPART_TM4C123GH6PM -I"D:/embedded/Code_Composer_Studio/Boot_App/Bootloader" -I"D:/embedded/Code_Composer_Studio/Boot_App/Bootloader/Source/BSP" -I"D:/embedded/Code_Composer_Studio/Boot_App/Bootloader/Source/CMSIS" -I"D:/embedded/Code_Composer_Studio/Boot_App/Bootloader/Source/Common" -I"D:/embedded/Code_Composer_Studio/Boot_App/Bootloader/Source/Interface" -I"C:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/arm-none-eabi/include" -O0 -fsigned-char -ffunction-sections -fdata-sections -Wall -specs="nosys.specs" -MMD -MP -MF"Source/App/Main/main.d_raw" -MT"Source/App/Main/main.o" -std=c99  -o"Source/App/Main/main.o" "../Source/App/Main/main.c"
+../Source/App/Main/main.c:39:6: warning: return type of 'main' is not 'int' [-Wmain]
+   39 | void main()
+      |      ^~~~
+../Source/App/Main/main.c: In function 'main':
+../Source/App/Main/main.c:27:34: warning: initialization of 'unsigned int *' from 'unsigned int' makes pointer from integer without a cast [-Wint-conversion]
+   27 | #define APPS_STACK_PTR_ADDR      (*((unsigned int*)(APPS_FLASH_START_ADDR)))
+      |                                  ^
+../Source/App/Main/main.c:44:36: note: in expansion of macro 'APPS_STACK_PTR_ADDR'
+   44 |     unsigned int *apps_stack_ptr = APPS_STACK_PTR_ADDR;
+      |                                    ^~~~~~~~~~~~~~~~~~~
+../Source/App/Main/main.c:53:19: warning: passing argument 1 of '__set_MSP' makes integer from pointer without a cast [-Wint-conversion]
+   53 |         __set_MSP(apps_stack_ptr);
+      |                   ^~~~~~~~~~~~~~
+      |                   |
+      |                   unsigned int *
+In file included from D:/embedded/Code_Composer_Studio/Boot_App/Bootloader/Source/CMSIS/core_cmInstr.h:61,
+                 from D:/embedded/Code_Composer_Studio/Boot_App/Bootloader/Source/CMSIS/core_cm4.h:213,
+                 from D:/embedded/Code_Composer_Studio/Boot_App/Bootloader/Source/CMSIS/TM4C123GH6PM.h:432,
+                 from ../Source/App/Main/main.c:2:
+D:/embedded/Code_Composer_Studio/Boot_App/Bootloader/Source/CMSIS/cmsis_gcc.h:188:76: note: expected 'uint32_t' {aka 'long unsigned int'} but argument is of type 'unsigned int *'
+  188 | __attribute__( ( always_inline ) ) __STATIC_INLINE void __set_MSP(uint32_t topOfMainStack)
+      |                                                                   ~~~~~~~~~^~~~~~~~~~~~~~
+In file included from D:/embedded/Code_Composer_Studio/Boot_App/Bootloader/Source/CMSIS/TM4C123GH6PM.h:432,
+                 from ../Source/App/Main/main.c:2:
+D:/embedded/Code_Composer_Studio/Boot_App/Bootloader/Source/CMSIS/core_cm4.h:96:28: warning: listing the stack pointer register 'sp' in a clobber list is deprecated [-Wdeprecated]
+   96 |   #define __ASM            __asm                                      /*!< asm keyword for GNU Compiler */
+      |                            ^~~~~
+D:/embedded/Code_Composer_Studio/Boot_App/Bootloader/Source/CMSIS/cmsis_gcc.h:190:3: note: in expansion of macro '__ASM'
+  190 |   __ASM volatile ("MSR msp, %0\n" : : "r" (topOfMainStack) : "sp");
+      |   ^~~~~
+D:/embedded/Code_Composer_Studio/Boot_App/Bootloader/Source/CMSIS/core_cm4.h:96:28: note: the value of the stack pointer after an 'asm' statement must be the same as it was before the statement
+   96 |   #define __ASM            __asm                                      /*!< asm keyword for GNU Compiler */
+      |                            ^~~~~
+D:/embedded/Code_Composer_Studio/Boot_App/Bootloader/Source/CMSIS/cmsis_gcc.h:190:3: note: in expansion of macro '__ASM'
+  190 |   __ASM volatile ("MSR msp, %0\n" : : "r" (topOfMainStack) : "sp");
+      |   ^~~~~
+Finished building: "../Source/App/Main/main.c"
+ 
+Building file: "../Source/BSP/startup_tm4c_gnu.c"
+Invoking: GNU Compiler
+"C:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc-9.2.1.exe" -c -mcpu=cortex-m4 -march=armv7e-m -mthumb -mfloat-abi=soft -mfpu=fpv4-sp-d16 -DPART_TM4C123GH6PM -I"D:/embedded/Code_Composer_Studio/Boot_App/Bootloader" -I"D:/embedded/Code_Composer_Studio/Boot_App/Bootloader/Source/BSP" -I"D:/embedded/Code_Composer_Studio/Boot_App/Bootloader/Source/CMSIS" -I"D:/embedded/Code_Composer_Studio/Boot_App/Bootloader/Source/Common" -I"D:/embedded/Code_Composer_Studio/Boot_App/Bootloader/Source/Interface" -I"C:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/arm-none-eabi/include" -O0 -fsigned-char -ffunction-sections -fdata-sections -Wall -specs="nosys.specs" -MMD -MP -MF"Source/BSP/startup_tm4c_gnu.d_raw" -MT"Source/BSP/startup_tm4c_gnu.o" -std=c99  -o"Source/BSP/startup_tm4c_gnu.o" "../Source/BSP/startup_tm4c_gnu.c"
+Finished building: "../Source/BSP/startup_tm4c_gnu.c"
+ 
+Building file: "../Source/BSP/bsp.c"
+Invoking: GNU Compiler
+"C:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc-9.2.1.exe" -c -mcpu=cortex-m4 -march=armv7e-m -mthumb -mfloat-abi=soft -mfpu=fpv4-sp-d16 -DPART_TM4C123GH6PM -I"D:/embedded/Code_Composer_Studio/Boot_App/Bootloader" -I"D:/embedded/Code_Composer_Studio/Boot_App/Bootloader/Source/BSP" -I"D:/embedded/Code_Composer_Studio/Boot_App/Bootloader/Source/CMSIS" -I"D:/embedded/Code_Composer_Studio/Boot_App/Bootloader/Source/Common" -I"D:/embedded/Code_Composer_Studio/Boot_App/Bootloader/Source/Interface" -I"C:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/arm-none-eabi/include" -O0 -fsigned-char -ffunction-sections -fdata-sections -Wall -specs="nosys.specs" -MMD -MP -MF"Source/BSP/bsp.d_raw" -MT"Source/BSP/bsp.o" -std=c99  -o"Source/BSP/bsp.o" "../Source/BSP/bsp.c"
+Finished building: "../Source/BSP/bsp.c"
+ 
+Building file: "../Source/Driver/ADC/ADC_Driver.c"
+Invoking: GNU Compiler
+"C:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc-9.2.1.exe" -c -mcpu=cortex-m4 -march=armv7e-m -mthumb -mfloat-abi=soft -mfpu=fpv4-sp-d16 -DPART_TM4C123GH6PM -I"D:/embedded/Code_Composer_Studio/Boot_App/Bootloader" -I"D:/embedded/Code_Composer_Studio/Boot_App/Bootloader/Source/BSP" -I"D:/embedded/Code_Composer_Studio/Boot_App/Bootloader/Source/CMSIS" -I"D:/embedded/Code_Composer_Studio/Boot_App/Bootloader/Source/Common" -I"D:/embedded/Code_Composer_Studio/Boot_App/Bootloader/Source/Interface" -I"C:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/arm-none-eabi/include" -O0 -fsigned-char -ffunction-sections -fdata-sections -Wall -specs="nosys.specs" -MMD -MP -MF"Source/Driver/ADC/ADC_Driver.d_raw" -MT"Source/Driver/ADC/ADC_Driver.o" -std=c99  -o"Source/Driver/ADC/ADC_Driver.o" "../Source/Driver/ADC/ADC_Driver.c"
+Finished building: "../Source/Driver/ADC/ADC_Driver.c"
+ 
+Building file: "../Source/Driver/CAN/CAN_Driver.c"
+Invoking: GNU Compiler
+"C:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc-9.2.1.exe" -c -mcpu=cortex-m4 -march=armv7e-m -mthumb -mfloat-abi=soft -mfpu=fpv4-sp-d16 -DPART_TM4C123GH6PM -I"D:/embedded/Code_Composer_Studio/Boot_App/Bootloader" -I"D:/embedded/Code_Composer_Studio/Boot_App/Bootloader/Source/BSP" -I"D:/embedded/Code_Composer_Studio/Boot_App/Bootloader/Source/CMSIS" -I"D:/embedded/Code_Composer_Studio/Boot_App/Bootloader/Source/Common" -I"D:/embedded/Code_Composer_Studio/Boot_App/Bootloader/Source/Interface" -I"C:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/arm-none-eabi/include" -O0 -fsigned-char -ffunction-sections -fdata-sections -Wall -specs="nosys.specs" -MMD -MP -MF"Source/Driver/CAN/CAN_Driver.d_raw" -MT"Source/Driver/CAN/CAN_Driver.o" -std=c99  -o"Source/Driver/CAN/CAN_Driver.o" "../Source/Driver/CAN/CAN_Driver.c"
+../Source/Driver/CAN/CAN_Driver.c: In function 'CAN0_Init':
+../Source/Driver/CAN/CAN_Driver.c:79:32: warning: unused variable 'delay' [-Wunused-variable]
+   79 |         volatile unsigned long delay;
+      |                                ^~~~~
+Finished building: "../Source/Driver/CAN/CAN_Driver.c"
+ 
+Building file: "../Source/Driver/GPIO/GPIOdriver.c"
+Invoking: GNU Compiler
+"C:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc-9.2.1.exe" -c -mcpu=cortex-m4 -march=armv7e-m -mthumb -mfloat-abi=soft -mfpu=fpv4-sp-d16 -DPART_TM4C123GH6PM -I"D:/embedded/Code_Composer_Studio/Boot_App/Bootloader" -I"D:/embedded/Code_Composer_Studio/Boot_App/Bootloader/Source/BSP" -I"D:/embedded/Code_Composer_Studio/Boot_App/Bootloader/Source/CMSIS" -I"D:/embedded/Code_Composer_Studio/Boot_App/Bootloader/Source/Common" -I"D:/embedded/Code_Composer_Studio/Boot_App/Bootloader/Source/Interface" -I"C:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/arm-none-eabi/include" -O0 -fsigned-char -ffunction-sections -fdata-sections -Wall -specs="nosys.specs" -MMD -MP -MF"Source/Driver/GPIO/GPIOdriver.d_raw" -MT"Source/Driver/GPIO/GPIOdriver.o" -std=c99  -o"Source/Driver/GPIO/GPIOdriver.o" "../Source/Driver/GPIO/GPIOdriver.c"
+Finished building: "../Source/Driver/GPIO/GPIOdriver.c"
+ 
+Building file: "../Source/Driver/I2C/I2C.c"
+Invoking: GNU Compiler
+"C:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc-9.2.1.exe" -c -mcpu=cortex-m4 -march=armv7e-m -mthumb -mfloat-abi=soft -mfpu=fpv4-sp-d16 -DPART_TM4C123GH6PM -I"D:/embedded/Code_Composer_Studio/Boot_App/Bootloader" -I"D:/embedded/Code_Composer_Studio/Boot_App/Bootloader/Source/BSP" -I"D:/embedded/Code_Composer_Studio/Boot_App/Bootloader/Source/CMSIS" -I"D:/embedded/Code_Composer_Studio/Boot_App/Bootloader/Source/Common" -I"D:/embedded/Code_Composer_Studio/Boot_App/Bootloader/Source/Interface" -I"C:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/arm-none-eabi/include" -O0 -fsigned-char -ffunction-sections -fdata-sections -Wall -specs="nosys.specs" -MMD -MP -MF"Source/Driver/I2C/I2C.d_raw" -MT"Source/Driver/I2C/I2C.o" -std=c99  -o"Source/Driver/I2C/I2C.o" "../Source/Driver/I2C/I2C.c"
+../Source/Driver/I2C/I2C.c: In function 'Check_I2C_busy':
+../Source/Driver/I2C/I2C.c:85:54: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+   85 |     while((I2C_config[I2C_Index].I2C_Perif_Addr->MCS & (1<<0) != 0));        // wait till I2C controller is busy
+      |                                                      ^
+Finished building: "../Source/Driver/I2C/I2C.c"
+ 
+Building file: "../Source/Driver/LCD/LCD.c"
+Invoking: GNU Compiler
+"C:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc-9.2.1.exe" -c -mcpu=cortex-m4 -march=armv7e-m -mthumb -mfloat-abi=soft -mfpu=fpv4-sp-d16 -DPART_TM4C123GH6PM -I"D:/embedded/Code_Composer_Studio/Boot_App/Bootloader" -I"D:/embedded/Code_Composer_Studio/Boot_App/Bootloader/Source/BSP" -I"D:/embedded/Code_Composer_Studio/Boot_App/Bootloader/Source/CMSIS" -I"D:/embedded/Code_Composer_Studio/Boot_App/Bootloader/Source/Common" -I"D:/embedded/Code_Composer_Studio/Boot_App/Bootloader/Source/Interface" -I"C:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/arm-none-eabi/include" -O0 -fsigned-char -ffunction-sections -fdata-sections -Wall -specs="nosys.specs" -MMD -MP -MF"Source/Driver/LCD/LCD.d_raw" -MT"Source/Driver/LCD/LCD.o" -std=c99  -o"Source/Driver/LCD/LCD.o" "../Source/Driver/LCD/LCD.c"
+Finished building: "../Source/Driver/LCD/LCD.c"
+ 
+Building file: "../Source/Driver/SPI/SPI.c"
+Invoking: GNU Compiler
+"C:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc-9.2.1.exe" -c -mcpu=cortex-m4 -march=armv7e-m -mthumb -mfloat-abi=soft -mfpu=fpv4-sp-d16 -DPART_TM4C123GH6PM -I"D:/embedded/Code_Composer_Studio/Boot_App/Bootloader" -I"D:/embedded/Code_Composer_Studio/Boot_App/Bootloader/Source/BSP" -I"D:/embedded/Code_Composer_Studio/Boot_App/Bootloader/Source/CMSIS" -I"D:/embedded/Code_Composer_Studio/Boot_App/Bootloader/Source/Common" -I"D:/embedded/Code_Composer_Studio/Boot_App/Bootloader/Source/Interface" -I"C:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/arm-none-eabi/include" -O0 -fsigned-char -ffunction-sections -fdata-sections -Wall -specs="nosys.specs" -MMD -MP -MF"Source/Driver/SPI/SPI.d_raw" -MT"Source/Driver/SPI/SPI.o" -std=c99  -o"Source/Driver/SPI/SPI.o" "../Source/Driver/SPI/SPI.c"
+Finished building: "../Source/Driver/SPI/SPI.c"
+ 
+Building file: "../Source/Driver/Timer/Timer.c"
+Invoking: GNU Compiler
+"C:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc-9.2.1.exe" -c -mcpu=cortex-m4 -march=armv7e-m -mthumb -mfloat-abi=soft -mfpu=fpv4-sp-d16 -DPART_TM4C123GH6PM -I"D:/embedded/Code_Composer_Studio/Boot_App/Bootloader" -I"D:/embedded/Code_Composer_Studio/Boot_App/Bootloader/Source/BSP" -I"D:/embedded/Code_Composer_Studio/Boot_App/Bootloader/Source/CMSIS" -I"D:/embedded/Code_Composer_Studio/Boot_App/Bootloader/Source/Common" -I"D:/embedded/Code_Composer_Studio/Boot_App/Bootloader/Source/Interface" -I"C:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/arm-none-eabi/include" -O0 -fsigned-char -ffunction-sections -fdata-sections -Wall -specs="nosys.specs" -MMD -MP -MF"Source/Driver/Timer/Timer.d_raw" -MT"Source/Driver/Timer/Timer.o" -std=c99  -o"Source/Driver/Timer/Timer.o" "../Source/Driver/Timer/Timer.c"
+../Source/Driver/Timer/Timer.c: In function 'Timer_scheduler':
+../Source/Driver/Timer/Timer.c:103:18: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+  103 |  if( TIMER0->RIS &0X00000001 == 1 )
+      |                  ^
+Finished building: "../Source/Driver/Timer/Timer.c"
+ 
+Building file: "../Source/Driver/UART/UART.c"
+Invoking: GNU Compiler
+"C:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc-9.2.1.exe" -c -mcpu=cortex-m4 -march=armv7e-m -mthumb -mfloat-abi=soft -mfpu=fpv4-sp-d16 -DPART_TM4C123GH6PM -I"D:/embedded/Code_Composer_Studio/Boot_App/Bootloader" -I"D:/embedded/Code_Composer_Studio/Boot_App/Bootloader/Source/BSP" -I"D:/embedded/Code_Composer_Studio/Boot_App/Bootloader/Source/CMSIS" -I"D:/embedded/Code_Composer_Studio/Boot_App/Bootloader/Source/Common" -I"D:/embedded/Code_Composer_Studio/Boot_App/Bootloader/Source/Interface" -I"C:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/arm-none-eabi/include" -O0 -fsigned-char -ffunction-sections -fdata-sections -Wall -specs="nosys.specs" -MMD -MP -MF"Source/Driver/UART/UART.d_raw" -MT"Source/Driver/UART/UART.o" -std=c99  -o"Source/Driver/UART/UART.o" "../Source/Driver/UART/UART.c"
+Finished building: "../Source/Driver/UART/UART.c"
+ 
+Building file: "../Source/Driver/Timer/timercnter.c"
+Invoking: GNU Compiler
+"C:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc-9.2.1.exe" -c -mcpu=cortex-m4 -march=armv7e-m -mthumb -mfloat-abi=soft -mfpu=fpv4-sp-d16 -DPART_TM4C123GH6PM -I"D:/embedded/Code_Composer_Studio/Boot_App/Bootloader" -I"D:/embedded/Code_Composer_Studio/Boot_App/Bootloader/Source/BSP" -I"D:/embedded/Code_Composer_Studio/Boot_App/Bootloader/Source/CMSIS" -I"D:/embedded/Code_Composer_Studio/Boot_App/Bootloader/Source/Common" -I"D:/embedded/Code_Composer_Studio/Boot_App/Bootloader/Source/Interface" -I"C:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/arm-none-eabi/include" -O0 -fsigned-char -ffunction-sections -fdata-sections -Wall -specs="nosys.specs" -MMD -MP -MF"Source/Driver/Timer/timercnter.d_raw" -MT"Source/Driver/Timer/timercnter.o" -std=c99  -o"Source/Driver/Timer/timercnter.o" "../Source/Driver/Timer/timercnter.c"
+Finished building: "../Source/Driver/Timer/timercnter.c"
+ 
+Building file: "../Source/Middleware/MCP3208/MCP3208.c"
+Invoking: GNU Compiler
+"C:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc-9.2.1.exe" -c -mcpu=cortex-m4 -march=armv7e-m -mthumb -mfloat-abi=soft -mfpu=fpv4-sp-d16 -DPART_TM4C123GH6PM -I"D:/embedded/Code_Composer_Studio/Boot_App/Bootloader" -I"D:/embedded/Code_Composer_Studio/Boot_App/Bootloader/Source/BSP" -I"D:/embedded/Code_Composer_Studio/Boot_App/Bootloader/Source/CMSIS" -I"D:/embedded/Code_Composer_Studio/Boot_App/Bootloader/Source/Common" -I"D:/embedded/Code_Composer_Studio/Boot_App/Bootloader/Source/Interface" -I"C:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/arm-none-eabi/include" -O0 -fsigned-char -ffunction-sections -fdata-sections -Wall -specs="nosys.specs" -MMD -MP -MF"Source/Middleware/MCP3208/MCP3208.d_raw" -MT"Source/Middleware/MCP3208/MCP3208.o" -std=c99  -o"Source/Middleware/MCP3208/MCP3208.o" "../Source/Middleware/MCP3208/MCP3208.c"
+Finished building: "../Source/Middleware/MCP3208/MCP3208.c"
+ 
+Building file: "../Source/Middleware/RTC_DS3231/DS3231.c"
+Invoking: GNU Compiler
+"C:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc-9.2.1.exe" -c -mcpu=cortex-m4 -march=armv7e-m -mthumb -mfloat-abi=soft -mfpu=fpv4-sp-d16 -DPART_TM4C123GH6PM -I"D:/embedded/Code_Composer_Studio/Boot_App/Bootloader" -I"D:/embedded/Code_Composer_Studio/Boot_App/Bootloader/Source/BSP" -I"D:/embedded/Code_Composer_Studio/Boot_App/Bootloader/Source/CMSIS" -I"D:/embedded/Code_Composer_Studio/Boot_App/Bootloader/Source/Common" -I"D:/embedded/Code_Composer_Studio/Boot_App/Bootloader/Source/Interface" -I"C:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/arm-none-eabi/include" -O0 -fsigned-char -ffunction-sections -fdata-sections -Wall -specs="nosys.specs" -MMD -MP -MF"Source/Middleware/RTC_DS3231/DS3231.d_raw" -MT"Source/Middleware/RTC_DS3231/DS3231.o" -std=c99  -o"Source/Middleware/RTC_DS3231/DS3231.o" "../Source/Middleware/RTC_DS3231/DS3231.c"
+Finished building: "../Source/Middleware/RTC_DS3231/DS3231.c"
+ 
+Building file: "../Source/Middleware/OLED_SSD1306/SSD1306.c"
+Invoking: GNU Compiler
+"C:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc-9.2.1.exe" -c -mcpu=cortex-m4 -march=armv7e-m -mthumb -mfloat-abi=soft -mfpu=fpv4-sp-d16 -DPART_TM4C123GH6PM -I"D:/embedded/Code_Composer_Studio/Boot_App/Bootloader" -I"D:/embedded/Code_Composer_Studio/Boot_App/Bootloader/Source/BSP" -I"D:/embedded/Code_Composer_Studio/Boot_App/Bootloader/Source/CMSIS" -I"D:/embedded/Code_Composer_Studio/Boot_App/Bootloader/Source/Common" -I"D:/embedded/Code_Composer_Studio/Boot_App/Bootloader/Source/Interface" -I"C:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/arm-none-eabi/include" -O0 -fsigned-char -ffunction-sections -fdata-sections -Wall -specs="nosys.specs" -MMD -MP -MF"Source/Middleware/OLED_SSD1306/SSD1306.d_raw" -MT"Source/Middleware/OLED_SSD1306/SSD1306.o" -std=c99  -o"Source/Middleware/OLED_SSD1306/SSD1306.o" "../Source/Middleware/OLED_SSD1306/SSD1306.c"
+Finished building: "../Source/Middleware/OLED_SSD1306/SSD1306.c"
+ 
+Building target: "Bootloader.out"
+Invoking: GNU Linker
+"C:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc-9.2.1.exe" -mfpu=fpv4-sp-d16 -DPART_TM4C123GH6PM -O0 -fsigned-char -ffunction-sections -fdata-sections -Wall -specs="nosys.specs" -march=armv7e-m -mthumb -mfloat-abi=soft -Wl,-Map,"Bootloader.map" --entry 0x00000000 -o"Bootloader.out" "./Source/App/Main/main.o" "./Source/BSP/bsp.o" "./Source/BSP/startup_tm4c_gnu.o" "./Source/Driver/ADC/ADC_Driver.o" "./Source/Driver/CAN/CAN_Driver.o" "./Source/Driver/GPIO/GPIOdriver.o" "./Source/Driver/I2C/I2C.o" "./Source/Driver/LCD/LCD.o" "./Source/Driver/SPI/SPI.o" "./Source/Driver/Timer/Timer.o" "./Source/Driver/Timer/timercnter.o" "./Source/Driver/UART/UART.o" "./Source/Middleware/MCP3208/MCP3208.o" "./Source/Middleware/OLED_SSD1306/SSD1306.o" "./Source/Middleware/RTC_DS3231/DS3231.o" -Wl,-T"../tm4c123gh6pm.lds"  -Wl,--start-group -lc -Wl,--end-group 
+Finished building target: "Bootloader.out"
+ 
+Building secondary target: "Bootloader.hex"
+Invoking: GNU Objcopy Utility
+"C:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-objcopy.exe"   "Bootloader.out"  "Bootloader.hex"
+Finished building secondary target: "Bootloader.hex"
+ 
+"C:\ti\ccs1220\ccs\tools\compiler\gcc-arm-none-eabi-9-2019-q4-major\bin\arm-none-eabi-objcopy.exe" -O binary "Bootloader.out" "Bootloader.bin"
+ 
 
 **** Build Finished ****

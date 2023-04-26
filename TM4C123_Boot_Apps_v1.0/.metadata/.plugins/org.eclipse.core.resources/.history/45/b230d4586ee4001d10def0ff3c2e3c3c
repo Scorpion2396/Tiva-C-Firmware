@@ -1,0 +1,9 @@
+# FIXED
+
+Source/Driver/LCD/LCD.obj: ../Source/Driver/LCD/LCD.c
+Source/Driver/LCD/LCD.obj: ../Source/Driver/LCD/LCD.h
+
+../Source/Driver/LCD/LCD.c:
+
+../Source/Driver/LCD/LCD.h:
+
