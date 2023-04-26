@@ -1,0 +1,9 @@
+
+
+/**
+ * main.c
+ */
+void boot_main(void)
+{
+	return 0;
+}

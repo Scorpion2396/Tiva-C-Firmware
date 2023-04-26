@@ -1,0 +1,8 @@
+
+**** Build of configuration Release for project Bootloader ****
+
+"C:\\ti\\ccs1220\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'Bootloader.out' is up to date.
+
+**** Build Finished ****

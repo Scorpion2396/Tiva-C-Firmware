@@ -1,0 +1,116 @@
+/******************************************************************************
+ *
+ * SAKSHAM RAJ
+ *
+ * 22/04/2023
+ *
+ *****************************************************************************/
+
+MEMORY { /* memory map of Tiva TM4C123GH6PM */
+    APPS_FLASH (rx)  : ORIGIN = 0x00000000, LENGTH = 256K
+    APPS_SRAM (xrw)  : ORIGIN = 0x20000000, LENGTH = 32K
+}
+
+STACK_SIZE            = 1K;
+HEAP_SIZE              = 1K;
+
+REGION_ALIAS("REGION_TEXT", APPS_FLASH);
+REGION_ALIAS("REGION_BSS", APPS_SRAM);
+REGION_ALIAS("REGION_DATA", APPS_SRAM);
+REGION_ALIAS("REGION_STACK", APPS_SRAM);
+REGION_ALIAS("REGION_HEAP", APPS_SRAM);
+
+
+SECTIONS {
+
+    PROVIDE (_intvecs_base_address = 0x00000000);
+
+    .intvecs (_intvecs_base_address) : AT (_intvecs_base_address) {
+        KEEP (*(.intvecs))
+    } > REGION_TEXT
+
+    PROVIDE (_vtable_base_address = 0x20000000);
+
+    .vtable (_vtable_base_address) : AT (_vtable_base_address) {
+        KEEP (*(.vtable))
+    } > REGION_DATA
+
+    .text : {              /* code and constants */
+        . = ALIGN(4);
+        *(.text)           /* .text sections (code) */
+        *(.text*)          /* .text* sections (code) */
+        *(.rodata)         /* .rodata sections (constants, strings, etc.) */
+        *(.rodata*)        /* .rodata* sections (constants, strings, etc.) */
+
+        KEEP (*(.init))
+        KEEP (*(.fini))
+
+        . = ALIGN(4);
+    } > REGION_TEXT
+
+
+    .preinit_array : {
+        PROVIDE_HIDDEN (__preinit_array_start = .);
+        KEEP (*(.preinit_array*))
+        PROVIDE_HIDDEN (__preinit_array_end = .);
+    } > REGION_TEXT
+
+    .init_array : {
+        PROVIDE_HIDDEN (__init_array_start = .);
+        KEEP (*(SORT(.init_array.*)))
+        KEEP (*(.init_array*))
+        PROVIDE_HIDDEN (__init_array_end = .);
+    } > REGION_TEXT
+
+    .fini_array : {
+        PROVIDE_HIDDEN (__fini_array_start = .);
+        KEEP (*(.fini_array*))
+        KEEP (*(SORT(.fini_array.*)))
+        PROVIDE_HIDDEN (__fini_array_end = .);
+    } > REGION_TEXT
+
+    _etext = .;            /* global symbols at end of code */
+
+    .data :  AT (_etext)
+    {
+        __data_load__ = LOADADDR (.data);
+        __data_start__ = .;
+        *(.data)           /* .data sections */
+        *(.data*)          /* .data* sections */
+        . = ALIGN(4);
+        __data_end__ = .;
+        _edata = __data_end__;
+    } > REGION_DATA AT> REGION_TEXT
+
+
+    .bss :
+    {
+        __bss_start__ = .;
+        *(.bss)
+        *(.bss*)
+        *(COMMON)
+        . = ALIGN(4);
+        _ebss = .;         /* define a global symbol at bss end */
+        __bss_end__ = .;
+    } > REGION_BSS
+
+
+    .heap :
+    {
+        __heap_start__ = .;
+        . = . + HEAP_SIZE;
+        KEEP(*(.heap))
+        . = ALIGN(4);
+        __heap_end__ = .;
+    } > REGION_HEAP
+
+
+    .stack :
+    {
+        __stack_start__ = .;
+        . = . + STACK_SIZE;
+        KEEP(*(.stack))
+        . = ALIGN(4);
+        __stack_end__ = .;
+    } > REGION_STACK
+}

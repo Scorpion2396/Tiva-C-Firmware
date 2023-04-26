@@ -1,0 +1,100 @@
+/******************************************************************************
+ *
+ * SAKSHAM RAJ
+ *
+ * 22/04/2023
+ *
+ *****************************************************************************/
+_BOOT_FLASH_START_ADDR_  = 0x00000000;
+_BOOT_SRAM_START_ADDR_   = 0x20000000;
+_STACK_SIZE_             = 1K;
+_HEAP_SIZE_              = 1K;
+
+_etext = .;            /* global symbols at end of code */
+
+
+MEMORY
+{
+    BOOT_FLASH (RX) : ORIGIN = _BOOT_FLASH_START_ADDR_, LENGTH = 16K
+    BOOT_SRAM (RWX) : ORIGIN = _BOOT_SRAM_START_ADDR_, LENGTH = 8K
+}
+
+REGION_ALIAS("REGION_TEXT", BOOT_FLASH);
+REGION_ALIAS("REGION_BSS", BOOT_SRAM);
+REGION_ALIAS("REGION_DATA", BOOT_SRAM);
+REGION_ALIAS("REGION_STACK", BOOT_SRAM);
+REGION_ALIAS("REGION_HEAP", BOOT_SRAM);
+
+
+SECTIONS {
+
+    PROVIDE (_intvecs_base_address = _BOOT_FLASH_START_ADDR_);
+
+    .intvecs (_intvecs_base_address) : AT (_intvecs_base_address) {
+        KEEP (*(.intvecs))
+    } > REGION_TEXT
+
+    PROVIDE (_vtable_base_address = _BOOT_SRAM_START_ADDR_);
+
+    .vtable (_vtable_base_address) : AT (_vtable_base_address) {
+        KEEP (*(.vtable))
+    } > REGION_DATA
+
+
+    .text : {              /* code and constants */
+        . = ALIGN(4);
+        *(.text)           /* .text sections (code) */
+        *(.text*)          /* .text* sections (code) */
+        *(.rodata)         /* .rodata sections (constants, strings, etc.) */
+        *(.rodata*)        /* .rodata* sections (constants, strings, etc.) */
+
+        KEEP (*(.init))
+        KEEP (*(.fini))
+
+        . = ALIGN(4);
+    } > REGION_TEXT
+
+
+    .data :  AT (_etext)
+    {
+        __data_load__ = LOADADDR (.data);
+        __data_start__ = .;
+        *(.data)           /* .data sections */
+        *(.data*)          /* .data* sections */
+        . = ALIGN(4);
+        __data_end__ = .;
+        _edata = __data_end__;
+    } > REGION_DATA AT> REGION_TEXT
+
+
+    .bss :
+    {
+        __bss_start__ = .;
+        *(.bss)
+        *(.bss*)
+        *(COMMON)
+        . = ALIGN(4);
+        _ebss = .;         /* define a global symbol at bss end */
+        __bss_end__ = .;
+    } > REGION_BSS
+
+
+    .heap :
+    {
+        __heap_start__ = .;
+        . = . + _HEAP_SIZE_;
+        KEEP(*(.heap))
+        . = ALIGN(4);
+        __heap_end__ = .;
+    } > REGION_HEAP
+
+
+    .stack :
+    {
+        __stack_start__ = .;
+        . = . + _STACK_SIZE_;
+        KEEP(*(.stack))
+        . = ALIGN(4);
+        __stack_end__ = .;
+    } > REGION_STACK
+}

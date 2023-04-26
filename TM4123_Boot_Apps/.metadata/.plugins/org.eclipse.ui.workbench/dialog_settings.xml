@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MemoryDumperFillAction">
+		<item key="com.ti.ccstudio.system.setup.ui.editors.connectionName" value="Stellaris In-Circuit Debug Interface"/>
+		<item key="com.ti.ccstudio.system.setup.ui.editors.connectionType" value="LM_ICDI"/>
+	</section>
+</section>

@@ -1,0 +1,50 @@
+#include<stdio.h>
+#include "TM4C123GH6PM.h"
+#include "GPIO_Driver_Interface.h"
+#include "Timer_Interface.h"
+#include "ADC_Driver_Interface.h"
+#include "Common_Datatype.h"
+#include "Common_Macros.h"
+//#include "LCD_Interface.h"
+#include "I2C_Interface.h"
+//#include "SPI_Interface.h"
+//#include "MCP3208_Interface.h"
+//#include "CAN_Interface.h"
+#include "UART_Interface.h"
+#include "timercnter_interface.h"
+#include "DS3231_Interface.h"
+#include "SSD1306_Interface.h"
+
+void delay(uint8_t count);
+
+void main()
+{
+    while(1)
+    {
+        DigitalWrite(PF2,HIGH);
+    }
+    unsigned int *apps_stack_ptr;
+
+    int a = 0;
+
+    apps_stack_ptr  = 0x20004000 + (4*1024);
+
+
+
+    void (*app_entry_point)(void);
+    app_entry_point = (void(*)(void)) (*((unsigned int*)(0x00020000 + 4)));
+
+    if((*((unsigned int*)(0x00010000 + 4))) != 0xffffffff)
+    {
+        __set_MSP(apps_stack_ptr);
+        app_entry_point();
+    }
+    else
+    {
+        DigitalWrite(PF2,HIGH);
+    }
+
+    a = 5;
+}
+
+

@@ -1,0 +1,8 @@
+
+**** Build of configuration Release for project Application ****
+
+"C:\\ti\\ccs1220\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'Application.out' is up to date.
+
+**** Build Finished ****
