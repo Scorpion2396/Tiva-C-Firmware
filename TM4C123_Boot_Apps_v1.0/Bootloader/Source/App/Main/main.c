@@ -65,6 +65,15 @@ void main()
 
     UART_init(UART_0, 115200);
 
+
+
+if(DigitalRead(PF0,PU) == 0)
+{
+    ssd1306_clear();
+    ssd1306_refresh();
+    ssd1306_setcursor(7,0);
+    ssd1306_Print_String("Flash Apps Mode");
+
     rx_data = UART_Receive();
     if(rx_data == 0xAA) // app flasher text byte to check if receiver is ready
         UART_Transmit(0x55);
@@ -145,7 +154,7 @@ void main()
     ssd1306_Print_String("Complete!!!");
 
     FlashProgram_ByteArr(Apps_start_Addr, temp, no_of_bytes_rem);
-
+}
 
 
 
