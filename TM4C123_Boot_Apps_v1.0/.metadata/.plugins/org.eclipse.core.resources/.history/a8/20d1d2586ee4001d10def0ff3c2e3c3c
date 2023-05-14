@@ -1,6 +1,0 @@
-# FIXED
-
-Source/BSP/startup_tm4c_gnu.obj: ../Source/BSP/startup_tm4c_gnu.c
-
-../Source/BSP/startup_tm4c_gnu.c:
-

@@ -1,6 +1,0 @@
-# FIXED
-
-Source/Middleware/MCP3208/MCP3208.obj: ../Source/Middleware/MCP3208/MCP3208.c
-
-../Source/Middleware/MCP3208/MCP3208.c:
-

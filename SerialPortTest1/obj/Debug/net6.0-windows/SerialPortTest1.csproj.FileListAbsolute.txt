@@ -1,0 +1,5 @@
+C:\Users\saksh\Desktop\SerialPortTest1\obj\Debug\net6.0-windows\SerialPortTest1.csproj.AssemblyReference.cache
+C:\Users\saksh\Desktop\SerialPortTest1\obj\Debug\net6.0-windows\SerialPortTest1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\saksh\Desktop\SerialPortTest1\obj\Debug\net6.0-windows\SerialPortTest1.AssemblyInfoInputs.cache
+C:\Users\saksh\Desktop\SerialPortTest1\obj\Debug\net6.0-windows\SerialPortTest1.AssemblyInfo.cs
+C:\Users\saksh\Desktop\SerialPortTest1\obj\Debug\net6.0-windows\SerialPortTest1.csproj.CoreCompileInputs.cache

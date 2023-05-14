@@ -1,0 +1,105 @@
+#include "TM4C123GH6PM.h"
+#include "FLASH.h"
+
+
+void FlashProgram(uint32_t *data, uint32_t address, uint32_t count) 
+{
+
+    uint32_t cnt  = 0;
+    uint32_t addr = 0;
+
+    for (i = 0 , addr = address ; i < count; i++ , addr+=4 )
+	{
+        // Write the word to the flash memory data register
+        FLASH_FMD = data[i];
+
+        // Start the write operation
+        FLASH_FMA = 0x3ffff & addr;
+
+        // Wait for the write operation to complete
+        while (FLASH_FMC_R & FLASH_FMC_WRITE);
+
+        // Check if the write operation was successful
+        if (*(volatile uint32_t *)address != data[i]) 
+		{
+            // Error: the write operation was unsuccessful
+            return;
+        }
+
+        // Increment the address to program the next word
+        address += 4;
+    }
+}
+
+/**********************************************************************************/
+
+void FlashProgram_4Byte(uint32_t address, uint32_t data)
+{
+    // Enable the flash controller
+    SYSCTL_RCGC2_R |= SYSCTL_RCGC2_FLASH;
+
+    // Check if the flash memory is ready for programming
+    while (FLASH_FMC_R & FLASH_FMC_WRITE);
+
+    // Set the write key and the address of the word to be programmed
+    FLASH_FMC_R = FLASH_FMC_WRKEY | FLASH_FMC_WRITE;
+    FLASH_FMA_R = address - FLASH_BASE_ADDRESS;
+
+    // Write the word to the flash memory data register
+    FLASH_FMD_R = data;
+
+    // Start the write operation
+    FLASH_FMC_R |= FLASH_FMC_WRITE;
+
+    // Wait for the write operation to complete
+    while (!(FLASH_FMC_R & FLASH_FMC_READY));
+
+    // Check if the write operation was successful
+    if (*(volatile uint32_t *)address != data)
+    {
+        // Error: the write operation was unsuccessful
+        return;
+    }
+}
+
+
+
+/**********************************************************************************/
+
+
+
+void FlashErase(uint32_t startaddress, uint32_t size) 
+{
+    uint32_t block_address;
+    uint32_t block_count;
+
+    // Calculate the block address and block count based on the input parameters
+    block_address = startaddress - FLASH_BASE_ADDRESS;
+    block_count = (size + FLASH_BLOCK_SIZE - 1) / FLASH_BLOCK_SIZE;
+
+    // Disable interrupts during flash erase operation
+    __disable_irq();
+
+    // Enable the flash controller and wait for it to become ready
+    SYSCTL_RCGC2_R |= SYSCTL_RCGC2_FLASH;
+    while (FLASH_FMC_R & FLASH_FMC_WRITE);
+
+    // Loop through all blocks to be erased
+    for (uint32_t i = 0; i < block_count; i++) 
+	{
+        // Set the write key and the address of the block to be erased
+        FLASH_FMC_R = FLASH_FMC_WRKEY | FLASH_FMC_ERASE | (block_address & 0x0001FFFF);
+
+        // Start the erase operation
+        FLASH_FMC_R = FLASH_FMC_WRKEY | FLASH_FMC_ERASE | FLASH_FMC_START;
+
+        // Wait for the erase operation to complete
+        while (!(FLASH_FMC_R & FLASH_FMC_READY));
+
+        // Move to the next block
+        block_address += FLASH_BLOCK_SIZE;
+    }
+
+    // Re-enable interrupts
+    __enable_irq();
+}

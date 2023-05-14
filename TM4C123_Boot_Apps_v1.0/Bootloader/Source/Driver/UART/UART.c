@@ -109,7 +109,7 @@ void UART_init(UART_Channel UART_Ch_Index, uint32_t UART_BaudRate)
     UART_Init_Flag = 1;
 }
 
-void UART_print(char *data)
+void UART_print(uint8_t *data)
 {
 	if(UART_Init_Flag == 0)
 	{
@@ -120,13 +120,13 @@ void UART_print(char *data)
 	{
 		while(*data)
 		{
-			UART_Transmitter(*(data++));
+			UART_Transmit(*(data++));
 		}
 	}
 }
 
 
-void UART_Transmitter(char data)  
+void UART_Transmit(uint8_t data)
 {
     while((UART_config[UART_Index].UART_Perif_Addr->FR & 0x20) != 0);           /* wait until Tx buffer not full */
     UART_config[UART_Index].UART_Perif_Addr->DR = data;                         /* before giving it another byte */
@@ -138,3 +138,43 @@ void Delay(unsigned long counter)
 	
 	for(i=0; i< counter; i++);
 }
+
+
+
+uint8_t UART_Receive() 
+{
+    uint8_t rx_data = 0xff;
+
+    /* Wait until there is data available to receive */
+    while(!UART_RxReady());
+
+    /* Read the received data */
+    rx_data = UART_config[UART_Index].UART_Perif_Addr->DR;
+
+    return rx_data;
+}
+
+
+uint32_t UART_Receive_Long()
+{
+    uint32_t rx_data = 0;
+    uint8_t rx_buff[4] = {0};
+    uint8_t rx_cnt = 0;
+
+    for(rx_cnt = 0 ; rx_cnt < 4 ; rx_cnt++)
+    {
+        rx_buff[rx_cnt] = UART_Receive();
+    }
+
+    rx_data  = (uint32_t)((rx_buff[3]<<24) | (rx_buff[2]<<16) | (rx_buff[1]<<8) | (rx_buff[0]<<0));
+
+
+    return rx_data;
+}
+
+
+uint8_t UART_RxReady()
+{
+    return ((UART_config[(uint32_t)UART_Index].UART_Perif_Addr->FR & UART_FR_RXFE) == 0);
+}
+

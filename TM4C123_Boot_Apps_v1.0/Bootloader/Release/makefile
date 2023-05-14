@@ -15,6 +15,7 @@ ORDERED_OBJS += \
 "./Source/BSP/startup_tm4c_gnu.o" \
 "./Source/Driver/ADC/ADC_Driver.o" \
 "./Source/Driver/CAN/CAN_Driver.o" \
+"./Source/Driver/FLASH/FLASH.o" \
 "./Source/Driver/GPIO/GPIOdriver.o" \
 "./Source/Driver/I2C/I2C.o" \
 "./Source/Driver/LCD/LCD.o" \
@@ -43,6 +44,7 @@ RMDIR := RMDIR /S/Q
 -include Source/BSP/subdir_vars.mk
 -include Source/Driver/ADC/subdir_vars.mk
 -include Source/Driver/CAN/subdir_vars.mk
+-include Source/Driver/FLASH/subdir_vars.mk
 -include Source/Driver/GPIO/subdir_vars.mk
 -include Source/Driver/I2C/subdir_vars.mk
 -include Source/Driver/LCD/subdir_vars.mk
@@ -57,6 +59,7 @@ RMDIR := RMDIR /S/Q
 -include Source/BSP/subdir_rules.mk
 -include Source/Driver/ADC/subdir_rules.mk
 -include Source/Driver/CAN/subdir_rules.mk
+-include Source/Driver/FLASH/subdir_rules.mk
 -include Source/Driver/GPIO/subdir_rules.mk
 -include Source/Driver/I2C/subdir_rules.mk
 -include Source/Driver/LCD/subdir_rules.mk
@@ -182,7 +185,7 @@ all: $(OBJS) $(LDS_SRCS) $(GEN_CMDS)
 Bootloader.out: $(OBJS) $(LDS_SRCS) $(GEN_CMDS)
 	@echo 'Building target: "$@"'
 	@echo 'Invoking: GNU Linker'
-	"C:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc-9.2.1.exe" -mfpu=fpv4-sp-d16 -DPART_TM4C123GH6PM -O0 -fsigned-char -ffunction-sections -fdata-sections -Wall -specs="nosys.specs" -march=armv7e-m -mthumb -mfloat-abi=soft -Wl,-Map,"Bootloader.map" --entry 0x00000000 -o"Bootloader.out" $(ORDERED_OBJS)
+	"C:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc-9.2.1.exe" -mfpu=fpv4-sp-d16 -DPART_TM4C123GH6PM -O0 -fsigned-char -ffunction-sections -fdata-sections -g -Wall -specs="nosys.specs" -march=armv7e-m -mthumb -mfloat-abi=soft -Wl,-Map,"Bootloader.map" --entry 0x00000000 -o"Bootloader.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: "$@"'
 	@echo ' '
 
@@ -197,8 +200,8 @@ Bootloader.hex: $(EXE_OUTPUTS)
 # Other Targets
 clean:
 	-$(RM) $(BIN_OUTPUTS__QUOTED)$(EXE_OUTPUTS__QUOTED)
-	-$(RM) "Source\App\Main\main.o" "Source\BSP\bsp.o" "Source\BSP\startup_tm4c_gnu.o" "Source\Driver\ADC\ADC_Driver.o" "Source\Driver\CAN\CAN_Driver.o" "Source\Driver\GPIO\GPIOdriver.o" "Source\Driver\I2C\I2C.o" "Source\Driver\LCD\LCD.o" "Source\Driver\SPI\SPI.o" "Source\Driver\Timer\Timer.o" "Source\Driver\Timer\timercnter.o" "Source\Driver\UART\UART.o" "Source\Middleware\MCP3208\MCP3208.o" "Source\Middleware\OLED_SSD1306\SSD1306.o" "Source\Middleware\RTC_DS3231\DS3231.o" 
-	-$(RM) "Source\App\Main\main.d" "Source\BSP\bsp.d" "Source\BSP\startup_tm4c_gnu.d" "Source\Driver\ADC\ADC_Driver.d" "Source\Driver\CAN\CAN_Driver.d" "Source\Driver\GPIO\GPIOdriver.d" "Source\Driver\I2C\I2C.d" "Source\Driver\LCD\LCD.d" "Source\Driver\SPI\SPI.d" "Source\Driver\Timer\Timer.d" "Source\Driver\Timer\timercnter.d" "Source\Driver\UART\UART.d" "Source\Middleware\MCP3208\MCP3208.d" "Source\Middleware\OLED_SSD1306\SSD1306.d" "Source\Middleware\RTC_DS3231\DS3231.d" 
+	-$(RM) "Source\App\Main\main.o" "Source\BSP\bsp.o" "Source\BSP\startup_tm4c_gnu.o" "Source\Driver\ADC\ADC_Driver.o" "Source\Driver\CAN\CAN_Driver.o" "Source\Driver\FLASH\FLASH.o" "Source\Driver\GPIO\GPIOdriver.o" "Source\Driver\I2C\I2C.o" "Source\Driver\LCD\LCD.o" "Source\Driver\SPI\SPI.o" "Source\Driver\Timer\Timer.o" "Source\Driver\Timer\timercnter.o" "Source\Driver\UART\UART.o" "Source\Middleware\MCP3208\MCP3208.o" "Source\Middleware\OLED_SSD1306\SSD1306.o" "Source\Middleware\RTC_DS3231\DS3231.o" 
+	-$(RM) "Source\App\Main\main.d" "Source\BSP\bsp.d" "Source\BSP\startup_tm4c_gnu.d" "Source\Driver\ADC\ADC_Driver.d" "Source\Driver\CAN\CAN_Driver.d" "Source\Driver\FLASH\FLASH.d" "Source\Driver\GPIO\GPIOdriver.d" "Source\Driver\I2C\I2C.d" "Source\Driver\LCD\LCD.d" "Source\Driver\SPI\SPI.d" "Source\Driver\Timer\Timer.d" "Source\Driver\Timer\timercnter.d" "Source\Driver\UART\UART.d" "Source\Middleware\MCP3208\MCP3208.d" "Source\Middleware\OLED_SSD1306\SSD1306.d" "Source\Middleware\RTC_DS3231\DS3231.d" 
 	-@echo 'Finished clean'
 	-@echo ' '
 

@@ -1,6 +1,0 @@
-# FIXED
-
-Source/Driver/ADC/ADC_Driver.obj: ../Source/Driver/ADC/ADC_Driver.c
-
-../Source/Driver/ADC/ADC_Driver.c:
-

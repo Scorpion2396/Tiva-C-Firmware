@@ -116,6 +116,7 @@ Source/App/Main \
 Source/BSP \
 Source/Driver/ADC \
 Source/Driver/CAN \
+Source/Driver/FLASH \
 Source/Driver/GPIO \
 Source/Driver/I2C \
 Source/Driver/LCD \

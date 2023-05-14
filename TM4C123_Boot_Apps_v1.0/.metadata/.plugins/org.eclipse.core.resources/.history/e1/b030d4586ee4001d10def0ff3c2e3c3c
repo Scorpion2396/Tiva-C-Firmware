@@ -1,9 +1,0 @@
-# FIXED
-
-Source/Driver/GPIO/GPIOdriver.obj: ../Source/Driver/GPIO/GPIOdriver.c
-Source/Driver/GPIO/GPIOdriver.obj: ../Source/Driver/GPIO/GPIOdriver.h
-
-../Source/Driver/GPIO/GPIOdriver.c:
-
-../Source/Driver/GPIO/GPIOdriver.h:
-

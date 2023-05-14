@@ -3,6 +3,7 @@
 "./Source/BSP/startup_tm4c_gnu.o"
 "./Source/Driver/ADC/ADC_Driver.o"
 "./Source/Driver/CAN/CAN_Driver.o"
+"./Source/Driver/FLASH/FLASH.o"
 "./Source/Driver/GPIO/GPIOdriver.o"
 "./Source/Driver/I2C/I2C.o"
 "./Source/Driver/LCD/LCD.o"

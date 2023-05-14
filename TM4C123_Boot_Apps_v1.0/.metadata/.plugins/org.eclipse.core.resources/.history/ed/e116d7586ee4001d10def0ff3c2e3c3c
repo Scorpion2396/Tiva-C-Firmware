@@ -1,9 +1,0 @@
-# FIXED
-
-Source/Middleware/RTC_DS3231/DS3231.obj: ../Source/Middleware/RTC_DS3231/DS3231.c
-Source/Middleware/RTC_DS3231/DS3231.obj: ../Source/Middleware/RTC_DS3231/DS3231.h
-
-../Source/Middleware/RTC_DS3231/DS3231.c:
-
-../Source/Middleware/RTC_DS3231/DS3231.h:
-

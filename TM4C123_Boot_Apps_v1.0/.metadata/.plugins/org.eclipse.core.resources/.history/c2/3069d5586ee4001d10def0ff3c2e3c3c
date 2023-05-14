@@ -1,6 +1,0 @@
-# FIXED
-
-Source/Driver/SPI/SPI.obj: ../Source/Driver/SPI/SPI.c
-
-../Source/Driver/SPI/SPI.c:
-

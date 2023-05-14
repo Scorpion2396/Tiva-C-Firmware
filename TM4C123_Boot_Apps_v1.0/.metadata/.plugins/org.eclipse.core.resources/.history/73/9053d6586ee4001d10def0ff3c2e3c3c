@@ -1,6 +1,0 @@
-# FIXED
-
-Source/Driver/UART/UART.obj: ../Source/Driver/UART/UART.c
-
-../Source/Driver/UART/UART.c:
-
