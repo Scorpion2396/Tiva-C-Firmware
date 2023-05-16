@@ -41,6 +41,7 @@ static uint32_t I2C_Index       = 0;
 static int error_code           = 0;
 static uint8_t I2C_Init_Flag    =  (uint8_t)0;
 static uint32_t I2C_TPR         = 0;
+static uint8_t I2C_is_first_data = 0;
 
 /*****************************************************************************************************************************************/
 void I2C_Init(I2C_Channel I2C_Ch_Index, uint32_t I2C_Freq_KHz)
@@ -74,7 +75,7 @@ void I2C_Init(I2C_Channel I2C_Ch_Index, uint32_t I2C_Freq_KHz)
 /*****************************************************************************************************************************************/
 static inline void Check_I2C_BUS_busy()
 {
-//	while((I2C_config[I2C_Index].I2C_Perif_Addr->MCS & (1<<6)) == (1<<6));        // wait till I2C bus is busy
+//	while((I2C_config[I2C_Index].I2C_Perif_Addr->MCS & (1<<6)) != 0);        // wait till I2C bus is busy
 }
 /*****************************************************************************************************************************************/
 
@@ -97,7 +98,7 @@ static int Check_I2C_error()
             }
             else
             {
-				I2C_config[I2C_Index].I2C_Perif_Addr->MCS  =   0x4;               // (STOP I2C communication).	
+                I2C_config[I2C_Index].I2C_Perif_Addr->MCS  =   0x4;               // (STOP I2C communication).	
             }
                 
              error_code = I2C_config[I2C_Index].I2C_Perif_Addr->MCS & 0xff;               
@@ -105,193 +106,191 @@ static int Check_I2C_error()
 	}
 	
 	else 
-		return (1);
+            return (1);
 }
 /*****************************************************************************************************************************************/
 
 /*****************************************************************************************************************************************/
 void I2C_Write(uint8_t slave_address , uint8_t data)
 {
-	uint8_t temp_data[1] = {data};	
-	I2C_Write_Multiple(slave_address , temp_data  , 1);
+    I2C_Begin(slave_address);
+    I2C_Transmit_byte(data);
 }
 /*****************************************************************************************************************************************/
 
 /*****************************************************************************************************************************************/
 void I2C_Write_Memory(uint8_t slave_address , uint8_t slave_memory_address , uint8_t data)
 {
-	uint8_t temp_data[2] = {slave_memory_address , data};	
-	I2C_Write_Multiple(slave_address , temp_data  , 2);
+        I2C_Write_Memory_Multiple(slave_address, slave_memory_address, &data, 1);
 }
+
 /*****************************************************************************************************************************************/
 
 
 /*****************************************************************************************************************************************/
-void I2C_Write_Multiple(uint8_t slave_address , uint8_t *data , uint8_t num_of_data)
+
+void I2C_Write_Multiple(uint8_t slave_address , uint8_t *data , uint32_t num_of_data)
 {
- //       num_of_data++;
-        
-	int  error  =  0;
-	
-	if(I2C_Init_Flag == 0)
-	{
-		I2C_Init(I2C_0, 100);
-	}
-	else
-	{
-		;
-	}
-	
-	if(num_of_data > 0)
-	{
-		I2C_config[I2C_Index].I2C_Perif_Addr->MSA     =      (slave_address << 1);       //  Defining Slave address
-		I2C_config[I2C_Index].I2C_Perif_Addr->MSA    &=      ~(1<<0);					 //  Enable Master transmit mode 
-		
-		if(num_of_data == 1)
-		{
-			I2C_config[I2C_Index].I2C_Perif_Addr->MDR = *data;
-			
-			Check_I2C_BUS_busy();
-			
-			I2C_config[I2C_Index].I2C_Perif_Addr->MCS  =   ((1<<2) | (1<<1) | (1<<0));  // (STOP, START, RUN).
-			
-			Check_I2C_busy();
-			
-			error = Check_I2C_error();
-		}
-		
-		else
-		{
-			I2C_config[I2C_Index].I2C_Perif_Addr->MDR = *data++;
-			
-			Check_I2C_BUS_busy();
-			
-			I2C_config[I2C_Index].I2C_Perif_Addr->MCS  =   ((1<<1) | (1<<0));            // (START, RUN).
-			
-			while(num_of_data > (uint8_t)2)
-			{
-                          
-                          Check_I2C_busy();
-                          
-				if(Check_I2C_error())
-				{
-					I2C_config[I2C_Index].I2C_Perif_Addr->MDR =  *data++;
-					
-					I2C_config[I2C_Index].I2C_Perif_Addr->MCS  =  (1<<0);                 // (RUN).	
-				}
-				else
-				{
-					;                                    // error in communication
-				}
-				
-				num_of_data--;
-			}
-                        
-                        Check_I2C_busy();
-			
-			I2C_config[I2C_Index].I2C_Perif_Addr->MDR = *data;
-			
-			I2C_config[I2C_Index].I2C_Perif_Addr->MCS  =   ((1<<2) | (1<<0));            // (STOP, RUN).
-			
-			Check_I2C_busy();
-			
-			error = Check_I2C_error();
-		}	
-	}
-        if(error == 0)
-        {
-          ;                                                             //I2C communication error
-        }
-
+    uint32_t cnt;
+    
+    I2C_Begin(slave_address);
+    
+    for(cnt = 0 ; cnt < num_of_data - 1 ; cnt++)
+    {
+        I2C_Transmit(data[cnt]);
+    }
+    
+    I2C_Transmit_end_byte(data[cnt]);
 }
-/*****************************************************************************************************************************************/
 
 /*****************************************************************************************************************************************/
-void I2C_Write_Memory_Multiple(uint8_t slave_address , uint8_t slave_memory_address , uint8_t* data , uint8_t num_of_data)
+
+void I2C_Write_Memory_Multiple(uint8_t slave_address , uint8_t slave_memory_address , uint8_t* data , uint32_t num_of_data)
 {
-	int  error  =  0;
-	
-	if(I2C_Init_Flag == 0)
-	{
-		I2C_Init(I2C_0, 100);
-	}
-	else
-	{
-		;
-	}
-	
-	if(num_of_data > 0)
-	{
-		
-		I2C_config[I2C_Index].I2C_Perif_Addr->MSA     =      (slave_address << 1);       //  Defining Slave address
-		I2C_config[I2C_Index].I2C_Perif_Addr->MSA    &=      ~(1<<0);					 //  Enable Master transmit mode 
-				
-		I2C_config[I2C_Index].I2C_Perif_Addr->MDR = slave_memory_address;
-			
-		Check_I2C_BUS_busy();
-			
-		I2C_config[I2C_Index].I2C_Perif_Addr->MCS  =   ((1<<1) | (1<<0));           				 // (START, RUN).
-		
-		Check_I2C_busy();		
-		
-		if(num_of_data == 1)
-		{
-			I2C_config[I2C_Index].I2C_Perif_Addr->MDR = *data;
-			
-			Check_I2C_BUS_busy();
-			
-			I2C_config[I2C_Index].I2C_Perif_Addr->MCS  =   ((1<<2) | (1<<0));  // (STOP, RUN).
-			
-			Check_I2C_busy();
-			
-			error = Check_I2C_error();
-		}
-		
-		else
-		{
-			I2C_config[I2C_Index].I2C_Perif_Addr->MDR = *data++;
-			
-			Check_I2C_BUS_busy();
-			
-			I2C_config[I2C_Index].I2C_Perif_Addr->MCS  =   ((1<<1) | (1<<0));            // (START, RUN).
-			
-			while(num_of_data > (uint8_t)2)
-			{
-                          
-                          Check_I2C_busy();
-                          
-				if(Check_I2C_error())
-				{
-					I2C_config[I2C_Index].I2C_Perif_Addr->MDR =  *data++;
-					
-					I2C_config[I2C_Index].I2C_Perif_Addr->MCS  =  (1<<0);                 // (RUN).	
-				}
-				else
-				{
-					;                                    // error in communication
-				}
-				
-				num_of_data--;
-			}
-                        
-                        Check_I2C_busy();
-			
-			I2C_config[I2C_Index].I2C_Perif_Addr->MDR = *data;
-			
-			I2C_config[I2C_Index].I2C_Perif_Addr->MCS  =   ((1<<2) | (1<<0));            // (STOP, RUN).
-			
-			Check_I2C_busy();
-			
-			error = Check_I2C_error();
-		}	
-	}
-        if(error == 0)
-        {
-          ;                                                             //I2C communication error
-        }
-
+    uint32_t cnt;
+    
+    I2C_Begin(slave_address);
+    I2C_Transmit(slave_memory_address);
+    
+    for(cnt = 0 ; cnt < num_of_data - 1 ; cnt++)
+    {
+        I2C_Transmit(data[cnt]);
+    }
+    
+    I2C_Transmit_end_byte(data[cnt]);
 }
+
 /*****************************************************************************************************************************************/
+
+
+void I2C_Begin(uint8_t slave_address)
+{
+    I2C_config[I2C_Index].I2C_Perif_Addr->MSA     =      (slave_address << 1);       //  Defining Slave address
+    
+    I2C_is_first_data = 1;
+}
+
+/*****************************************************************************************************************************************/
+
+void I2C_Transmit(uint8_t data)
+{
+    uint8_t error = 0;
+    
+    if(I2C_is_first_data == 1)
+    {
+        I2C_config[I2C_Index].I2C_Perif_Addr->MSA    &=      ~(1<<0);	        //  Enable Master transmit mode 
+        I2C_config[I2C_Index].I2C_Perif_Addr->MDR     = data ;
+        Check_I2C_BUS_busy();
+        I2C_config[I2C_Index].I2C_Perif_Addr->MCS     =   ((1<<1) | (1<<0));    // (START, RUN).
+        I2C_is_first_data = 0;
+    }
+    else
+    {
+        I2C_config[I2C_Index].I2C_Perif_Addr->MDR  = data ;
+        I2C_config[I2C_Index].I2C_Perif_Addr->MCS  = (1<<0);                    // (RUN).	
+    }
+            
+    Check_I2C_busy();
+/*
+    if(Check_I2C_error())
+    {
+        error = error_code;  			
+    } 
+*/
+}
+
+/*****************************************************************************************************************************************/
+
+void I2C_Transmit_start_byte(uint8_t data)
+{
+    uint8_t error = 0;
+    
+    I2C_config[I2C_Index].I2C_Perif_Addr->MSA    &=      ~(1<<0);	        //  Enable Master transmit mode 
+    I2C_config[I2C_Index].I2C_Perif_Addr->MDR     = data ;
+    Check_I2C_BUS_busy();
+    I2C_config[I2C_Index].I2C_Perif_Addr->MCS     =   ((1<<1) | (1<<0));    // (START, RUN).
+            
+    Check_I2C_busy();
+/*
+    if(Check_I2C_error())
+    {
+        error = error_code;  			
+    } 
+*/
+    I2C_is_first_data = 0;
+}
+
+/*****************************************************************************************************************************************/
+
+/*****************************************************************************************************************************************/
+
+void I2C_Transmit_byte(uint8_t data)
+{
+    uint8_t error = 0;
+    
+    I2C_config[I2C_Index].I2C_Perif_Addr->MSA    &=      ~(1<<0);	        //  Enable Master transmit mode 
+    I2C_config[I2C_Index].I2C_Perif_Addr->MDR     = data ;
+    Check_I2C_BUS_busy();
+    I2C_config[I2C_Index].I2C_Perif_Addr->MCS     =   ((1<<2) | (1<<1) | (1<<0));    // (STOP, START, RUN).
+            
+    Check_I2C_busy();
+/*
+    if(Check_I2C_error())
+    {
+        error = error_code;  			
+    } 
+*/
+}
+
+/*****************************************************************************************************************************************/
+
+/*****************************************************************************************************************************************/
+
+void I2C_Transmit_end_byte(uint8_t data)
+{
+    uint8_t error = 0;
+    
+    I2C_config[I2C_Index].I2C_Perif_Addr->MDR  = data ;
+    I2C_config[I2C_Index].I2C_Perif_Addr->MCS  =   ((1<<2) | (1<<0));            // (STOP, RUN).
+            
+    Check_I2C_busy();
+/*    
+    if(Check_I2C_error())
+    {
+        error = error_code;  			
+    } 
+*/
+}
+
+/*****************************************************************************************************************************************/
+
+
+/*****************************************************************************************************************************************/
+
+void I2C_End()
+{
+    uint8_t error;
+    I2C_config[I2C_Index].I2C_Perif_Addr->MCS  =   ((1<<2) | (1<<0));            // (STOP, RUN).
+			
+    Check_I2C_busy();
+/*   
+    if(!Check_I2C_error())
+    {
+      error = error_code;                                                       // To Do error handler for I2C
+    }
+*/
+}
+
+/*****************************************************************************************************************************************/
+
+
+
+
+
+
+
+
+
 
 /*****************************************************************************************************************************************/
 int I2C_Read(uint8_t slave_address)
@@ -304,7 +303,7 @@ int I2C_Read(uint8_t slave_address)
 
 
 /*****************************************************************************************************************************************/
-void I2C_Read_Multiple(uint8_t slave_address , uint8_t *data , uint8_t num_of_data)
+void I2C_Read_Multiple(uint8_t slave_address , uint8_t *data , uint32_t num_of_data)
 {
 	int  error  =  0;
 	
@@ -402,7 +401,7 @@ int I2C_Read_Memory(uint8_t slave_address , uint8_t slave_memory_address)
 /*****************************************************************************************************************************************/
 
 /*****************************************************************************************************************************************/
-void I2C_Read_Memory_Multiple(uint8_t slave_address , uint8_t slave_memory_address , uint8_t *data , uint8_t num_of_data)
+void I2C_Read_Memory_Multiple(uint8_t slave_address , uint8_t slave_memory_address , uint8_t *data , uint32_t num_of_data)
 {
 	
 	I2C_Write(slave_address , slave_memory_address);
@@ -410,3 +409,4 @@ void I2C_Read_Memory_Multiple(uint8_t slave_address , uint8_t slave_memory_addre
 	I2C_Read_Multiple(slave_address ,  data ,  num_of_data);
 }
 /*****************************************************************************************************************************************/
+

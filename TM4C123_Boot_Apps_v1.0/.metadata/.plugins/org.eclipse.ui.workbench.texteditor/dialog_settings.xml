@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="Flash_Erase_Size"/>
+		<item key="selection" value="rx_data"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="rx_data"/>
+			<item value="APPS_FLASH_START_ADDR"/>
+			<item value="Apps_start_Addr"/>
+			<item value="rx_stack_ptr"/>
+			<item value="str1"/>
+			<item value="rx_cnt"/>
+			<item value="rx_app_size"/>
+			<item value="temp1"/>
 			<item value="Flash_Erase_Size"/>
 			<item value="FLASH_FMC_WRKEY"/>
 			<item value="FLASH_FMC_RDY"/>
@@ -15,9 +23,6 @@
 			<item value="FLASH_BLOCK_SIZE"/>
 			<item value="delay"/>
 			<item value="Delay_ms"/>
-			<item value="UART_Transmitter"/>
-			<item value="UART_Ch_Index"/>
-			<item value="Reset_Handler"/>
 		</list>
 		<list key="replacehistory">
 		</list>

@@ -17,6 +17,7 @@ extern void ssd1306_DrawRect(int x, int y, int width, int height);
 extern void ssd1306_SetDrawWindow(int x0, int y0, int x1, int y1) ;
 extern void ssd1306_set_display_mode(uint8_t mode) ;
 extern void ssd1306_DrawCircle(int16_t x0, int16_t y0, uint8_t r) ;
+extern void ssd1306_clear_row(uint8_t row_num);
 
 extern void dino_game() ;
 

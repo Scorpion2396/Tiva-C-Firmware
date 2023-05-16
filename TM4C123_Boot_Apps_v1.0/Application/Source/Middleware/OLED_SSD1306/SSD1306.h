@@ -16,6 +16,7 @@
 // Define the SSD1306 command and data byte commands
 #define SSD1306_COMMAND     0x00
 #define SSD1306_DATA        0xC0
+#define SSD1306_DATA_STREAM 0x40
 
 // Define the SSD1306 buffer size in bytes
 #define SSD1306_BUFFER_SIZE (SSD1306_WIDTH * (SSD1306_HEIGHT / 8))
@@ -77,6 +78,7 @@
 void ssd1306_init(void);
 void ssd1306_command(uint8_t command);
 void ssd1306_data(uint8_t data);
+void ssd1306_buffer_flush(uint8_t *data, uint32_t buffer_size) ;
 void ssd1306_clear(void);
 void ssd1306_draw_pixel(uint8_t x, uint8_t y, uint8_t color);
 void ssd1306_draw_line(uint8_t x0, uint8_t y0, uint8_t x1, uint8_t y1, uint8_t value) ;

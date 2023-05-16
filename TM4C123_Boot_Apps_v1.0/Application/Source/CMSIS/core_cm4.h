@@ -280,8 +280,6 @@
 
 /*@} end of group Cortex_M4 */
 
-
-
 /*******************************************************************************
  *                 Register Abstraction
   Core Register contain:

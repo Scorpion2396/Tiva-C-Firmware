@@ -3,5 +3,5 @@ MODULES_DATA_OFFSET=
 MODULES_MRU_PATH=D\:\\embedded\\Code_Composer_Studio\\Boot_App\\Bootloader\\Debug\\Bootloader.out\#THREAD_IDS\#Stellaris In-Circuit Debug Interface_0/CORTEX_M4_0
 MODULES_MRU_PATH.1=\#ADD_SYM\#(,)path\=D\:\\embedded\\Code_Composer_Studio\\Boot_App\\Application\\Debug\\Application.out\#THREAD_IDS\#Stellaris In-Circuit Debug Interface_0/CORTEX_M4_0
 eclipse.preferences.version=1
-symbolAutoCompleteHistory<seperator>org.eclipse.cdt.debug.ui.memory.memorybrowser.MemoryBrowser<seperator>Stellaris\ In-Circuit\ Debug\ Interface_0\\CORTEX_M4_0=0x20000,0x20400,0x2b1a0,0x2000,0x2b180,0xb180,0x400FD004,0x20100,0x20010,0x400FD000,0x00020010,0,0x00020000,0x40005000,0x4000551c
+symbolAutoCompleteHistory<seperator>org.eclipse.cdt.debug.ui.memory.memorybrowser.MemoryBrowser<seperator>Stellaris\ In-Circuit\ Debug\ Interface_0\\CORTEX_M4_0=0x20000,0x00021DC1,0x20400,0x2b1a0,0x2000,0x2b180,0xb180,0x400FD004,0x20100,0x20010,0x400FD000,0x00020010,0,0x00020000,0x40005000
 useAnnotationsPrefPage=true

@@ -1,7 +1,7 @@
 #include "TM4C123GH6PM.h"
 #include "FLASH.h"
 /**********************************************************************/
-void FlashProgram_ByteArr(uint32_t address, uint8_t *data, uint32_t count)
+uint8_t FlashProgram_ByteArr(uint32_t address, uint8_t *data, uint32_t count)
 {
 
     uint32_t cnt  = 0;
@@ -29,7 +29,7 @@ void FlashProgram_ByteArr(uint32_t address, uint8_t *data, uint32_t count)
         if (*(volatile uint32_t *)addr != data_long)
         {
             // Error: the write operation was unsuccessful
-            return;
+            return 0;
         }
 
     }
@@ -53,12 +53,33 @@ void FlashProgram_ByteArr(uint32_t address, uint8_t *data, uint32_t count)
         default:
             break;
         }
+
+        // Write the word to the flash memory data register
+        FLASH_FMD = data_long;
+
+        // Start the write operation
+        FLASH_FMA = 0x3ffff & addr;
+
+        //write wrkey , write and comit
+        FLASH_FMC = FLASH_FMC_WRKEY | FLASH_FMC_WRITE  ;
+
+        // Wait for the write operation to complete
+        while (FLASH_FMC & (FLASH_FMC_WRITE | FLASH_FMC_COMT));
+
+        // Check if the write operation was successful
+        if (*(volatile uint32_t *)addr != data_long)
+        {
+            // Error: the write operation was unsuccessful
+            return 0;
+        }
     }
+
+    return 1;
 
 }
 /***********************************************************************/
 
-void FlashProgram(uint32_t address, uint32_t *data, uint32_t count)
+uint8_t FlashProgram(uint32_t address, uint32_t *data, uint32_t count)
 {
 
     uint32_t cnt  = 0;
@@ -82,14 +103,16 @@ void FlashProgram(uint32_t address, uint32_t *data, uint32_t count)
         if (*(volatile uint32_t *)addr != data[cnt])
 		{
             // Error: the write operation was unsuccessful
-            return;
+            return 0;
         }
 
     }
+
+    return 1;
 }
 
 /*********************************************************************/
-void FlashErase(uint32_t address, uint32_t count)
+uint8_t FlashErase(uint32_t address, uint32_t count)
 {
 
     uint32_t cnt  = 0;
@@ -110,8 +133,9 @@ void FlashErase(uint32_t address, uint32_t count)
         if (*(volatile uint32_t *)addr != 0xFFFFFFFF)
         {
             // Error: the Erase operation was unsuccessful
-            return;
+            return 0;
         }
 
     }
+    return 1;
 }

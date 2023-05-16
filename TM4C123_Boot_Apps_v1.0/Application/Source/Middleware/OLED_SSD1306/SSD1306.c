@@ -175,7 +175,7 @@ const unsigned char shiva_logo [] = {
 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
 };
 
-/***********************************************************************************************/
+/*******************************************************************************/
 uint8_t ssd1306_current_col  = 0;
 uint8_t ssd1306_current_page = 0;
 
@@ -183,22 +183,7 @@ uint8_t ssd1306_current_page = 0;
 // The SSD1306 display buffer
 uint8_t ssd1306_buffer[SSD1306_BUFFER_SIZE];
 
-// Send a command byte to the SSD1306 display
-void ssd1306_command(uint8_t command) 
-{
-    // Send the control and command bytes to the display over I2C
-    I2C_Write_Memory(SSD1306_ADDRESS, SSD1306_COMMAND, command);
-}
-
-
-// Send a data byte to the SSD1306 display
-void ssd1306_data(uint8_t data) 
-{	
-	// Send the control and data bytes to the display over I2C
-	I2C_Write_Memory(SSD1306_ADDRESS, SSD1306_DATA, data);
-}
-
-// Initialize the SSD1306 display
+/*********************** Initialize the SSD1306 display*************************/
 void ssd1306_init(void) 
 {
 
@@ -255,11 +240,81 @@ void ssd1306_init(void)
   ssd1306_command(SSD1306_DISPLAY_ON);                // 0xAF = Set Display ON
   
   ssd1306_clear();
-  ssd1306_refresh(); 
-  
+  ssd1306_refresh();   
 }
 
-// Clear the SSD1306 display buffer
+/****************** Send a command byte to the SSD1306 display *****************/
+void ssd1306_command(uint8_t command) 
+{
+    // Send the control and command bytes to the display over I2C
+    I2C_Write_Memory(SSD1306_ADDRESS, SSD1306_COMMAND, command);
+}
+
+
+/*************** Send a data byte to the SSD1306 display ***********************/
+void ssd1306_data(uint8_t data) 
+{	
+	// Send the control and data bytes to the display over I2C
+	I2C_Write_Memory(SSD1306_ADDRESS, SSD1306_DATA, data);
+}
+
+/***************** Set the cursor (x = column , y = page) **********************/
+void ssd1306_setcursor(uint8_t page, uint8_t column) 
+{
+    if (column >= SSD1306_WIDTH || page >= SSD1306_PAGES) 
+    {
+        return; // Invalid coordinates
+    }
+
+    ssd1306_current_col = column;
+    ssd1306_current_page = page;
+
+    ssd1306_command(SSD1306_SET_COLUMN_ADDR);
+    ssd1306_command(column);
+    ssd1306_command(SSD1306_WIDTH - 1);
+    ssd1306_command(SSD1306_SET_PAGE_ADDR);
+    ssd1306_command(page);
+    ssd1306_command(SSD1306_PAGES - 1);
+}
+
+/************************************ Print string *****************************/
+void ssd1306_Print_String(uint8_t* str)
+{
+    uint16_t str_cnt  = 0;
+    uint8_t  font_col = 0;
+	
+    for(str_cnt = 0 ; str[str_cnt] != '\0' ; str_cnt++)
+    {
+        if((str[str_cnt] >= 32) && (str[str_cnt] <= 127))
+	{
+            for(font_col = 0 ; font_col < font_width ; font_col++)
+            {
+                ssd1306_data(font_5x8[str[str_cnt] - 32][font_col]);
+                                
+                if(ssd1306_current_col < (SSD1306_WIDTH - font_width))
+                {
+                    ssd1306_current_col += font_width;
+                }
+                else
+                {
+                    ssd1306_current_col += font_width;
+                    ssd1306_current_col %= SSD1306_WIDTH ;
+                                   
+                    if(ssd1306_current_page < (SSD1306_PAGES - 1))
+                    {
+                        ssd1306_current_page++;
+                    }
+                    else
+                    {
+                        ssd1306_current_page = 0;
+                    }
+                 }
+             }	
+	}	
+    }
+}
+
+/******************** Clear the SSD1306 display buffer *************************/
 void ssd1306_clear(void) 
 {
     for (uint16_t i = 0; i < sizeof(ssd1306_buffer); i++) 
@@ -268,7 +323,34 @@ void ssd1306_clear(void)
     }
 }
 
-// Set a pixel in the SSD1306 display buffer
+/***** Refresh the display with the contents of the display buffer *************/
+void ssd1306_refresh() 
+{
+    // Set the column address range
+    ssd1306_command(SSD1306_SET_COLUMN_ADDR);
+    ssd1306_command(0);
+    ssd1306_command(SSD1306_WIDTH - 1);
+
+    // Set the page address range
+    ssd1306_command(SSD1306_SET_PAGE_ADDR);
+    ssd1306_command(0);
+    ssd1306_command((SSD1306_HEIGHT / 8) - 1);
+
+    // Send the display buffer
+
+   ssd1306_buffer_flush(ssd1306_buffer, SSD1306_BUFFER_SIZE);
+
+}
+
+/**************** Send a data buffer to the SSD1306 display ********************/
+void ssd1306_buffer_flush(uint8_t *data, uint32_t buffer_size) 
+{	
+    I2C_Write_Memory_Multiple(SSD1306_ADDRESS , 0x40 , data , buffer_size);
+}
+
+
+
+/************* Set a pixel in the SSD1306 display buffer ***********************/
 /*
 * The function takes three arguments: x, y, and value. 
 * x and y specify the coordinates of the pixel, 
@@ -328,83 +410,6 @@ void ssd1306_draw_line(uint8_t x0, uint8_t y0, uint8_t x1, uint8_t y1, uint8_t v
     }
 }
 
-// Refresh the display with the contents of the display buffer
-void ssd1306_refresh() 
-{
-    // Set the column address range
-    ssd1306_command(SSD1306_SET_COLUMN_ADDR);
-    ssd1306_command(0);
-    ssd1306_command(SSD1306_WIDTH - 1);
-
-    // Set the page address range
-    ssd1306_command(SSD1306_SET_PAGE_ADDR);
-    ssd1306_command(0);
-    ssd1306_command((SSD1306_HEIGHT / 8) - 1);
-
-    // Send the display buffer
-    for (uint16_t i = 0; i < SSD1306_BUFFER_SIZE; i++) 
-	{
-        ssd1306_data(ssd1306_buffer[i]);
-    }
-}
-
-
-//Set the cursor (x = column , y = page)
-void ssd1306_setcursor(uint8_t page, uint8_t column) 
-{
-    if (column >= SSD1306_WIDTH || page >= SSD1306_PAGES) 
-	{
-        return; // Invalid coordinates
-    }
-
-    ssd1306_current_col = column;
-    ssd1306_current_page = page;
-
-    ssd1306_command(SSD1306_SET_COLUMN_ADDR);
-    ssd1306_command(column);
-    ssd1306_command(SSD1306_WIDTH - 1);
-    ssd1306_command(SSD1306_SET_PAGE_ADDR);
-    ssd1306_command(page);
-    ssd1306_command(SSD1306_PAGES - 1);
-}
-
-//Print string
-void ssd1306_Print_String(uint8_t* str)
-{
-	uint16_t str_cnt = 0;
-	uint8_t font_col = 0;
-	
-	for(str_cnt = 0 ; str[str_cnt] != '\0' ; str_cnt++)
-	{
-		if((str[str_cnt] >= 32) && (str[str_cnt] <= 127))
-		{
-			for(font_col = 0 ; font_col < font_width ; font_col++)
-			{
-				ssd1306_data(font_5x8[str[str_cnt] - 32][font_col]);
-                                
-                                if(ssd1306_current_col < (SSD1306_WIDTH - font_width))
-                                {
-                                   ssd1306_current_col += font_width;
-                                }
-                                else
-                                {
-                                   ssd1306_current_col += font_width;
-                                   ssd1306_current_col %= SSD1306_WIDTH ;
-                                   
-                                   if(ssd1306_current_page < (SSD1306_PAGES - 1))
-                                   {
-                                       ssd1306_current_page++;
-                                   }
-                                   else
-                                   {
-                                       ssd1306_current_page = 0;
-                                   }
-                                }
-			}	
-		}
-		
-	}
-}
 
 /**********************************************************************************/
 

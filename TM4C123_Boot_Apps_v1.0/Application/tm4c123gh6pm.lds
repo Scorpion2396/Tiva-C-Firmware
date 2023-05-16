@@ -37,6 +37,7 @@ OUTPUT_FORMAT("elf32-littlearm", "elf32-bigarm", "elf32-littlearm")
 OUTPUT_ARCH(arm)
 ENTRY(Reset_Handler) /* entry Point */
 
+
 MEMORY { /* memory map of Tiva TM4C123GH6PM */
     ROM (rx)  : ORIGIN = 0x00020000, LENGTH = 128K
     RAM (xrw) : ORIGIN = 0x20004000, LENGTH = 16K
@@ -90,12 +91,6 @@ SECTIONS {
 
     _etext = .;            /* global symbols at end of code */
 
-    .stack : {
-        __stack_start__ = .;
-        . = . + STACK_SIZE;
-        . = ALIGN(4);
-        __stack_end__ = .;
-    } >RAM
 
     .data :  AT (_etext) {
         __data_load__ = LOADADDR (.data);
@@ -126,6 +121,14 @@ SECTIONS {
         . = . + HEAP_SIZE;
         . = ALIGN(4);
         __heap_end__ = .;
+    } >RAM
+
+
+    .stack : {
+        __stack_start__ = .;
+        . = . + STACK_SIZE;
+        . = ALIGN(4);
+        __stack_end__ = .;
     } >RAM
 
     /* Remove information from the standard libraries */

@@ -1,3 +1,4 @@
+"./Source/App/Main/AppsDownloader.o"
 "./Source/App/Main/main.o"
 "./Source/BSP/bsp.o"
 "./Source/BSP/startup_tm4c_gnu.o"
