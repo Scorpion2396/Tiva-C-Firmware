@@ -6,6 +6,8 @@
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
+        private Label lblProgress;
+        private TextBox logBox;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -34,10 +36,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.cmbComPorts = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtBaudRate = new System.Windows.Forms.TextBox();
+            this.txtBaudRate = new System.Windows.Forms.ComboBox();
             this.btnSend = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.label4 = new System.Windows.Forms.Label();
+            this.dataPacketSize = new System.Windows.Forms.ComboBox();
+            this.progressBar = new System.Windows.Forms.ProgressBar();
             this.SuspendLayout();
+
             // 
             // btnSelectFile
             // 
@@ -95,10 +101,12 @@
 			//
 			// txtBaudRate
 			//
-			this.txtBaudRate.Location = new System.Drawing.Point(12, 134);
-			this.txtBaudRate.Name = "txtBaudRate";
-			this.txtBaudRate.Size = new System.Drawing.Size(121, 20);
-			this.txtBaudRate.TabIndex = 6;
+            this.txtBaudRate.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txtBaudRate.FormattingEnabled = true;
+            this.txtBaudRate.Location = new System.Drawing.Point(12, 134);
+            this.txtBaudRate.Name = "txtBaudRate";
+            this.txtBaudRate.Size = new System.Drawing.Size(121, 20);
+            this.txtBaudRate.TabIndex = 6;
 			//
 			// btnSend
 			//
@@ -106,9 +114,56 @@
 			this.btnSend.Name = "btnSend";
 			this.btnSend.Size = new System.Drawing.Size(75, 23);
 			this.btnSend.TabIndex = 7;
-			this.btnSend.Text = "Send";
+			this.btnSend.Text = "Flash";
 			this.btnSend.UseVisualStyleBackColor = true;
 			this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
+
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(142, 67);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(58, 13);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Data Packet Size:";
+            // 
+            // dataPacketSize
+            // 
+            this.dataPacketSize.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.dataPacketSize.FormattingEnabled = true;
+            this.dataPacketSize.Location = new System.Drawing.Point(142, 83);
+            this.dataPacketSize.Name = "dataPacketSize";
+            this.dataPacketSize.Size = new System.Drawing.Size(121, 21);
+            this.dataPacketSize.TabIndex = 9;
+
+            // Configure the properties of the ProgressBar control
+            this.progressBar.Location = new System.Drawing.Point(12, 180);  // Set the desired location
+            this.progressBar.Name = "progressBar";
+            this.progressBar.Size = new System.Drawing.Size(350, 15);  // Set the desired size
+            this.progressBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;  // Set the progress bar style
+            this.progressBar.TabIndex = 5;  // Set the desired tab index
+            this.progressBar.Visible = false;  // Initially set the visibility to false
+
+            // 
+            // % Box
+            // 
+            lblProgress = new Label();
+            lblProgress.Text = "0%";
+            lblProgress.Location = new Point(progressBar.Left + progressBar.Width + 10, progressBar.Top);
+            this.lblProgress.Visible = false;  // Initially set the visibility to false
+            this.Controls.Add(lblProgress);
+
+            // Initialize and configure the logBox control
+            logBox = new TextBox();
+            logBox.Multiline = true;
+            logBox.ReadOnly = true;
+            logBox.ScrollBars = ScrollBars.Vertical;
+            logBox.Location = new Point(10, progressBar.Bottom + 10);
+            logBox.Size = new Size(400, 200);
+            this.Controls.Add(logBox);
+
+
 			//
 			// openFileDialog1
 			//
@@ -118,19 +173,24 @@
 			//
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(507, 169);
+			this.ClientSize = new System.Drawing.Size(512, 512);
 			this.Controls.Add(this.btnSend);
 			this.Controls.Add(this.txtBaudRate);
 			this.Controls.Add(this.label3);
 			this.Controls.Add(this.cmbComPorts);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
+            this.Controls.Add(this.label4);
+			this.Controls.Add(this.dataPacketSize);
 			this.Controls.Add(this.txtFilePath);
 			this.Controls.Add(this.btnSelectFile);
+            this.Controls.Add(this.progressBar);
 			this.Name = "Form1";
 			this.Text = "Serial Port Application";
 			this.ResumeLayout(false);
 			this.PerformLayout();
+
+
 		}
 
     #endregion
@@ -141,9 +201,13 @@
     private System.Windows.Forms.Label label2;
     private System.Windows.Forms.ComboBox cmbComPorts;
     private System.Windows.Forms.Label label3;
-    private System.Windows.Forms.TextBox txtBaudRate;
+    private System.Windows.Forms.ComboBox txtBaudRate;
     private System.Windows.Forms.Button btnSend;
+    private System.Windows.Forms.Label label4;
+    private System.Windows.Forms.ComboBox dataPacketSize;
+    private System.Windows.Forms.ProgressBar progressBar;
     private System.Windows.Forms.OpenFileDialog openFileDialog1;
+    
 	}
 }
             
