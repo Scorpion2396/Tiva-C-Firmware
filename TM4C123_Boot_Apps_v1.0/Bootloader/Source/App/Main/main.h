@@ -34,6 +34,9 @@ typedef void (*fun_ptr)(void);
 /******************************************************************************/
 void Delay_ms(unsigned int delay_value);
 unsigned char verify_apps(void);
+unsigned char is_key_pressed(GPIO_PORT key);
+unsigned char is_key_pressed_sw1();
+unsigned char is_key_pressed_sw2();
 
 uint8_t downloadNflashApps();
 

@@ -28,7 +28,7 @@ uint8_t downloadNflashApps()
 
 
 
-    ssd1306_clear_row(7);
+    ssd1306_clear_refresh();
     ssd1306_setcursor(7,0);
     ssd1306_Print_String("Flash Apps Mode");
 
@@ -37,7 +37,7 @@ uint8_t downloadNflashApps()
         UART_Transmit(0x55);
     else
     {
-        while(1);
+        return 0;
     }
 
     for(rx_cnt = 0 ; rx_cnt < 4 ; rx_cnt++)

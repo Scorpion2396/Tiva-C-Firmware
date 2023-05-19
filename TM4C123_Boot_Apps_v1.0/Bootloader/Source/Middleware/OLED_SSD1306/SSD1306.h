@@ -78,6 +78,7 @@ void ssd1306_init(void);
 void ssd1306_command(uint8_t command);
 void ssd1306_data(uint8_t data);
 void ssd1306_clear(void);
+void ssd1306_clear_refresh();
 void ssd1306_draw_pixel(uint8_t x, uint8_t y, uint8_t color);
 void ssd1306_draw_line(uint8_t x0, uint8_t y0, uint8_t x1, uint8_t y1, uint8_t value) ;
 void ssd1306_refresh() ;

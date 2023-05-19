@@ -262,7 +262,9 @@ void ssd1306_init(void)
 // Clear the SSD1306 display buffer
 void ssd1306_clear(void) 
 {
-    for (uint16_t i = 0; i < sizeof(ssd1306_buffer); i++) 
+    uint16_t i;
+
+    for (i = 0; i < sizeof(ssd1306_buffer); i++)
     {
         ssd1306_buffer[i] = 0x00;
     }
