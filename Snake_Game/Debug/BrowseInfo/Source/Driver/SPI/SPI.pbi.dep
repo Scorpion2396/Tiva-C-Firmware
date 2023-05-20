@@ -1,0 +1,19 @@
+D:\embedded\Game\Snake_Game\Debug\BrowseInfo\Source\Driver\SPI\SPI.pbi: \
+  D:\embedded\Game\Snake_Game\Source\Driver\SPI\SPI.c \
+  D:\embedded\Game\Snake_Game\Source\CMSIS\TM4C123GH6PM.h \
+  D:\embedded\Game\Snake_Game\Source\CMSIS\core_cm4.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\stdint.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\ycheck.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\yvals.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\DLib_Defaults.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\DLib_Config_Normal.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\DLib_Product.h \
+  D:\embedded\Game\Snake_Game\Source\CMSIS\core_cmInstr.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\aarch32\cmsis_iar.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\aarch32\iccarm_builtin.h \
+  D:\embedded\Game\Snake_Game\Source\CMSIS\core_cmFunc.h \
+  D:\embedded\Game\Snake_Game\Source\CMSIS\core_cmSimd.h \
+  D:\embedded\Game\Snake_Game\Source\Interface\GPIO_Driver_Interface.h \
+  D:\embedded\Game\Snake_Game\Source\Common\Common_Datatype.h \
+  D:\embedded\Game\Snake_Game\Source\Common\Common_Macros.h \
+  D:\embedded\Game\Snake_Game\Source\Driver\SPI\SPI.h
