@@ -1,0 +1,19 @@
+
+**** Clean-only build of configuration FlashROM_StackLibrary for project ble5_simple_peripheral_cc2640r2lp_app ****
+
+"C:\\ti\\ccs1220\\ccs\\utils\\bin\\gmake" -k -j 4 clean -O 
+ 
+DEL /F  "configPkg\linker.cmd" "configPkg\compiler.opt"  "ble5_simple_peripheral_cc2640r2lp_app.out" 
+DEL /F "Application\board_key.obj" "Application\simple_peripheral.obj" "Application\simple_peripheral_menu.obj" "Application\two_btn_menu.obj" "Application\util.obj" "Drivers\ECC\ECCROMCC26XX.obj" "Drivers\TRNG\TRNGCC26XX.obj" "ICall\icall.obj" "ICall\icall_cc2650.obj" "ICall\icall_user_config.obj" "ICallBLE\ble_user_config.obj" "ICallBLE\icall_api_lite.obj" "PROFILES\devinfoservice.obj" "PROFILES\gatt_uuid.obj" "PROFILES\gattservapp_util.obj" "PROFILES\simple_gatt_profile.obj" "Startup\board.obj" "Startup\ccfg_app_ble.obj" "Startup\main.obj" 
+DEL /F "Application\board_key.d" "Application\simple_peripheral.d" "Application\simple_peripheral_menu.d" "Application\two_btn_menu.d" "Application\util.d" "Drivers\ECC\ECCROMCC26XX.d" "Drivers\TRNG\TRNGCC26XX.d" "ICall\icall.d" "ICall\icall_cc2650.d" "ICall\icall_user_config.d" "ICallBLE\ble_user_config.d" "ICallBLE\icall_api_lite.d" "PROFILES\devinfoservice.d" "PROFILES\gatt_uuid.d" "PROFILES\gattservapp_util.d" "PROFILES\simple_gatt_profile.d" "Startup\board.d" "Startup\ccfg_app_ble.d" "Startup\main.d" 
+RMDIR /S/Q  "configPkg\" 
+Could Not Find D:\embedded\Code_Composer_Studio\Boot_App\ble5_simple_peripheral_cc2640r2lp_app\FlashROM_StackLibrary\ble5_simple_peripheral_cc2640r2lp_app.out
+Could Not Find D:\embedded\Code_Composer_Studio\Boot_App\ble5_simple_peripheral_cc2640r2lp_app\FlashROM_StackLibrary\Application\board_key.obj
+Could Not Find D:\embedded\Code_Composer_Studio\Boot_App\ble5_simple_peripheral_cc2640r2lp_app\FlashROM_StackLibrary\Drivers\ECC\ECCROMCC26XX.obj
+Could Not Find D:\embedded\Code_Composer_Studio\Boot_App\ble5_simple_peripheral_cc2640r2lp_app\FlashROM_StackLibrary\Drivers\TRNG\TRNGCC26XX.obj
+Could Not Find D:\embedded\Code_Composer_Studio\Boot_App\ble5_simple_peripheral_cc2640r2lp_app\FlashROM_StackLibrary\ICall\icall.obj
+Could Not Find D:\embedded\Code_Composer_Studio\Boot_App\ble5_simple_peripheral_cc2640r2lp_app\FlashROM_StackLibrary\ICallBLE\ble_user_config.obj
+Finished clean
+ 
+
+**** Build Finished ****

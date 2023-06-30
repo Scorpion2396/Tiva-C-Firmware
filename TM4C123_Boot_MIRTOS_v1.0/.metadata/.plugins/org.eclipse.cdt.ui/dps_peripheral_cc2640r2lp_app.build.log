@@ -1,0 +1,34 @@
+
+**** Build of configuration FlashROM_StackLibrary for project dps_peripheral_cc2640r2lp_app ****
+
+"C:\\ti\\ccs1220\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../TOOLS/app_ble.cfg"
+Invoking: XDCtools
+"C:/ti/xdctools_3_51_03_28_core/xs" --xdcpath="C:/ti/simplelink_cc2640r2_sdk_5_30_00_03/source;C:/ti/simplelink_cc2640r2_sdk_5_30_00_03/kernel/tirtos/packages;C:/ti/simplelink_cc2640r2_sdk_5_30_00_03/source/ti/blestack;" xdc.tools.configuro -o configPkg -t ti.targets.arm.elf.M3 -p ti.platforms.simplelink:CC2640R2F -r release -c "C:/ti/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS" --compileOptions "-mv7M3 --code_state=16 -me -Ooff --opt_for_speed=0 --include_path=\"D:/embedded/Code_Composer_Studio/Boot_App/dps_peripheral_cc2640r2lp_app\" --include_path=\"D:/embedded/Code_Composer_Studio/Boot_App/dps_peripheral_cc2640r2lp_app/Application\" --include_path=\"D:/embedded/Code_Composer_Studio/Boot_App/dps_peripheral_cc2640r2lp_app/Startup\" --include_path=\"D:/embedded/Code_Composer_Studio/Boot_App/dps_peripheral_cc2640r2lp_app/PROFILES\" --include_path=\"D:/embedded/Code_Composer_Studio/Boot_App/dps_peripheral_cc2640r2lp_app/Include\" --include_path=\"C:/ti/simplelink_cc2640r2_sdk_5_30_00_03/source/ti/blestack/controller/cc26xx_r2/inc\" --include_path=\"C:/ti/simplelink_cc2640r2_sdk_5_30_00_03/source/ti/blestack/inc\" --include_path=\"C:/ti/simplelink_cc2640r2_sdk_5_30_00_03/source/ti/blestack/rom\" --include_path=\"C:/ti/simplelink_cc2640r2_sdk_5_30_00_03/source/ti/blestack/common/cc26xx\" --include_path=\"C:/ti/simplelink_cc2640r2_sdk_5_30_00_03/source/ti/blestack/icall/inc\" --include_path=\"C:/ti/simplelink_cc2640r2_sdk_5_30_00_03/source/ti/blestack/profiles/dev_info\" --include_path=\"C:/ti/simplelink_cc2640r2_sdk_5_30_00_03/source/ti/blestack/profiles/roles/cc26xx\" --include_path=\"C:/ti/simplelink_cc2640r2_sdk_5_30_00_03/source/ti/blestack/profiles/roles\" --include_path=\"C:/ti/simplelink_cc2640r2_sdk_5_30_00_03/source/ti/blestack/profiles/simple_profile/cc26xx\" --include_path=\"C:/ti/simplelink_cc2640r2_sdk_5_30_00_03/source/ti/blestack/profiles/simple_profile\" --include_path=\"C:/ti/simplelink_cc2640r2_sdk_5_30_00_03/source/ti/blestack/target\" --include_path=\"C:/ti/simplelink_cc2640r2_sdk_5_30_00_03/source/ti/blestack/hal/src/target/_common\" --include_path=\"C:/ti/simplelink_cc2640r2_sdk_5_30_00_03/source/ti/blestack/hal/src/target/_common/cc26xx\" --include_path=\"C:/ti/simplelink_cc2640r2_sdk_5_30_00_03/source/ti/blestack/hal/src/inc\" --include_path=\"C:/ti/simplelink_cc2640r2_sdk_5_30_00_03/source/ti/blestack/heapmgr\" --include_path=\"C:/ti/simplelink_cc2640r2_sdk_5_30_00_03/source/ti/blestack/icall/src/inc\" --include_path=\"C:/ti/simplelink_cc2640r2_sdk_5_30_00_03/source/ti/blestack/osal/src/inc\" --include_path=\"C:/ti/simplelink_cc2640r2_sdk_5_30_00_03/source/ti/blestack/services/src/saddr\" --include_path=\"C:/ti/simplelink_cc2640r2_sdk_5_30_00_03/source/ti/blestack/services/src/sdata\" --include_path=\"C:/ti/simplelink_cc2640r2_sdk_5_30_00_03/source/ti/devices/cc26x0r2\" --include_path=\"C:/ti/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" --define=DeviceFamily_CC26X0R2 --define=BOARD_DISPLAY_USE_LCD=0 --define=BOARD_DISPLAY_USE_UART=1 --define=BOARD_DISPLAY_USE_UART_ANSI=1 --define=CC2640R2_LAUNCHXL --define=CC26XX --define=CC26XX_R2 --define=ICALL_EVENTS --define=ICALL_JT --define=ICALL_LITE --define=ICALL_MAX_NUM_ENTITIES=6 --define=ICALL_MAX_NUM_TASKS=3 --define=ICALL_STACK0_ADDR --define=POWER_SAVING --define=STACK_LIBRARY --define=USE_ICALL --define=xdc_runtime_Assert_DISABLE_ALL --define=xdc_runtime_Log_DISABLE_ALL -g --c99 --gcc --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --abi=eabi " "../TOOLS/app_ble.cfg"
+making package.mak (because of package.bld) ...
+generating interfaces for package configPkg (because package/package.xdc.inc is older than package.xdc) ...
+configuring app_ble.xem3 from package/cfg/app_ble_pem3.cfg ...
+generating custom ROM library makefile ... 
+Starting build of library sources ...
+making D:/embedded/Code_Composer_Studio/Boot_App/dps_peripheral_cc2640r2lp_app/TOOLS/src/sysbios/rom_sysbios.aem3 ...
+Build of libraries failed.
+TOOLS/subdir_rules.mk:12: recipe for target 'build-396906753-inproc' failed
+process_begin: CreateProcess(NULL, C:\msys64\mingw64\bin -C D:/embedded/Code_Composer_Studio/Boot_App/dps_peripheral_cc2640r2lp_app/TOOLS/src/sysbios, ...) failed.
+make (e=5): Access is denied.
+ 
+gmake: *** [D:/embedded/Code_Composer_Studio/Boot_App/dps_peripheral_cc2640r2lp_app/TOOLS/src/makefile.libs:57: D:/embedded/Code_Composer_Studio/Boot_App/dps_peripheral_cc2640r2lp_app/TOOLS/src/sysbios/rom_sysbios.aem3] Error 5
+error: xdc.cfg.SourceDir: "C:/ti/xdctools_3_51_03_28_core/packages/xdc/cfg/SourceDir.xs", line 209: xdc.cfg.SourceDir : Build of generated source libraries failed: exit status = 2:
+ 
+js: "C:/ti/xdctools_3_51_03_28_core/packages/xdc/cfg/Main.xs", line 160: Error: Configuration failed!
+gmake.exe: *** [package.mak:202: package/cfg/app_ble_pem3.xdl] Error 1
+gmake.exe: *** Deleting file 'package/cfg/app_ble_pem3.xdl'
+gmake.exe: *** [package/cfg/app_ble_pem3.xdl] Deleting file 'package/cfg/app_ble_pem3.h'
+gmake.exe: *** [package/cfg/app_ble_pem3.xdl] Deleting file 'package/cfg/app_ble_pem3.c'
+js: "C:/ti/xdctools_3_51_03_28_core/packages/xdc/tools/Cmdr.xs", line 52: Error: xdc.tools.configuro: configuration failed due to earlier errors (status = 2); 'linker.cmd' deleted.
+gmake[1]: *** [build-396906753-inproc] Error 1
+gmake: *** [build-396906753] Error 2
+TOOLS/subdir_rules.mk:9: recipe for target 'build-396906753' failed
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****

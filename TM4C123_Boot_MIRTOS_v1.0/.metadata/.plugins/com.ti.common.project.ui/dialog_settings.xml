@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="com.ti.ccstudio.project.ui.internal.preferences.CodegenToolsPreferencePage">
+		<item key="ToolsPreferencePage.BROWSE_FILTER" value="D:\embedded\tools\ti-cgt-arm_18.12.8.LTS"/>
+	</section>
+</section>

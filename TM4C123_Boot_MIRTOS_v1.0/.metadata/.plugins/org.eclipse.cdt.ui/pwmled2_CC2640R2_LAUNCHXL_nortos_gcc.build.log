@@ -1,0 +1,37 @@
+
+**** Build of configuration Debug for project pwmled2_CC2640R2_LAUNCHXL_nortos_gcc ****
+
+"C:\\ti\\ccs1220\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../main_nortos.c"
+Invoking: GNU Compiler
+"C:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc-9.2.1.exe" -c -mcpu=cortex-m3 -march=armv7-m -mthumb -mfloat-abi=soft -DDeviceFamily_CC26X0R2 -I"D:/embedded/Code_Composer_Studio/Boot_App/pwmled2_CC2640R2_LAUNCHXL_nortos_gcc" -I"C:/ti/simplelink_cc2640r2_sdk_1_00_00_22_/source" -I"C:/ti/simplelink_cc2640r2_sdk_1_00_00_22_/kernel/nortos" -I"C:/ti/simplelink_cc2640r2_sdk_1_00_00_22_/kernel/nortos/posix" -I"C:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/arm-none-eabi/include/newlib-nano" -I"C:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/arm-none-eabi/include" -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -MMD -MP -MF"main_nortos.d_raw" -MT"main_nortos.o" -std=c99  -o"main_nortos.o" "../main_nortos.c"
+Finished building: "../main_nortos.c"
+ 
+Building file: "../ccfg.c"
+Invoking: GNU Compiler
+"C:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc-9.2.1.exe" -c -mcpu=cortex-m3 -march=armv7-m -mthumb -mfloat-abi=soft -DDeviceFamily_CC26X0R2 -I"D:/embedded/Code_Composer_Studio/Boot_App/pwmled2_CC2640R2_LAUNCHXL_nortos_gcc" -I"C:/ti/simplelink_cc2640r2_sdk_1_00_00_22_/source" -I"C:/ti/simplelink_cc2640r2_sdk_1_00_00_22_/kernel/nortos" -I"C:/ti/simplelink_cc2640r2_sdk_1_00_00_22_/kernel/nortos/posix" -I"C:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/arm-none-eabi/include/newlib-nano" -I"C:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/arm-none-eabi/include" -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -MMD -MP -MF"ccfg.d_raw" -MT"ccfg.o" -std=c99  -o"ccfg.o" "../ccfg.c"
+Finished building: "../ccfg.c"
+ 
+Building file: "../CC2640R2_LAUNCHXL_fxns.c"
+Invoking: GNU Compiler
+"C:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc-9.2.1.exe" -c -mcpu=cortex-m3 -march=armv7-m -mthumb -mfloat-abi=soft -DDeviceFamily_CC26X0R2 -I"D:/embedded/Code_Composer_Studio/Boot_App/pwmled2_CC2640R2_LAUNCHXL_nortos_gcc" -I"C:/ti/simplelink_cc2640r2_sdk_1_00_00_22_/source" -I"C:/ti/simplelink_cc2640r2_sdk_1_00_00_22_/kernel/nortos" -I"C:/ti/simplelink_cc2640r2_sdk_1_00_00_22_/kernel/nortos/posix" -I"C:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/arm-none-eabi/include/newlib-nano" -I"C:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/arm-none-eabi/include" -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -MMD -MP -MF"CC2640R2_LAUNCHXL_fxns.d_raw" -MT"CC2640R2_LAUNCHXL_fxns.o" -std=c99  -o"CC2640R2_LAUNCHXL_fxns.o" "../CC2640R2_LAUNCHXL_fxns.c"
+Finished building: "../CC2640R2_LAUNCHXL_fxns.c"
+ 
+Building file: "../CC2640R2_LAUNCHXL.c"
+Invoking: GNU Compiler
+"C:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc-9.2.1.exe" -c -mcpu=cortex-m3 -march=armv7-m -mthumb -mfloat-abi=soft -DDeviceFamily_CC26X0R2 -I"D:/embedded/Code_Composer_Studio/Boot_App/pwmled2_CC2640R2_LAUNCHXL_nortos_gcc" -I"C:/ti/simplelink_cc2640r2_sdk_1_00_00_22_/source" -I"C:/ti/simplelink_cc2640r2_sdk_1_00_00_22_/kernel/nortos" -I"C:/ti/simplelink_cc2640r2_sdk_1_00_00_22_/kernel/nortos/posix" -I"C:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/arm-none-eabi/include/newlib-nano" -I"C:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/arm-none-eabi/include" -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -MMD -MP -MF"CC2640R2_LAUNCHXL.d_raw" -MT"CC2640R2_LAUNCHXL.o" -std=c99  -o"CC2640R2_LAUNCHXL.o" "../CC2640R2_LAUNCHXL.c"
+Finished building: "../CC2640R2_LAUNCHXL.c"
+ 
+Building file: "../pwmled2.c"
+Invoking: GNU Compiler
+"C:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc-9.2.1.exe" -c -mcpu=cortex-m3 -march=armv7-m -mthumb -mfloat-abi=soft -DDeviceFamily_CC26X0R2 -I"D:/embedded/Code_Composer_Studio/Boot_App/pwmled2_CC2640R2_LAUNCHXL_nortos_gcc" -I"C:/ti/simplelink_cc2640r2_sdk_1_00_00_22_/source" -I"C:/ti/simplelink_cc2640r2_sdk_1_00_00_22_/kernel/nortos" -I"C:/ti/simplelink_cc2640r2_sdk_1_00_00_22_/kernel/nortos/posix" -I"C:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/arm-none-eabi/include/newlib-nano" -I"C:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/arm-none-eabi/include" -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -MMD -MP -MF"pwmled2.d_raw" -MT"pwmled2.o" -std=c99  -o"pwmled2.o" "../pwmled2.c"
+Finished building: "../pwmled2.c"
+ 
+Building target: "pwmled2_CC2640R2_LAUNCHXL_nortos_gcc.out"
+Invoking: GNU Linker
+"C:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc-9.2.1.exe" -DDeviceFamily_CC26X0R2 -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -march=armv7-m -mthumb -mfloat-abi=soft -Wl,-Map,"pwmled2_CC2640R2_LAUNCHXL_nortos_gcc.map" --entry resetISR -nostartfiles -static -Wl,--gc-sections -L"C:/ti/simplelink_cc2640r2_sdk_1_00_00_22_/source" -L"C:/ti/simplelink_cc2640r2_sdk_1_00_00_22_/kernel/nortos" -L"C:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/arm-none-eabi/lib/thumb/v7-m" -L"C:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/arm-none-eabi/lib" -march=armv7-m -mthumb --specs=nano.specs -o"pwmled2_CC2640R2_LAUNCHXL_nortos_gcc.out" "./CC2640R2_LAUNCHXL.o" "./CC2640R2_LAUNCHXL_fxns.o" "./ccfg.o" "./main_nortos.o" "./pwmled2.o" -Wl,-T"../CC2640R2_LAUNCHXL_NoRTOS.lds"  -l:"ti/display/lib/display.am3g" -l:"ti/grlib/lib/gcc/m3/grlib.a" -l:"third_party/spiffs/lib/gcc/m3/spiffs_cc26xx.a" -l:"ti/drivers/rf/lib/rf_multiMode_cc26x0r2.am3g" -l:"ti/drivers/lib/drivers_cc26x0r2.am3g" -l:"lib/nortos_cc26x0r2.am3g" -l:"ti/devices/cc26x0r2/driverlib/bin/gcc/driverlib.lib" -lgcc -lc -lm -lnosys 
+Finished building target: "pwmled2_CC2640R2_LAUNCHXL_nortos_gcc.out"
+ 
+
+**** Build Finished ****

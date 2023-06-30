@@ -1,0 +1,84 @@
+/******************************************************************************/
+#include "main.h"
+/******************************************************************************/
+
+
+void main()
+{
+
+
+    fun_ptr  jump_to_apps = (void(*)(void)) (*((unsigned int*)(APPS_RESET_HANDLER_ADDR)));
+    unsigned int apps_stack_ptr = APPS_STACK_PTR_ADDR;
+
+    if(verify_apps())
+    {
+
+        SCB->VTOR = APPS_FLASH_START_ADDR;  // change in Interrupt Vector Table address to Apps IntVtrTble
+        __set_MSP(apps_stack_ptr);
+        jump_to_apps();
+    }
+    else
+    {
+
+        while(1)
+            DigitalWrite(PF1,HIGH);
+    }
+}
+
+__ASM
+(void PendSV_Handler(void)
+{
+    IMPORT OS_curr /* extern variable */
+    IMPORT OS_next /* extern variable */
+/*  disable irq */
+    CPSID       I
+
+/*  if(OS_curr != (OSThread *)0) */
+/*  {  */
+     LDR        r1,=OS_curr
+     LDR        r1,=[r1,#0x00]
+     CBZ        r1,PendSV_restore
+/*   push r4 - r11 to the stack */
+     PUSH       {r4-r11}
+     LDR        r1,=OS_curr
+     LDR        r1,[r1,#0x00]
+/*   OS_curr->sp = sp;  */
+     STR        sp,[r1,#0x00]
+
+/*   }  */
+
+PendSV_restore
+/*  sp = OS_next->sp;   */
+    LDR         r1,=OS_next
+    LDR         r1,[r1,#0x00]
+    LDR         sp,[r1,#0x00]
+/*  OS_curr = OS_next;  */
+    LDR         r1,=OS_next
+    LDR         r1,[r1,#0x00]
+    LDR         r2,=OS_curr
+    STR         r1,[r2,#0x00]
+
+    /*  pop registers r4-r11 */
+    POP        {r4-r11}
+
+    /* enable irq */
+    CPSIE       I
+    BX          lr
+})
+
+
+
+/**************************************************************************************/
+unsigned char verify_apps(void)
+{
+    if((*((unsigned int*)(APPS_RESET_HANDLER_ADDR))) != APPS_INVALID)
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
+}
+
+

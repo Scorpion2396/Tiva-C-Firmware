@@ -1,0 +1,6 @@
+1682164192357	Rename resource 'Boot_Apps'
+1682164610423	Delete resource 'Application'
+1682169871036	Delete resource 'Bootloader/main.c'
+1682175618526	Delete resource 'test'
+1682176594879	Delete resource 'Application/tm4c123gh6pm_startup_ccs_gcc.c'
+1682176597926	Delete resource 'Application/main.c'

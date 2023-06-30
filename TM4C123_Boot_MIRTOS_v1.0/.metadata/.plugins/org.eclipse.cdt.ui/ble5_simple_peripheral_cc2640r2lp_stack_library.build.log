@@ -1,0 +1,45 @@
+
+**** Build of configuration FlashROM_Library for project ble5_simple_peripheral_cc2640r2lp_stack_library ****
+
+"C:\\ti\\ccs1220\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+C:/ti/simplelink_cc2640r2_sdk_1_00_00_22/source/ti/ble5stack/../../../tools/ble5stack/lib_search/lib_search    --opt D:/embedded/Code_Composer_Studio/Boot_App/ble5_simple_peripheral_cc2640r2lp_stack_library/TOOLS/build_config.opt    --lib-dir C:/ti/simplelink_cc2640r2_sdk_1_00_00_22/source/ti/ble5stack/blelib/cc26x0r2    --cmd D:/embedded/Code_Composer_Studio/Boot_App/ble5_simple_peripheral_cc2640r2lp_stack_library/FlashROM_Library/lib_linker.cmd    --xml C:/ti/simplelink_cc2640r2_sdk_1_00_00_22/source/ti/ble5stack/../../../tools/ble5stack/lib_search/lib_search.xml    --sym-dir C:/ti/simplelink_cc2640r2_sdk_1_00_00_22/source/ti/ble5stack/symbols/cc26x0r2
+makefile:203: recipe for target 'pre-build' failed
+process_begin: CreateProcess(NULL, C:/ti/simplelink_cc2640r2_sdk_1_00_00_22/source/ti/ble5stack/../../../tools/ble5stack/lib_search/lib_search --opt D:/embedded/Code_Composer_Studio/Boot_App/ble5_simple_peripheral_cc2640r2lp_stack_library/TOOLS/build_config.opt --lib-dir C:/ti/simplelink_cc2640r2_sdk_1_00_00_22/source/ti/ble5stack/blelib/cc26x0r2 --cmd D:/embedded/Code_Composer_Studio/Boot_App/ble5_simple_peripheral_cc2640r2lp_stack_library/FlashROM_Library/lib_linker.cmd --xml C:/ti/simplelink_cc2640r2_sdk_1_00_00_22/source/ti/ble5stack/../../../tools/ble5stack/lib_search/lib_search.xml --sym-dir C:/ti/simplelink_cc2640r2_sdk_1_00_00_22/source/ti/ble5stack/symbols/cc26x0r2, ...) failed.
+ 
+gmake[1]: [pre-build] Error 2 (ignored)
+ 
+makefile:178: recipe for target 'all' failed
+gmake[1]: *** No rule to make target 'C:/ti/simplelink_cc2640r2_sdk_1_00_00_22/source/ti/ble5stack/hal/src/common/hal_assert.c', needed by 'HAL/Common/hal_assert.obj'.
+gmake[1]: *** No rule to make target 'C:/ti/simplelink_cc2640r2_sdk_1_00_00_22/source/ti/ble5stack/hal/src/target/_common/hal_flash_wrapper.c', needed by 'HAL/Target/CC2650/Drivers/hal_flash_wrapper.obj'.
+gmake[1]: *** No rule to make target 'C:/ti/simplelink_cc2640r2_sdk_1_00_00_22/source/ti/ble5stack/hal/src/target/_common/hal_rtc_wrapper.c', needed by 'HAL/Target/CC2650/Drivers/hal_rtc_wrapper.obj'.
+gmake[1]: *** No rule to make target 'C:/ti/simplelink_cc2640r2_sdk_1_00_00_22/source/ti/ble5stack/hal/src/target/_common/hal_trng_wrapper.c', needed by 'HAL/Target/CC2650/Drivers/hal_trng_wrapper.obj'.
+gmake[1]: *** No rule to make target 'C:/ti/simplelink_cc2640r2_sdk_1_00_00_22/source/ti/ble5stack/hal/src/target/_common/cc26xx/mb_patch.c', needed by 'HAL/Target/CC2650/_common/mb_patch.obj'.
+gmake[1]: *** No rule to make target 'C:/ti/simplelink_cc2640r2_sdk_1_00_00_22/source/ti/ble5stack/host/gatt_uuid.c', needed by 'Host/gatt_uuid.obj'.
+gmake[1]: *** No rule to make target 'C:/ti/simplelink_cc2640r2_sdk_1_00_00_22/source/ti/ble5stack/icall/stack/ble_dispatch_JT.c', needed by 'ICallBLE/ble_dispatch_JT.obj'.
+gmake[1]: *** No rule to make target 'C:/ti/simplelink_cc2640r2_sdk_1_00_00_22/source/ti/ble5stack/icall/stack/ble_dispatch_lite.c', needed by 'ICallBLE/ble_dispatch_lite.obj'.
+gmake[1]: *** No rule to make target 'C:/ti/simplelink_cc2640r2_sdk_1_00_00_22/source/ti/ble5stack/icall/src/icall_lite_translation.c', needed by 'ICallBLE/icall_lite_translation.obj'.
+gmake[1]: *** No rule to make target 'C:/ti/simplelink_cc2640r2_sdk_1_00_00_22/source/ti/ble5stack/common/cc26xx/npi/stack/npi.c', needed by 'NPI/npi.obj'.
+gmake[1]: *** No rule to make target 'C:/ti/simplelink_cc2640r2_sdk_1_00_00_22/source/ti/ble5stack/osal/src/common/osal.c', needed by 'OSAL/osal.obj'.
+gmake[1]: *** No rule to make target 'C:/ti/simplelink_cc2640r2_sdk_1_00_00_22/source/ti/ble5stack/osal/src/common/osal_bufmgr.c', needed by 'OSAL/osal_bufmgr.obj'.
+gmake[1]: *** No rule to make target 'C:/ti/simplelink_cc2640r2_sdk_1_00_00_22/source/ti/ble5stack/osal/src/common/osal_cbtimer.c', needed by 'OSAL/osal_cbtimer.obj'.
+gmake[1]: *** No rule to make target 'C:/ti/simplelink_cc2640r2_sdk_1_00_00_22/source/ti/ble5stack/osal/src/common/osal_clock.c', needed by 'OSAL/osal_clock.obj'.
+gmake[1]: *** No rule to make target 'C:/ti/simplelink_cc2640r2_sdk_1_00_00_22/source/ti/ble5stack/osal/src/common/osal_list.c', needed by 'OSAL/osal_list.obj'.
+gmake[1]: *** No rule to make target 'C:/ti/simplelink_cc2640r2_sdk_1_00_00_22/source/ti/ble5stack/osal/src/common/osal_memory_icall.c', needed by 'OSAL/osal_memory_icall.obj'.
+gmake[1]: *** No rule to make target 'C:/ti/simplelink_cc2640r2_sdk_1_00_00_22/source/ti/ble5stack/osal/src/common/osal_pwrmgr.c', needed by 'OSAL/osal_pwrmgr.obj'.
+gmake[1]: *** No rule to make target 'C:/ti/simplelink_cc2640r2_sdk_1_00_00_22/source/ti/ble5stack/osal/src/mcu/cc26xx/osal_snv_wrapper.c', needed by 'OSAL/osal_snv_wrapper.obj'.
+gmake[1]: *** No rule to make target 'C:/ti/simplelink_cc2640r2_sdk_1_00_00_22/source/ti/ble5stack/osal/src/common/osal_timers.c', needed by 'OSAL/osal_timers.obj'.
+gmake[1]: *** No rule to make target 'C:/ti/simplelink_cc2640r2_sdk_1_00_00_22/source/ti/ble5stack/host/gap.c', needed by 'PROFILES/gap.obj'.
+gmake[1]: *** No rule to make target 'C:/ti/simplelink_cc2640r2_sdk_1_00_00_22/source/ti/ble5stack/host/gapbondmgr.c', needed by 'PROFILES/gapbondmgr.obj'.
+gmake[1]: *** No rule to make target 'C:/ti/simplelink_cc2640r2_sdk_1_00_00_22/source/ti/ble5stack/host/gattservapp_util.c', needed by 'PROFILES/gattservapp_util.obj'.
+gmake[1]: *** No rule to make target 'C:/ti/simplelink_cc2640r2_sdk_1_00_00_22/source/ti/ble5stack/host/sm_ecc.c', needed by 'PROFILES/sm_ecc.obj'.
+gmake[1]: *** No rule to make target 'C:/ti/simplelink_cc2640r2_sdk_1_00_00_22/source/ti/ble5stack/rom/r2/common_rom_init.c', needed by 'ROM/common_rom_init.obj'.
+gmake[1]: *** No rule to make target 'C:/ti/simplelink_cc2640r2_sdk_1_00_00_22/source/ti/ble5stack/rom/r2/rom_init.c', needed by 'ROM/rom_init.obj'.
+gmake[1]: *** No rule to make target 'C:/ti/simplelink_cc2640r2_sdk_1_00_00_22/source/ti/ble5stack/icall/stack/ble_user_config.c', needed by 'Startup/ble_user_config.obj'.
+gmake[1]: *** No rule to make target 'C:/ti/simplelink_cc2640r2_sdk_1_00_00_22/source/ti/ble5stack/common/cc26xx/icall_startup.c', needed by 'Startup/icall_startup.obj'.
+gmake[1]: *** No rule to make target 'C:/ti/simplelink_cc2640r2_sdk_1_00_00_22/examples/rtos/CC2640R2_LAUNCHXL/ble5stack/simple_peripheral/src/stack/osal_icall_ble.c', needed by 'Startup/osal_icall_ble.obj'.
+gmake[1]: *** No rule to make target 'C:/ti/simplelink_cc2640r2_sdk_1_00_00_22/source/ti/ble5stack/common/cc26xx/onboard.c', needed by 'TOOLS/onboard.obj'.
+gmake[1]: Target 'main-build' not remade because of errors.
+gmake: *** [all] Error 2
+
+**** Build Finished ****

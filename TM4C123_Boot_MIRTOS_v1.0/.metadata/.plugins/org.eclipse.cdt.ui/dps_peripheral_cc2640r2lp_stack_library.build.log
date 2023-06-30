@@ -1,0 +1,23 @@
+
+**** Build of configuration FlashROM_Library for project dps_peripheral_cc2640r2lp_stack_library ****
+
+"C:\\ti\\ccs1220\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+C:/ti/simplelink_cc2640r2_sdk_5_30_00_03/source/ti/blestack/../../../tools/blestack/lib_search/lib_search         D:/embedded/Code_Composer_Studio/Boot_App/dps_peripheral_cc2640r2lp_stack_library/TOOLS/build_config.opt         C:/ti/simplelink_cc2640r2_sdk_5_30_00_03/source/ti/blestack/blelib         D:/embedded/Code_Composer_Studio/Boot_App/dps_peripheral_cc2640r2lp_stack_library/FlashROM_Library/lib_linker.cmd         cc2640         C:/ti/simplelink_cc2640r2_sdk_5_30_00_03/source/ti/blestack/../../../tools/blestack/lib_search/lib_search.xml         C:/ti/simplelink_cc2640r2_sdk_5_30_00_03/source/ti/blestack/symbols
+<<< Using library: C:\ti\simplelink_cc2640r2_sdk_5_30_00_03\source\ti\blestack\blelib\ctrlll\cc2640_ctrlll_pxxx.a >>>
+<<< Using library: C:\ti\simplelink_cc2640r2_sdk_5_30_00_03\source\ti\blestack\blelib\ctrlhci\cc2640_ctrlhci_pxxx.a >>>
+<<< Using library: C:\ti\simplelink_cc2640r2_sdk_5_30_00_03\source\ti\blestack\blelib\hci_tl\cc26xx_hci_tl_none.a >>>
+<<< Using library: C:\ti\simplelink_cc2640r2_sdk_5_30_00_03\source\ti\blestack\blelib\host\cc26xx_att_pxxx.a >>>
+<<< Using library: C:\ti\simplelink_cc2640r2_sdk_5_30_00_03\source\ti\blestack\blelib\host\cc26xx_gap_pxxx.a >>>
+<<< Using library: C:\ti\simplelink_cc2640r2_sdk_5_30_00_03\source\ti\blestack\blelib\host\cc26xx_gatt_pxxx.a >>>
+<<< Using library: C:\ti\simplelink_cc2640r2_sdk_5_30_00_03\source\ti\blestack\blelib\host\cc26xx_l2cap_pxxx.a >>>
+<<< Using library: C:\ti\simplelink_cc2640r2_sdk_5_30_00_03\source\ti\blestack\blelib\host\cc26xx_profiles_pxxx.a >>>
+<<< Using library: C:\ti\simplelink_cc2640r2_sdk_5_30_00_03\source\ti\blestack\blelib\host\cc26xx_smp_pxxx.a >>>
+<<< Using library: C:\ti\simplelink_cc2640r2_sdk_5_30_00_03\source\ti\blestack\blelib\host\cc26xx_sm_pxxx.a >>>
+<<< Not modifying lib_linker.cmd. Stack configurations have not changed. >>>
+ 
+<<< Using pxxx.symbols >>>
+ 
+gmake[1]: Nothing to be done for 'main-build'.
+
+**** Build Finished ****

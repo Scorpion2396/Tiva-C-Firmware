@@ -1,0 +1,8 @@
+
+**** Build of configuration Debug for project uartecho_CC2640R2_LAUNCHXL_nortos_gcc ****
+
+"C:\\ti\\ccs1220\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'uartecho_CC2640R2_LAUNCHXL_nortos_gcc.out' is up to date.
+
+**** Build Finished ****

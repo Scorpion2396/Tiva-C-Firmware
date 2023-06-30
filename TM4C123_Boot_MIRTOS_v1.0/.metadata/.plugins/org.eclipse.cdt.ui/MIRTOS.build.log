@@ -1,0 +1,24 @@
+
+**** Build of configuration Debug for project MIRTOS ****
+
+"C:\\ti\\ccs1220\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: GNU Compiler
+"C:/msys64/mingw64/bin/gcc.exe" -c -mcpu=cortex-m4 -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DPART_TM4C123GH6PM -I"D:/embedded/Code_Composer_Studio/Boot_App/MIRTOS" -I"C:/msys64/mingw64/bin" -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -MMD -MP -MF"main.d_raw" -MT"main.o"   -o"main.o" "../main.c"
+subdir_rules.mk:9: recipe for target 'main.o' failed
+gcc.exe: warning: '-mcpu=' is deprecated; use '-mtune=' or '-march=' instead
+gcc.exe: fatal error: cannot read spec file 'nosys.specs': No such file or directory
+compilation terminated.
+gmake: *** [main.o] Error 1
+Building file: "../tm4c123gh6pm_startup_ccs_gcc.c"
+Invoking: GNU Compiler
+"C:/msys64/mingw64/bin/gcc.exe" -c -mcpu=cortex-m4 -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DPART_TM4C123GH6PM -I"D:/embedded/Code_Composer_Studio/Boot_App/MIRTOS" -I"C:/msys64/mingw64/bin" -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -MMD -MP -MF"tm4c123gh6pm_startup_ccs_gcc.d_raw" -MT"tm4c123gh6pm_startup_ccs_gcc.o"   -o"tm4c123gh6pm_startup_ccs_gcc.o" "../tm4c123gh6pm_startup_ccs_gcc.c"
+subdir_rules.mk:9: recipe for target 'tm4c123gh6pm_startup_ccs_gcc.o' failed
+gcc.exe: warning: '-mcpu=' is deprecated; use '-mtune=' or '-march=' instead
+gcc.exe: fatal error: cannot read spec file 'nosys.specs': No such file or directory
+compilation terminated.
+gmake: *** [tm4c123gh6pm_startup_ccs_gcc.o] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****

@@ -1,0 +1,140 @@
+#include "TM4C123GH6PM.h"
+#include "mirtos.h"
+
+/******************************************************************************/
+OSThread * volatile OS_curr; /* pointer to the current thread */
+OSThread * volatile OS_next; /* pointer to the next thread */
+
+OSThread *OS_Thread[32 + 1]; /* array of threads  started so far */
+uint8_t OS_threadNum;        /* Number of threads started so far */
+
+/******************************************************************************/
+void OS_init(void)
+{
+  /* set PendSV interrupt priority to the lowest level */
+  *(uint32_t volatile*)0xE000ED20 |= (0xFFU << 16);
+} 
+
+/******************************************************************************/
+void OS_sched(void)
+{
+
+    extern OSThread led1_thread;
+    extern OSThread led2_thread;
+
+    if(OS_curr == &led1_thread)
+    {
+        OS_next = &led2_thread;
+    }
+    else
+    {
+        OS_next = &led1_thread;
+    }
+
+
+    if(OS_next != OS_curr)
+    {
+        *(uint32_t volatile *)0xE000ED04 = (1U << 28); // 0xE000ED04 = (SCB->ICSR)
+    }
+}     
+/******************************************************************************/
+void OSThread_start(
+    OSThread *me,
+    OSThreadHandler threadhandler,
+    void *pvt_stack,
+    uint32_t stack_size)
+{
+    uint32_t *sp = (uint32_t*)((((uint32_t)pvt_stack + stack_size) / 8) * 8);
+    uint32_t *stack_limit;
+  
+    /* STACK FRAME  */
+    *(--sp) = (1U << 24);               /* xPSR */
+    *(--sp) = (uint32_t)threadhandler; /*  PC  */
+    *(--sp) = 0x0000000EU;              /*  LR  */
+    *(--sp) = 0x0000000CU;              /* R12  */
+    *(--sp) = 0x00000003U;              /*  R3  */
+    *(--sp) = 0x00000002U;              /*  R2  */
+    *(--sp) = 0x00000001U;              /*  R1  */
+    *(--sp) = 0x00000000U;              /*  R0  */
+    /* additional regs*/
+    *(--sp) = 0x0000000BU;              /*  R11 */
+    *(--sp) = 0x0000000AU;              /*  R10 */
+    *(--sp) = 0x00000009U;              /*  R9  */
+    *(--sp) = 0x00000008U;              /*  R8  */
+    *(--sp) = 0x00000007U;              /*  R7  */
+    *(--sp) = 0x00000006U;              /*  R6  */
+    *(--sp) = 0x00000005U;              /*  R5  */
+    *(--sp) = 0x00000004U;              /*  R4  */
+    
+    me->sp = sp;
+    
+    stack_limit = (uint32_t*)(((((uint32_t)pvt_stack - 1U) / 8) + 1U) * 8);
+    
+    for(sp = sp - 1 ; sp >= stack_limit ; sp--)
+    {
+        *sp = 0xDEADBEEFU;
+    }
+}
+
+/******************************************************************************/
+void PendSV_Handler(void)
+{
+
+    // disable irq
+    __asm("CPSID I");
+
+    // if (OS_curr != (OSThread *)0)
+    __asm(
+        "LDR r1, =OS_curr\n\t"
+        "LDR r1, [r1, #0x00]\n\t"
+        "CBZ r1, PendSV_restore\n\t"
+    );
+
+    // push r4 - r11 to the stack
+    __asm("PUSH {r4-r11}");
+
+    // OS_curr->sp = sp;
+    __asm(
+        "LDR r1, =OS_curr\n\t"
+        "LDR r1, [r1, #0x00]\n\t"
+        "STR sp, [r1, #0x00]\n\t"
+    );
+
+    // PendSV_restore:
+    __asm(
+    "PendSV_restore:\n\t"
+        // sp = OS_next->sp;
+        "LDR r1, =OS_next\n\t"
+        "LDR r1, [r1, #0x00]\n\t"
+        "LDR sp, [r1, #0x00]\n\t"
+    );
+
+    // OS_curr = OS_next;
+    __asm(
+        "LDR r1, =OS_next\n\t"
+        "LDR r1, [r1, #0x00]\n\t"
+        "LDR r2, =OS_curr\n\t"
+        "STR r1, [r2, #0x00]\n\t"
+    );
+
+    // pop registers r4-r11
+    __asm("POP {r4-r11}");
+
+    // enable irq
+    __asm("CPSIE I");
+
+    // return from interrupt
+    __asm("BX lr");
+}
+
+
+
+
+
+
+
+
+
+
+
+    

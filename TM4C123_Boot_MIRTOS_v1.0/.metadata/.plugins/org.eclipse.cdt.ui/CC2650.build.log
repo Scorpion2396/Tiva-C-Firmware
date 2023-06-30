@@ -1,0 +1,93 @@
+
+**** Build of configuration Debug for project CC2650 ****
+
+"C:\\ti\\ccs1220\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../ccfg.c"
+Invoking: GNU Compiler
+"C:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc-9.2.1.exe" -c -mcpu=cortex-m3 -mthumb -I"D:/embedded/Code_Composer_Studio/Boot_App/CC2650" -I"C:/ti/simplelink_cc2640r2_sdk_5_30_00_03/source" -I"C:/ti/simplelink_cc2640r2_sdk_5_30_00_03/kernel/nortos" -I"D:/embedded/Code_Composer_Studio/Boot_App/CC2650/gcc" -I"C:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/arm-none-eabi/include" -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -fno-strict-aliasing --asm -MMD -MP -MF"ccfg.d_raw" -MT"ccfg.o"   -o"ccfg.o" "../ccfg.c"
+Finished building: "../ccfg.c"
+ 
+Building file: "../CC2640R2_LAUNCHXL_fxns.c"
+Invoking: GNU Compiler
+"C:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc-9.2.1.exe" -c -mcpu=cortex-m3 -mthumb -I"D:/embedded/Code_Composer_Studio/Boot_App/CC2650" -I"C:/ti/simplelink_cc2640r2_sdk_5_30_00_03/source" -I"C:/ti/simplelink_cc2640r2_sdk_5_30_00_03/kernel/nortos" -I"D:/embedded/Code_Composer_Studio/Boot_App/CC2650/gcc" -I"C:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/arm-none-eabi/include" -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -fno-strict-aliasing --asm -MMD -MP -MF"CC2640R2_LAUNCHXL_fxns.d_raw" -MT"CC2640R2_LAUNCHXL_fxns.o"   -o"CC2640R2_LAUNCHXL_fxns.o" "../CC2640R2_LAUNCHXL_fxns.c"
+Finished building: "../CC2640R2_LAUNCHXL_fxns.c"
+ 
+Building file: "../CC2640R2_LAUNCHXL.c"
+Invoking: GNU Compiler
+"C:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc-9.2.1.exe" -c -mcpu=cortex-m3 -mthumb -I"D:/embedded/Code_Composer_Studio/Boot_App/CC2650" -I"C:/ti/simplelink_cc2640r2_sdk_5_30_00_03/source" -I"C:/ti/simplelink_cc2640r2_sdk_5_30_00_03/kernel/nortos" -I"D:/embedded/Code_Composer_Studio/Boot_App/CC2650/gcc" -I"C:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/arm-none-eabi/include" -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -fno-strict-aliasing --asm -MMD -MP -MF"CC2640R2_LAUNCHXL.d_raw" -MT"CC2640R2_LAUNCHXL.o"   -o"CC2640R2_LAUNCHXL.o" "../CC2640R2_LAUNCHXL.c"
+Finished building: "../CC2640R2_LAUNCHXL.c"
+ 
+Building target: "CC2650.out"
+Invoking: GNU Linker
+"C:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc-9.2.1.exe" -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -fno-strict-aliasing --asm -mcpu=cortex-m3 -Wl,-Map,"CC2650.map" -o"CC2650.out" "./CC2640R2_LAUNCHXL.o" "./CC2640R2_LAUNCHXL_fxns.o" "./ccfg.o" "./gpiointerrupt.o" "./main_nortos.o" -Wl,-T"../gcc/CC2640R2_LAUNCHXL_NoRTOS.lds"  
+makefile:140: recipe for target 'CC2650.out' failed
+c:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/bin/ld.exe: ./CC2640R2_LAUNCHXL.o: in function `CC2640R2_LAUNCHXL_initGeneral':
+D:\embedded\Code_Composer_Studio\Boot_App\CC2650\Debug/../CC2640R2_LAUNCHXL.c:1032: undefined reference to `Power_init'
+c:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/bin/ld.exe: D:\embedded\Code_Composer_Studio\Boot_App\CC2650\Debug/../CC2640R2_LAUNCHXL.c:1034: undefined reference to `PIN_init'
+c:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/bin/ld.exe: ./CC2640R2_LAUNCHXL.o:D:\embedded\Code_Composer_Studio\Boot_App\CC2650\Debug/../CC2640R2_LAUNCHXL.c:87: undefined reference to `ADCBufCC26XX_fxnTable'
+c:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/bin/ld.exe: ./CC2640R2_LAUNCHXL.o:D:\embedded\Code_Composer_Studio\Boot_App\CC2650\Debug/../CC2640R2_LAUNCHXL.c:207: undefined reference to `ADCCC26XX_fxnTable'
+c:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/bin/ld.exe: ./CC2640R2_LAUNCHXL.o:(.rodata.ADC_config+0xc): undefined reference to `ADCCC26XX_fxnTable'
+c:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/bin/ld.exe: ./CC2640R2_LAUNCHXL.o:(.rodata.ADC_config+0x18): undefined reference to `ADCCC26XX_fxnTable'
+c:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/bin/ld.exe: ./CC2640R2_LAUNCHXL.o:(.rodata.ADC_config+0x24): undefined reference to `ADCCC26XX_fxnTable'
+c:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/bin/ld.exe: ./CC2640R2_LAUNCHXL.o:(.rodata.ADC_config+0x30): undefined reference to `ADCCC26XX_fxnTable'
+c:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/bin/ld.exe: ./CC2640R2_LAUNCHXL.o:(.rodata.ADC_config+0x3c): more undefined references to `ADCCC26XX_fxnTable' follow
+c:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/bin/ld.exe: ./CC2640R2_LAUNCHXL.o:D:\embedded\Code_Composer_Studio\Boot_App\CC2650\Debug/../CC2640R2_LAUNCHXL.c:466: undefined reference to `DisplayUartMin_fxnTable'
+c:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/bin/ld.exe: ./CC2640R2_LAUNCHXL.o:D:\embedded\Code_Composer_Studio\Boot_App\CC2650\Debug/../CC2640R2_LAUNCHXL.c:608: undefined reference to `I2CCC26XX_fxnTable'
+c:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/bin/ld.exe: ./CC2640R2_LAUNCHXL.o:D:\embedded\Code_Composer_Studio\Boot_App\CC2650\Debug/../CC2640R2_LAUNCHXL.c:739: undefined reference to `NVSCC26XX_fxnTable'
+c:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/bin/ld.exe: ./CC2640R2_LAUNCHXL.o:(.rodata.NVS_config+0xc): undefined reference to `NVSSPI25X_fxnTable'
+c:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/bin/ld.exe: ./CC2640R2_LAUNCHXL.o:D:\embedded\Code_Composer_Studio\Boot_App\CC2650\Debug/../CC2640R2_LAUNCHXL.c:820: undefined reference to `PWMTimerCC26XX_fxnTable'
+c:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/bin/ld.exe: ./CC2640R2_LAUNCHXL.o:(.rodata.PWM_config+0xc): undefined reference to `PWMTimerCC26XX_fxnTable'
+c:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/bin/ld.exe: ./CC2640R2_LAUNCHXL.o:(.rodata.PWM_config+0x18): undefined reference to `PWMTimerCC26XX_fxnTable'
+c:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/bin/ld.exe: ./CC2640R2_LAUNCHXL.o:(.rodata.PWM_config+0x24): undefined reference to `PWMTimerCC26XX_fxnTable'
+c:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/bin/ld.exe: ./CC2640R2_LAUNCHXL.o:(.rodata.PWM_config+0x30): undefined reference to `PWMTimerCC26XX_fxnTable'
+c:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/bin/ld.exe: ./CC2640R2_LAUNCHXL.o:(.rodata.PWM_config+0x3c): more undefined references to `PWMTimerCC26XX_fxnTable' follow
+c:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/bin/ld.exe: ./CC2640R2_LAUNCHXL.o:(.rodata.PowerCC26XX_config+0x4): undefined reference to `PowerCC26XX_standbyPolicy'
+c:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/bin/ld.exe: ./CC2640R2_LAUNCHXL.o:(.rodata.PowerCC26XX_config+0x8): undefined reference to `PowerCC26XX_calibrate'
+c:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/bin/ld.exe: ./CC2640R2_LAUNCHXL.o:D:\embedded\Code_Composer_Studio\Boot_App\CC2650\Debug/../CC2640R2_LAUNCHXL.c:861: undefined reference to `SDSPI_fxnTable'
+c:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/bin/ld.exe: ./CC2640R2_LAUNCHXL.o:D:\embedded\Code_Composer_Studio\Boot_App\CC2650\Debug/../CC2640R2_LAUNCHXL.c:917: undefined reference to `SPICC26XXDMA_fxnTable'
+c:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/bin/ld.exe: ./CC2640R2_LAUNCHXL.o:(.rodata.SPI_config+0xc): undefined reference to `SPICC26XXDMA_fxnTable'
+c:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/bin/ld.exe: ./CC2640R2_LAUNCHXL.o:D:\embedded\Code_Composer_Studio\Boot_App\CC2650\Debug/../CC2640R2_LAUNCHXL.c:961: undefined reference to `UARTCC26XX_fxnTable'
+c:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/bin/ld.exe: ./CC2640R2_LAUNCHXL.o:D:\embedded\Code_Composer_Studio\Boot_App\CC2650\Debug/../CC2640R2_LAUNCHXL.c:1011: undefined reference to `WatchdogCC26XX_fxnTable'
+c:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/bin/ld.exe: ./CC2640R2_LAUNCHXL_fxns.o: in function `CC2640R2_LAUNCHXL_sendExtFlashByte':
+D:\embedded\Code_Composer_Studio\Boot_App\CC2650\Debug/../CC2640R2_LAUNCHXL_fxns.c:57: undefined reference to `PIN_setOutputValue'
+c:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/bin/ld.exe: D:\embedded\Code_Composer_Studio\Boot_App\CC2650\Debug/../CC2640R2_LAUNCHXL_fxns.c:60: undefined reference to `PIN_setOutputValue'
+c:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/bin/ld.exe: D:\embedded\Code_Composer_Studio\Boot_App\CC2650\Debug/../CC2640R2_LAUNCHXL_fxns.c:63: undefined reference to `PIN_setOutputValue'
+c:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/bin/ld.exe: D:\embedded\Code_Composer_Studio\Boot_App\CC2650\Debug/../CC2640R2_LAUNCHXL_fxns.c:64: undefined reference to `PIN_setOutputValue'
+c:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/bin/ld.exe: D:\embedded\Code_Composer_Studio\Boot_App\CC2650\Debug/../CC2640R2_LAUNCHXL_fxns.c:71: undefined reference to `NOROM_CPUdelay'
+c:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/bin/ld.exe: D:\embedded\Code_Composer_Studio\Boot_App\CC2650\Debug/../CC2640R2_LAUNCHXL_fxns.c:74: undefined reference to `PIN_setOutputValue'
+c:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/bin/ld.exe: D:\embedded\Code_Composer_Studio\Boot_App\CC2650\Debug/../CC2640R2_LAUNCHXL_fxns.c:75: undefined reference to `PIN_setOutputValue'
+c:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/bin/ld.exe: D:\embedded\Code_Composer_Studio\Boot_App\CC2650\Debug/../CC2640R2_LAUNCHXL_fxns.c:81: undefined reference to `NOROM_CPUdelay'
+c:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/bin/ld.exe: ./CC2640R2_LAUNCHXL_fxns.o: in function `CC2640R2_LAUNCHXL_wakeUpExtFlash':
+D:\embedded\Code_Composer_Studio\Boot_App\CC2650\Debug/../CC2640R2_LAUNCHXL_fxns.c:96: undefined reference to `PIN_open'
+c:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/bin/ld.exe: D:\embedded\Code_Composer_Studio\Boot_App\CC2650\Debug/../CC2640R2_LAUNCHXL_fxns.c:104: undefined reference to `PIN_setOutputValue'
+c:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/bin/ld.exe: D:\embedded\Code_Composer_Studio\Boot_App\CC2650\Debug/../CC2640R2_LAUNCHXL_fxns.c:106: undefined reference to `NOROM_CPUdelay'
+c:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/bin/ld.exe: D:\embedded\Code_Composer_Studio\Boot_App\CC2650\Debug/../CC2640R2_LAUNCHXL_fxns.c:107: undefined reference to `PIN_setOutputValue'
+c:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/bin/ld.exe: D:\embedded\Code_Composer_Studio\Boot_App\CC2650\Debug/../CC2640R2_LAUNCHXL_fxns.c:109: undefined reference to `NOROM_CPUdelay'
+c:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/bin/ld.exe: D:\embedded\Code_Composer_Studio\Boot_App\CC2650\Debug/../CC2640R2_LAUNCHXL_fxns.c:111: undefined reference to `PIN_close'
+c:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/bin/ld.exe: ./CC2640R2_LAUNCHXL_fxns.o: in function `CC2640R2_LAUNCHXL_shutDownExtFlash':
+D:\embedded\Code_Composer_Studio\Boot_App\CC2650\Debug/../CC2640R2_LAUNCHXL_fxns.c:140: undefined reference to `PIN_open'
+c:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/bin/ld.exe: D:\embedded\Code_Composer_Studio\Boot_App\CC2650\Debug/../CC2640R2_LAUNCHXL_fxns.c:146: undefined reference to `PIN_close'
+c:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/bin/ld.exe: ./gpiointerrupt.o: in function `gpioButtonFxn0':
+D:\embedded\Code_Composer_Studio\Boot_App\CC2650\Debug/../gpiointerrupt.c:52: undefined reference to `GPIO_toggle'
+c:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/bin/ld.exe: ./gpiointerrupt.o: in function `gpioButtonFxn1':
+D:\embedded\Code_Composer_Studio\Boot_App\CC2650\Debug/../gpiointerrupt.c:63: undefined reference to `GPIO_toggle'
+c:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/bin/ld.exe: ./gpiointerrupt.o: in function `mainThread':
+D:\embedded\Code_Composer_Studio\Boot_App\CC2650\Debug/../gpiointerrupt.c:72: undefined reference to `GPIO_init'
+c:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/bin/ld.exe: D:\embedded\Code_Composer_Studio\Boot_App\CC2650\Debug/../gpiointerrupt.c:75: undefined reference to `GPIO_setConfig'
+c:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/bin/ld.exe: D:\embedded\Code_Composer_Studio\Boot_App\CC2650\Debug/../gpiointerrupt.c:76: undefined reference to `GPIO_setConfig'
+c:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/bin/ld.exe: D:\embedded\Code_Composer_Studio\Boot_App\CC2650\Debug/../gpiointerrupt.c:77: undefined reference to `GPIO_setConfig'
+c:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/bin/ld.exe: D:\embedded\Code_Composer_Studio\Boot_App\CC2650\Debug/../gpiointerrupt.c:80: undefined reference to `GPIO_write'
+c:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/bin/ld.exe: D:\embedded\Code_Composer_Studio\Boot_App\CC2650\Debug/../gpiointerrupt.c:83: undefined reference to `GPIO_setCallback'
+c:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/bin/ld.exe: D:\embedded\Code_Composer_Studio\Boot_App\CC2650\Debug/../gpiointerrupt.c:86: undefined reference to `GPIO_enableInt'
+c:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/bin/ld.exe: D:\embedded\Code_Composer_Studio\Boot_App\CC2650\Debug/../gpiointerrupt.c:94: undefined reference to `GPIO_setConfig'
+c:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/bin/ld.exe: D:\embedded\Code_Composer_Studio\Boot_App\CC2650\Debug/../gpiointerrupt.c:97: undefined reference to `GPIO_setCallback'
+c:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/bin/ld.exe: D:\embedded\Code_Composer_Studio\Boot_App\CC2650\Debug/../gpiointerrupt.c:98: undefined reference to `GPIO_enableInt'
+c:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/bin/ld.exe: ./main_nortos.o: in function `main':
+D:\embedded\Code_Composer_Studio\Boot_App\CC2650\Debug/../main_nortos.c:56: undefined reference to `NoRTOS_start'
+collect2.exe: error: ld returned 1 exit status
+gmake[1]: *** [CC2650.out] Error 1
+gmake: *** [all] Error 2
+makefile:136: recipe for target 'all' failed
+
+**** Build Finished ****
