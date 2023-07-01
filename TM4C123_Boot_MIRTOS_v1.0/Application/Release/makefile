@@ -185,7 +185,7 @@ all: $(OBJS) $(LDS_SRCS) $(GEN_CMDS)
 Application.out: $(OBJS) $(LDS_SRCS) $(GEN_CMDS)
 	@echo 'Building target: "$@"'
 	@echo 'Invoking: GNU Linker'
-	"C:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc-9.2.1.exe" -DPART_TM4C123GH6PM -O0 -fsigned-char -ffunction-sections -fdata-sections -g -Wall -specs="nosys.specs" -mcpu=cortex-m4 -Wl,-Map,"Application.map" -o"Application.out" $(ORDERED_OBJS)
+	"C:/ti/ccs1220/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc-9.2.1.exe" -fno-exceptions -DPART_TM4C123GH6PM -O0 -funsigned-char -ffunction-sections -fdata-sections -g -Wall -specs="nosys.specs" -march=armv7e-m -mthumb -mfloat-abi=soft -Wl,-Map,"Application.map" -o"Application.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: "$@"'
 	@echo ' '
 

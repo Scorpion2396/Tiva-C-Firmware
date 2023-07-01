@@ -2,8 +2,6 @@
 #define __BSP_H__
 
 /* Board Support Package for the EK-TM4C123GXL board */
-void BSP_delay(uint32_t delay);
-static uint32_t BSP_tickCtr(void);
 
 /* system clock setting [Hz] */
 #define SYS_CLOCK_HZ 16000000U
