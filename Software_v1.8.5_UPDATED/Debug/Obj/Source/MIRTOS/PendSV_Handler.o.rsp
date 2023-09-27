@@ -1,0 +1,1 @@
+﻿D:\embedded\Updated\Software_v1.8.5_SYSTICK\Source\MIRTOS\PendSV_Handler.s -OD:\embedded\Updated\Software_v1.8.5_SYSTICK\Debug\Obj\Source\MIRTOS -s+ -M<> -w+ -r -j --cpu Cortex-M4 --fpu None
