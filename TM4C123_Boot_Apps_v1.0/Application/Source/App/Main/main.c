@@ -14,96 +14,108 @@
 #include "timercnter_interface.h"
 #include "DS3231_Interface.h"
 #include "SSD1306_Interface.h"
+#include "bsp.h"
+#include "mirtos.h"
 
-void delay(uint8_t count);
+/******************************************************************************/
+void led1();
+void led2();
+void led3();
 
-//#define UART_LOG_EN 1
+/*********************************************************************/
 
-uint8_t rx_data = 0x0;
-
-void main()
-{ 
-
-  
-  int cnt = 0;
-  unsigned int curr_time = 0;
-  unsigned int temp_time = 0;
-  unsigned int prev_time = 0;
-  unsigned char str[100] = {0};
-  unsigned char str1[100] = {0};
-  int fps = 0;
-  
-  UART_init(UART_0, 115200);
-  
-  DigitalWrite(PB0,LOW );
-  DigitalWrite(PB1, HIGH);
-  DigitalWrite(PF3, HIGH);
-  delay(10);
-  
-  init_Timer_Counter();
-  I2C_Init(I2C_2, 500);
-  ssd1306_init();
-  
-  Start_Timer_counter();
-  
-    while (1) 
-    { 
-
-#ifdef UART_LOG_EN
-        curr_time = 0;
-        curr_time = millis(); 
-#endif        
-        cnt+=3;
-        ssd1306_clear();
-        ssd1306_DrawCircle(cnt, 32, 10);
-        if(cnt >= 127)
-          cnt = 0;
-        ssd1306_draw_line(0, 43, 127, 43, 1); 
-
-#ifdef UART_LOG_EN
-        temp_time = curr_time;
-        curr_time = millis();
-        temp_time = curr_time - temp_time;
-        sprintf(str,"ssd1306 driver buffer update time = %d\r\n", temp_time);
-        UART_print(str);
-#endif 
-        
-        ssd1306_refresh();    /* max time consuming */
-        
-#ifdef UART_LOG_EN        
-        temp_time = curr_time;
-        curr_time = millis();
-        temp_time = curr_time - temp_time;
-        sprintf(str,"ssd1306 oled buffer time = %d\r\n", temp_time);
-        UART_print(str);
-#endif         
-
-        curr_time = millis();
-        fps = 1000/curr_time;
-        sprintf(str1,"FPS = %d\r\n", fps);
-        ssd1306_setcursor(7,5);
-        ssd1306_Print_String(str1);
-
-        
-        
-#ifdef UART_LOG_EN        
-        temp_time = curr_time;
-        curr_time = millis();
-        temp_time = curr_time - temp_time;
-        sprintf(str,"ssd1306 oled fps update time = %d\r\n", temp_time);
-        UART_print(str);
-#endif  
-        
-        Refresh_Timer_counter();
-    }
-}
-
-void delay(uint8_t count)
+uint32_t stack_led1[40];
+OSThread led1_thread;
+void led1()
 {
-	uint32_t i = 0;
-	uint32_t j = 0;
-	for(i=0 ; i<count ; i++)
-	{
-		for(j=0 ; j < 3180 ; j++);
-	}
+  while(1)
+  {
+/*    DigitalWrite(PF1, HIGH);
+    UART_print("Red Led ON\n\r");
+    OS_delay(BSP_TICK_PER_SEC / 100);
+    DigitalWrite(PF1, LOW);
+    UART_print("Red Led OFF\n\r");
+    OS_delay(BSP_TICK_PER_SEC / 100);
+*/
+    UART_print("LED_1\n\r");
+    OS_delay(BSP_TICK_PER_SEC/10);
+  }
+
 }
+
+/**********************************************************/
+uint32_t stack_led2[40];
+OSThread led2_thread;
+
+void led2()
+{
+
+  while(1)
+  {
+ /*     DigitalWrite(PF2, LOW);
+      UART_print("Blue Led ON\n\r");
+      OS_delay(BSP_TICK_PER_SEC / 200);
+      DigitalWrite(PF2, HIGH);
+      UART_print("Blue Led OFF\n\r");
+      OS_delay(BSP_TICK_PER_SEC / 200);
+*/
+      UART_print("LED_2\n\r");
+      OS_delay(BSP_TICK_PER_SEC/10);
+  }
+
+}
+
+/**********************************************************/
+uint32_t stack_led3[40];
+OSThread led3_thread;
+
+void led3()
+{
+
+  while(1)
+  {
+/*      DigitalWrite(PF3, LOW);
+      UART_print("Green Led ON\n\r");
+      OS_delay(BSP_TICK_PER_SEC/500);
+      DigitalWrite(PF3, HIGH);
+      UART_print("Green Led OFF\n\r");
+      OS_delay(BSP_TICK_PER_SEC/500);
+*/
+      UART_print("LED_3\n\r");
+      OS_delay(BSP_TICK_PER_SEC/10);
+  }
+
+}
+
+/**********************************************************/
+uint32_t volatile* intreg;
+void main()
+{
+    UART_init(UART_0,115200);
+    BSP_init();
+    OS_init();
+    
+    OSThread_start(&led1_thread,
+                   &led1,
+                   stack_led1,
+                   sizeof(stack_led1));
+
+    OSThread_start(&led2_thread,
+                         &led2,
+                         stack_led2,
+                         sizeof(stack_led2));
+
+    OSThread_start(&led3_thread,
+                         &led3,
+                         stack_led3,
+                         sizeof(stack_led3));
+
+
+    /* transfer control to the RTOS to run the threads */
+    OS_run();
+    
+}
+
+
+
+

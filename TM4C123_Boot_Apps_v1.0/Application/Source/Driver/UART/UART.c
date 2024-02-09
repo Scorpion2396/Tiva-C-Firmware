@@ -1,5 +1,8 @@
 #include "TM4C123GH6PM.h"
 #include "UART.h"
+#include "mirtos.h"
+
+volatile uint8_t lock = 0;
 
 /********************* Structure Defination*** ************************/
 UART_config_type UART_config[] = 
@@ -111,6 +114,8 @@ void UART_init(UART_Channel UART_Ch_Index, uint32_t UART_BaudRate)
 
 void UART_print(uint8_t *data)
 {
+    mutex_lock(&lock);
+
 	if(UART_Init_Flag == 0)
 	{
 		UART_init(UART_0, 9600);
@@ -123,6 +128,8 @@ void UART_print(uint8_t *data)
 			UART_Transmitter(*(data++));
 		}
 	}
+
+	mutex_unlock(&lock);
 }
 
 
